@@ -1,0 +1,22 @@
+{
+  "id": "ea2c2ec3-4d1b-4063-82ce-b32ec1d25dfb",
+  "name": "AL",
+  "publisher": "Guru",
+  "brief": "",
+  "description": "",
+  "version": "1.0.0.0",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "capabilities": [],
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "12.0.0.0",
+  "application": "12.0.0.0",
+  "idRange": {
+    "from": 50100,
+    "to": 50149
+  }
+}

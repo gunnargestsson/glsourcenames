@@ -1,0 +1,17 @@
+{
+    "version":  "0.2.0",
+    "configurations":  [
+                           {
+                               "type":  "al",
+                               "request":  "launch",
+                               "name":  "Publish to local server",
+                               "server":  "http://d4523d0ae7b5",
+                               "port":  7049,
+                               "tenant":  "Default",
+                               "serverInstance":  "NAV",
+                               "authentication":  "Windows",
+                               "startupObjectId":  22,
+                               "startupObjectType":  "Page"
+                           }
+                       ]
+}

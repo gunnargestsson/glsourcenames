@@ -1,0 +1,13 @@
+﻿{
+    "branchId":  "5e70ced0-ba68-47d0-ac83-a0b92ab5d164",
+    "dockerImage":  "microsoft/bcsandbox:us",
+    "dockerMemoryLimit": "4G",
+    "navVersion":  "12.0.21812.0",
+    "navSolution":  "W1",
+    "projectName":  "W1",
+    "storeAllObjects":  "true",
+    "uidOffset":  "50100",
+    "objectProperties":  "true",
+    "datetimeCulture":  "en-US",
+    "targetPlatform":  "Dynamics365"
+}
