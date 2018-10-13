@@ -5,7 +5,7 @@
                                "type":  "al",
                                "request":  "launch",
                                "name":  "Publish to local server",
-                               "server":  "http://d4523d0ae7b5",
+                               "server":  "http://W1",
                                "port":  7049,
                                "tenant":  "Default",
                                "serverInstance":  "NAV",
