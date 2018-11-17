@@ -1,6 +1,6 @@
 {
-  "id": "ea2c2ec3-4d1b-4063-82ce-b32ec1d25dfb",
-  "name": "HelloWorld",
+  "id": "fc4df91e-dfa4-4dc6-84d4-3aea630da8dd",
+  "name": "HelloWorld Unit Test",
   "publisher": "Navision.guru",
   "brief": "",
   "description": "",
@@ -10,13 +10,20 @@
   "help": "",
   "url": "",
   "logo": "",
-  "target":"Extension",
+  "target": "Extension",
   "showMyCode": true,
   "features": [
     "TranslationFile"
-  ],  
+  ],
   "capabilities": [],
-  "dependencies": [],
+  "dependencies": [
+    {
+      "appId": "ea2c2ec3-4d1b-4063-82ce-b32ec1d25dfb",
+      "name": "HelloWorld",
+      "publisher": "Navision.guru",
+      "version": "1.0.0.0"
+    }
+  ],
   "screenshots": [],
   "platform": "13.0.0.0",
   "application": "13.0.0.0",

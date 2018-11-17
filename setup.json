@@ -1,6 +1,6 @@
 ﻿{
     "branchId":  "5e70ced0-ba68-47d0-ac83-a0b92ab5d164",
-    "dockerImage":  "microsoft/bcsandbox:us",
+    "dockerImage":  "microsoft/bcsandbox",
     "dockerMemoryLimit": "4G",
     "navVersion":  "13.0.0.0",
     "navSolution":  "W1",
