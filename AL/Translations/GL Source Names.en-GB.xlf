@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?><xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd"><file datatype="xml" source-language="en-US" target-language="en-GB" original="GL Source Names"><body><group id="body"><trans-unit id="Table 102911037 - Field 1753214751 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Type</source>
+          <target state="translated">Source Type</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN - Field:Source Type</note>
+        </trans-unit><trans-unit id="Table 102911037 - Field 1753214751 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source> ,Customer,Vendor,Bank Account,Fixed Asset,Employee</source>
+          <target state="translated"> ,Customer,Vendor,Bank Account,Fixed Asset,Employee</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN - Field:Source Type</note>
+        </trans-unit><trans-unit id="Table 102911037 - Field 1882905478 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source No.</source>
+          <target state="translated">Source No.</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN - Field:Source No.</note>
+        </trans-unit><trans-unit id="Table 102911037 - Field 1343707150 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Name</source>
+          <target state="translated">Source Name</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN - Field:Source Name</note>
+        </trans-unit><trans-unit id="Table 3539689440 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <target state="translated">Primary Key</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Setup - Field:Primary Key</note>
+        </trans-unit><trans-unit id="Table 3539689440 - Field 661833578 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Registration E-Mail Address</source>
+          <target state="translated">Registration E-Mail Address</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Setup - Field:Registration E-Mail Address</note>
+        </trans-unit><trans-unit id="Table 3539689440 - Field 155626315 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Installation Id</source>
+          <target state="translated">Installation Id</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Setup - Field:Installation Id</note>
+        </trans-unit><trans-unit id="Table 3539689440 - Field 1635236888 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Registration Id</source>
+          <target state="translated">Registration Id</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Setup - Field:Registration Id</note>
+        </trans-unit><trans-unit id="Table 3539689440 - Field 1413240321 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Next Registration Verification</source>
+          <target state="translated">Next Registration Verification</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Setup - Field:Next Registration Verification</note>
+        </trans-unit><trans-unit id="Table 3539689440 - Field 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status</source>
+          <target state="translated">Status</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Setup - Field:Status</note>
+        </trans-unit><trans-unit id="Table 3539689440 - Field 513339096 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Not Completed,Completed,Not Started,Seen,Watched,Read, </source>
+          <target state="translated">Not Completed,Completed,Not Started,Seen,Watched,Read, </target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Setup - Field:Status</note>
+        </trans-unit><trans-unit id="Table 3539689440 - Field 62955203 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tour Id</source>
+          <target state="translated">Tour Id</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Setup - Field:Tour Id</note>
+        </trans-unit><trans-unit id="Table 3539689440 - Field 448805223 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Video Status</source>
+          <target state="translated">Video Status</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Setup - Field:Video Status</note>
+        </trans-unit><trans-unit id="Table 3539689440 - Field 1358400863 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Help Status</source>
+          <target state="translated">Help Status</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Setup - Field:Help Status</note>
+        </trans-unit><trans-unit id="Table 3539689440 - Field 2362958084 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tour Status</source>
+          <target state="translated">Tour Status</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Setup - Field:Tour Status</note>
+        </trans-unit><trans-unit id="Page 3539689440 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L Source Name Setup</source>
+          <target state="translated">G/L Source Name Setup</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup - Page:O4N GL SN Setup</note>
+        </trans-unit><trans-unit id="Page 3539689440 - Control 661833578 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The G/L Source Name Extension will be registered on this E-Mail Address.  When registering the registration key will be sent to this E-Mail Address.</source>
+          <target state="translated">The G/L Source Name Extension will be registered on this E-Mail Address.  When registering the registration key will be sent to this E-Mail Address.</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup - Control:Registration E-Mail Address</note>
+        </trans-unit><trans-unit id="Table 2508189916 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <target state="translated">Code</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Help Resource - Field:Code</note>
+        </trans-unit><trans-unit id="Table 2508189916 - Field 4165234317 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Url</source>
+          <target state="translated">Url</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Help Resource - Field:Url</note>
+        </trans-unit><trans-unit id="Table 2508189916 - Field 4036313429 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Icon</source>
+          <target state="translated">Icon</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Help Resource - Field:Icon</note>
+        </trans-unit><trans-unit id="Table 2508189916 - Method 245899503 - NamedType 133915093" size-unit="char" translate="no" xml:space="preserve">
+          <source>SETUPHELP</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Help Resource - LocalVariable:SetupHelpCode</note>
+        </trans-unit><trans-unit id="Table 2508189916 - Method 2556269663 - NamedType 4131345173" size-unit="char" translate="no" xml:space="preserve">
+          <source>SETUPVIDEO</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Help Resource - LocalVariable:SetupVideoCode</note>
+        </trans-unit><trans-unit id="Table 2508189916 - Method 2471557953 - NamedType 2635079363" size-unit="char" translate="no" xml:space="preserve">
+          <source>USAGEHELP</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Help Resource - LocalVariable:UsageHelpCode</note>
+        </trans-unit><trans-unit id="Table 2508189916 - Method 4138924577 - NamedType 2068054355" size-unit="char" translate="no" xml:space="preserve">
+          <source>USAGEVIDEO</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Help Resource - LocalVariable:UsageVideoCode</note>
+        </trans-unit><trans-unit id="Table 2508189916 - Method 2424527569 - NamedType 2197034666" size-unit="char" translate="no" xml:space="preserve">
+          <source>GLSOURCENAMES_70PXICON</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Help Resource - LocalVariable:IconCode</note>
+        </trans-unit><trans-unit id="Table 2508189916 - Method 2331078000 - NamedType 2197034666" size-unit="char" translate="no" xml:space="preserve">
+          <source>GLSOURCENAMES_150PXICON</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Help Resource - LocalVariable:IconCode</note>
+        </trans-unit><trans-unit id="Table 2508189916 - Method 2571162554 - NamedType 2197034666" size-unit="char" translate="no" xml:space="preserve">
+          <source>GLSOURCENAMES_240PXICON</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Help Resource - LocalVariable:IconCode</note>
+        </trans-unit><trans-unit id="Table 2508189916 - Method 1033616249 - NamedType 2197034666" size-unit="char" translate="no" xml:space="preserve">
+          <source>GLSOURCENAMES_250PXICON</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Help Resource - LocalVariable:IconCode</note>
+        </trans-unit><trans-unit id="Table 2508189916 - Method 1920203142 - NamedType 2197034666" size-unit="char" translate="no" xml:space="preserve">
+          <source>GLSOURCENAMES_417PXICON</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Help Resource - LocalVariable:IconCode</note>
+        </trans-unit><trans-unit id="Table 2508189916 - Method 3844081278 - NamedType 3031047135" size-unit="char" translate="no" xml:space="preserve">
+          <source>http://Objects4NAV.com/GLSourceNames</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Help Resource - LocalVariable:SetupHelpUrl</note>
+        </trans-unit><trans-unit id="Table 2508189916 - Method 3245760214 - NamedType 2950263455" size-unit="char" translate="no" xml:space="preserve">
+          <source>https://www.youtube.com/embed/TYo1ZJ5jizs</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Help Resource - LocalVariable:SetupVideoUrl</note>
+        </trans-unit><trans-unit id="Table 2508189916 - Method 1060900626 - NamedType 1032451233" size-unit="char" translate="no" xml:space="preserve">
+          <source>http://Objects4NAV.com/GLSourceNames</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Help Resource - LocalVariable:UsageHelpUrl</note>
+        </trans-unit><trans-unit id="Table 2508189916 - Method 1302256473 - NamedType 2565882737" size-unit="char" translate="no" xml:space="preserve">
+          <source>https://www.youtube.com/embed/Xj5TATt7Pns</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Help Resource - LocalVariable:UsageVideoUrl</note>
+        </trans-unit><trans-unit id="Table 2508189916 - Method 2484516267 - NamedType 1288258319" size-unit="char" translate="no" xml:space="preserve">
+          <source>G/L Source Name Icon 70x70</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Help Resource - LocalVariable:IconDescription</note>
+        </trans-unit><trans-unit id="Table 2508189916 - Method 3378677603 - NamedType 1288258319" size-unit="char" translate="no" xml:space="preserve">
+          <source>G/L Source Name Icon 150x150</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Help Resource - LocalVariable:IconDescription</note>
+        </trans-unit><trans-unit id="Table 2508189916 - Method 4000611587 - NamedType 1288258319" size-unit="char" translate="no" xml:space="preserve">
+          <source>G/L Source Name Icon 240x240</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Help Resource - LocalVariable:IconDescription</note>
+        </trans-unit><trans-unit id="Table 2508189916 - Method 151507459 - NamedType 1288258319" size-unit="char" translate="no" xml:space="preserve">
+          <source>G/L Source Name Icon 250x250</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Help Resource - LocalVariable:IconDescription</note>
+        </trans-unit><trans-unit id="Table 2508189916 - Method 1328106787 - NamedType 1288258319" size-unit="char" translate="no" xml:space="preserve">
+          <source>G/L Source Name Icon 417x417</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Help Resource - LocalVariable:IconDescription</note>
+        </trans-unit><trans-unit id="Table 1175440386 - Field 3233782167 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Permission Level</source>
+          <target state="translated">Permission Level</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN User Access - Field:Permission Level</note>
+        </trans-unit><trans-unit id="Table 1175440386 - Field 3233782167 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Read,Update</source>
+          <target state="translated">Read,Update</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN User Access - Field:Permission Level</note>
+        </trans-unit><trans-unit id="Table 1175440386 - Field 3021697414 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User Security ID</source>
+          <target state="translated">User Security ID</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN User Access - Field:User Security ID</note>
+        </trans-unit><trans-unit id="Table 1175440386 - Field 3174909667 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Access Via User Group Code</source>
+          <target state="translated">Access Via User Group Code</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN User Access - Field:Access Via User Group Code</note>
+        </trans-unit><trans-unit id="Table 1175440386 - Field 129688762 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User Name</source>
+          <target state="translated">User Name</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN User Access - Field:User Name</note>
+        </trans-unit><trans-unit id="Table 1175440386 - Field 1581469095 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User Full Name</source>
+          <target state="translated">User Full Name</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN User Access - Field:User Full Name</note>
+        </trans-unit><trans-unit id="Table 1175440386 - Field 2831955675 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Has Permission</source>
+          <target state="translated">Has Permission</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN User Access - Field:Has Permission</note>
+        </trans-unit><trans-unit id="Table 1175440386 - Field 2038419342 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Assign Permission</source>
+          <target state="translated">Assign Permission</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN User Access - Field:Assign Permission</note>
+        </trans-unit><trans-unit id="Table 1175440386 - Field 1061021719 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Remove Permission</source>
+          <target state="translated">Remove Permission</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN User Access - Field:Remove Permission</note>
+        </trans-unit><trans-unit id="Table 1175440386 - Field 2439937807 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Updated Via User Group</source>
+          <target state="translated">Updated Via User Group</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN User Access - Field:Updated Via User Group</note>
+        </trans-unit><trans-unit id="Table 4126486020 - Field 3233782167 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Permission Level</source>
+          <target state="translated">Permission Level</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Group Access - Field:Permission Level</note>
+        </trans-unit><trans-unit id="Table 4126486020 - Field 3233782167 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Read,Update</source>
+          <target state="translated">Read,Update</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Group Access - Field:Permission Level</note>
+        </trans-unit><trans-unit id="Table 4126486020 - Field 43241205 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User Group Code</source>
+          <target state="translated">User Group Code</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Group Access - Field:User Group Code</note>
+        </trans-unit><trans-unit id="Table 4126486020 - Field 1341274843 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User Group Name</source>
+          <target state="translated">User Group Name</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Group Access - Field:User Group Name</note>
+        </trans-unit><trans-unit id="Table 4126486020 - Field 2831955675 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Has Permission</source>
+          <target state="translated">Has Permission</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Group Access - Field:Has Permission</note>
+        </trans-unit><trans-unit id="Table 4126486020 - Field 2038419342 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Assign Permission</source>
+          <target state="translated">Assign Permission</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Group Access - Field:Assign Permission</note>
+        </trans-unit><trans-unit id="Table 4126486020 - Field 1061021719 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Remove Permission</source>
+          <target state="translated">Remove Permission</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN Group Access - Field:Remove Permission</note>
+        </trans-unit><trans-unit id="Table 3047140855 - Field 3021697414 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User Security ID</source>
+          <target state="translated">User Security ID</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN User Setup - Field:User Security ID</note>
+        </trans-unit><trans-unit id="Table 3047140855 - Field 4045127740 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Notification Id</source>
+          <target state="translated">Notification Id</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table:O4N GL SN User Setup - Field:Notification Id</note>
+        </trans-unit><trans-unit id="Codeunit 1923820039 - NamedType 2842100407" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Populating G/L Source Names...</source>
+          <target state="translated">Populating G/L Source Names...</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit:O4N GL SN Mgt - GlobalVariable:ProcessInfo</note>
+        </trans-unit><trans-unit id="Codeunit 1923820039 - NamedType 2069865725" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Required permissions for table "%1" is missing.  Can't refresh lookup data.</source>
+          <target state="translated">Required permissions for table "%1" is missing.  Can't refresh lookup data.</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit:O4N GL SN Mgt - GlobalVariable:RequiredPermissionMissingErr</note>
+        </trans-unit><trans-unit id="Codeunit 1923820039 - NamedType 713180994" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L Source Names lookup table update finished</source>
+          <target state="translated">G/L Source Names lookup table update finished</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit:O4N GL SN Mgt - GlobalVariable:ProcessCompleted</note>
+        </trans-unit><trans-unit id="Codeunit 3280080720 - NamedType 882275687" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source is not defined</source>
+          <target state="translated">Source is not defined</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit:O4N GL Show Source Card - GlobalVariable:NoSourceDefined</note>
+        </trans-unit><trans-unit id="Codeunit 3280080720 - NamedType 1028476842" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 %2 %3 not found</source>
+          <target state="translated">%1 %2 %3 not found</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit:O4N GL Show Source Card - GlobalVariable:SourceNotFound</note>
+        </trans-unit><trans-unit id="Codeunit 1706989871 - NamedType 2065641905" size-unit="char" translate="no" xml:space="preserve">
+          <source>G/L-SOURCE NAMES, S</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit:O4N GL Source Name Install - GlobalVariable:PermissionSetToSetupGLSourceNames</note>
+        </trans-unit><trans-unit id="Codeunit 1706989871 - NamedType 2562940083" size-unit="char" translate="no" xml:space="preserve">
+          <source>G/L-SOURCE NAMES, E</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit:O4N GL Source Name Install - GlobalVariable:PermissionSetToUpdateGLSourceNames</note>
+        </trans-unit><trans-unit id="Codeunit 1706989871 - NamedType 2648853195" size-unit="char" translate="no" xml:space="preserve">
+          <source>G/L-SOURCE NAMES</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit:O4N GL Source Name Install - GlobalVariable:PermissionSetToUserGLSourceNames</note>
+        </trans-unit><trans-unit id="Codeunit 3732620711 - NamedType 3329025740" size-unit="char" translate="no" xml:space="preserve">
+          <source>1dd20373-27f8-4c68-a7b4-aab7ca199b98</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit:O4N GL SN Notifications - GlobalVariable:NewFeatuerNotificationIdTxt</note>
+        </trans-unit><trans-unit id="Codeunit 3732620711 - NamedType 1542739173" size-unit="char" translate="yes" xml:space="preserve">
+          <source>We have added a new feature to the General Ledger Entries.  Now you can see the Source Name column!</source>
+          <target state="translated">We have added a new feature to the General Ledger Entries.  Now you can see the Source Name column!</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit:O4N GL SN Notifications - GlobalVariable:NewFeatureMessageTxt</note>
+        </trans-unit><trans-unit id="Codeunit 3732620711 - NamedType 3624917100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show me the details</source>
+          <target state="translated">Show me the details</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit:O4N GL SN Notifications - GlobalVariable:NewFeatureLinkTxt</note>
+        </trans-unit><trans-unit id="Codeunit 3732620711 - NamedType 2082415633" size-unit="char" translate="no" xml:space="preserve">
+          <source>4fa8230a-53e5-4182-8423-373dc6f23f9d</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit:O4N GL SN Notifications - GlobalVariable:MissingPermissionNotificationIdTxt</note>
+        </trans-unit><trans-unit id="Codeunit 3732620711 - NamedType 523333275" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You don't have permissions to use our new feature that will show Source Names.  Please contact your administrator.</source>
+          <target state="translated">You don't have permissions to use our new feature that will show Source Names.  Please contact your administrator.</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit:O4N GL SN Notifications - GlobalVariable:MissingPermissionMessageText</note>
+        </trans-unit><trans-unit id="Codeunit 3732620711 - NamedType 1986711657" size-unit="char" translate="yes" xml:space="preserve">
+          <source>What should I show?</source>
+          <target state="translated">What should I show?</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit:O4N GL SN Notifications - GlobalVariable:MissingPermissionLinkTxt</note>
+        </trans-unit><trans-unit id="Codeunit 832878245 - NamedType 501564687" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do you want to hide this notification in the future?</source>
+          <target state="translated">Do you want to hide this notification in the future?</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit:O4N GL SN Feature Notif. - GlobalVariable:ShowAgainQst</note>
+        </trans-unit><trans-unit id="Codeunit 1890157437 - NamedType 501564687" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do you want to hide this notification in the future?</source>
+          <target state="translated">Do you want to hide this notification in the future?</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit:O4N GL SN Perm. Notif. - GlobalVariable:ShowAgainQst</note>
+        </trans-unit><trans-unit id="Codeunit 3669574782 - NamedType 2021711790" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Set up G/L Source Names</source>
+          <target state="translated">Set up G/L Source Names</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit:O4N GL SN Assisted Setup - GlobalVariable:GLSourceNamesTxt</note>
+        </trans-unit><trans-unit id="Codeunit 3669574782 - NamedType 2069865725" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You have not been granted required access rights to start the Assisted Setup.\\The Assisted Setup for G/L Source Names is about assigning the required permissions to users.  To be able to assign permissions you need to be granted either the SUPER og SECURITY permission set.</source>
+          <target state="translated">You have not been granted required access rights to start the Assisted Setup.\\The Assisted Setup for G/L Source Names is about assigning the required permissions to users.  To be able to assign permissions you need to be granted either the SUPER og SECURITY permission set.</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit:O4N GL SN Assisted Setup - GlobalVariable:RequiredPermissionMissingErr</note>
+        </trans-unit><trans-unit id="Codeunit 1005735586 - NamedType 3503631157" size-unit="char" translate="no" xml:space="preserve">
+          <source>G/L-SOURCE NAMES</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit:O4N GL SN Permission Mgt - GlobalVariable:ReadRoleId</note>
+        </trans-unit><trans-unit id="Codeunit 1005735586 - NamedType 4237602524" size-unit="char" translate="no" xml:space="preserve">
+          <source>G/L-SOURCE NAMES, E</source>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit:O4N GL SN Permission Mgt - GlobalVariable:UpdateRoleId</note>
+        </trans-unit><trans-unit id="Page 371913171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L Source Name List</source>
+          <target state="translated">G/L Source Name List</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN List - Page:O4N GL SN List</note>
+        </trans-unit><trans-unit id="Page 86709904 - Control 3233782167 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Indicates whether the user has full access or just read access to G/L Source Names Lookup table</source>
+          <target state="translated">Indicates whether the user has full access or just read access to G/L Source Names Lookup table</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Users ListPart - Control:Permission Level</note>
+        </trans-unit><trans-unit id="Page 86709904 - Control 539887058 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User Group Member</source>
+          <target state="translated">User Group Member</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Users ListPart - Control:User Group Member</note>
+        </trans-unit><trans-unit id="Page 86709904 - Control 539887058 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Indicates if this user is a member of a user group in one of the previous steps.</source>
+          <target state="translated">Indicates if this user is a member of a user group in one of the previous steps.</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Users ListPart - Control:User Group Member</note>
+        </trans-unit><trans-unit id="Page 86709904 - Control 2831955675 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Indicates whether the user already has required permissions</source>
+          <target state="translated">Indicates whether the user already has required permissions</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Users ListPart - Control:Has Permission</note>
+        </trans-unit><trans-unit id="Page 86709904 - Control 2038419342 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This will assign the required permission to this user when the wizard completes.</source>
+          <target state="translated">This will assign the required permission to this user when the wizard completes.</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Users ListPart - Control:Assign Permission</note>
+        </trans-unit><trans-unit id="Page 86709904 - Control 1061021719 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This will remove current permission from this user when the wizard completes.</source>
+          <target state="translated">This will remove current permission from this user when the wizard completes.</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Users ListPart - Control:Remove Permission</note>
+        </trans-unit><trans-unit id="Page 3595059435 - Control 3233782167 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Indicates whether members of this user group have full access or just read access to G/L Source Names Lookup table</source>
+          <target state="translated">Indicates whether members of this user group have full access or just read access to G/L Source Names Lookup table</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Group ListPart - Control:Permission Level</note>
+        </trans-unit><trans-unit id="Page 3595059435 - Control 2831955675 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Indicates whether the user that are member of this user group already have required permissions</source>
+          <target state="translated">Indicates whether the user that are member of this user group already have required permissions</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Group ListPart - Control:Has Permission</note>
+        </trans-unit><trans-unit id="Page 3595059435 - Control 2038419342 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This will assign the required permission to the members of this user group when the wizard completes.</source>
+          <target state="translated">This will assign the required permission to the members of this user group when the wizard completes.</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Group ListPart - Control:Assign Permission</note>
+        </trans-unit><trans-unit id="Page 3595059435 - Control 1061021719 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This will remove current permission from the members of this user group when the wizard completes.</source>
+          <target state="translated">This will remove current permission from the members of this user group when the wizard completes.</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Group ListPart - Control:Remove Permission</note>
+        </trans-unit><trans-unit id="Page 549180695 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L Source Names DrillDown</source>
+          <target state="translated">G/L Source Names DrillDown</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SNs DrillDown - Page:O4N GL SNs DrillDown</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L Source Name Setup</source>
+          <target state="translated">G/L Source Name Setup</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Page:O4N GL SN Setup Wizard</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Control 118272148 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Welcome to G/L Source Name Setup</source>
+          <target state="translated">Welcome to G/L Source Name Setup</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Control:Welcome to G/L Source Name Setup</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Control 1612614122 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>To be able to use Source Names on G/L Entries, users must have required permissions.</source>
+          <target state="translated">To be able to use Source Names on G/L Entries, users must have required permissions.</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Control:Group18</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Control 974917505 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Users that can update master tables, like; Customer, Vendor, Bank Account, Fixed Asset and Employee, must be able to update the G/L Source Name lookup table.</source>
+          <target state="translated">Users that can update master tables, like; Customer, Vendor, Bank Account, Fixed Asset and Employee, must be able to update the G/L Source Name lookup table.</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Control:Group19</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Control 3647570164 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Let's go!</source>
+          <target state="translated">Let's go!</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Control:Let's go!</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Control 1134365254 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Choose Set Defaults and all required permissions will be automatically assigned to user group members and users based on current permissions to the G/L Entries and the above master tables.</source>
+          <target state="translated">Choose Set Defaults and all required permissions will be automatically assigned to user group members and users based on current permissions to the G/L Entries and the above master tables.</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Control:Group70009201</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Control 727926705 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Choose Next so you can manually set up permissions for users and groups.</source>
+          <target state="translated">Choose Next so you can manually set up permissions for users and groups.</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Control:Group22</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Control 1548525519 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check the Assign or Remove Permisson Box to change read permission for the user group members</source>
+          <target state="translated">Check the Assign or Remove Permisson Box to change read permission for the user group members</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Control:Group2</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Control 3658412756 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User Groups requiring read access</source>
+          <target state="translated">User Groups requiring read access</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Control:GroupsWithReadAccess</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Control 3580960544 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check the Assign or Remove Permisson Box to change both read and update permission for the user group members</source>
+          <target state="translated">Check the Assign or Remove Permisson Box to change both read and update permission for the user group members</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Control:Group1000000002</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Control 2987393997 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User Groups requiring update access</source>
+          <target state="translated">User Groups requiring update access</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Control:GroupsWithUpdateAccess</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Control 1199083099 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check the Assign or Remove Permisson Box to change read permission for the user.  User Group members should be managed through the user group only.</source>
+          <target state="translated">Check the Assign or Remove Permisson Box to change read permission for the user.  User Group members should be managed through the user group only.</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Control:Group1000000007</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Control 2940688026 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Users requiring read access</source>
+          <target state="translated">Users requiring read access</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Control:UsersWithReadAccess</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Control 2474476333 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Check the Assign or Remove Permisson Box to change both read and update permission for the user.  User Group members should be managed through the user group only</source>
+          <target state="translated">Check the Assign or Remove Permisson Box to change both read and update permission for the user.  User Group members should be managed through the user group only</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Control:Group1000000005</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Control 2103052239 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Users requiring update access</source>
+          <target state="translated">Users requiring update access</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Control:UsersWithUpdateAccess</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Control 3916409790 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enter the Registration details.</source>
+          <target state="translated">Enter the Registration details.</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Control:Group27</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Control 661833578 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Your registration will only be stored in Dynamics365.  Your E-Mail Address is not shared with anyone.</source>
+          <target state="translated">Your registration will only be stored in Dynamics365.  Your E-Mail Address is not shared with anyone.</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Control:Registration E-Mail Address</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Control 4153939316 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>We suggest that you refresh the data in G/L Source Names lookup table before finishing this wizard.  You can come back here any time to refresh the lookup table again</source>
+          <target state="translated">We suggest that you refresh the data in G/L Source Names lookup table before finishing this wizard.  You can come back here any time to refresh the lookup table again</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Control:Group70009203</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Control 1546979963 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>That's it!</source>
+          <target state="translated">That's it!</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Control:That's it!</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Control 1365623322 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>To refresh the data in the G/L Source Name lookup table, choose Update G/L Source Names.</source>
+          <target state="translated">To refresh the data in the G/L Source Name lookup table, choose Update G/L Source Names.</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Control:Group23</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Control 2641016556 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>To enable Source Names in G/L Entries, choose Finish.</source>
+          <target state="translated">To enable Source Names in G/L Entries, choose Finish.</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Control:Group25</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Action 2438272767 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Back</source>
+          <target state="translated">Back</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Action:ActionBack</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Action 914282563 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Next</source>
+          <target state="translated">Next</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Action:ActionNext</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Action 2679202735 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Set Defaults</source>
+          <target state="translated">Set Defaults</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Action:ActionDefault</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Action 2679202735 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Updates Permissions to all users and user groups as suggested</source>
+          <target state="translated">Updates Permissions to all users and user groups as suggested</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Action:ActionDefault</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Action 1986928548 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Update G/L Source Names</source>
+          <target state="translated">Update G/L Source Names</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Action:ActionUpdateSourceLookup</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Action 1986928548 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This action will update the G/L Source Names lookup table</source>
+          <target state="translated">This action will update the G/L Source Names lookup table</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Action:ActionUpdateSourceLookup</note>
+        </trans-unit><trans-unit id="Page 3431183161 - Action 3259912055 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Finish</source>
+          <target state="translated">Finish</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - Action:ActionFinish</note>
+        </trans-unit><trans-unit id="Page 3431183161 - NamedType 3476492343" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L Source Names have not been set up.\\Are you sure you want to exit?</source>
+          <target state="translated">G/L Source Names have not been set up.\\Are you sure you want to exit?</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - GlobalVariable:NAVNotSetUpQst</note>
+        </trans-unit><trans-unit id="Page 3431183161 - NamedType 601425374" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Registration E-Mail Address is missing</source>
+          <target state="translated">Registration E-Mail Address is missing</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page:O4N GL SN Setup Wizard - GlobalVariable:RegistrationEMailAddressMissingErr</note>
+        </trans-unit><trans-unit id="PageExtension 934504585 - Control 1195644 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the type of the master record associated with this entry</source>
+          <target state="translated">Specifies the type of the master record associated with this entry</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension:pageextension70009201 - Control:O4N Source Type</note>
+        </trans-unit><trans-unit id="PageExtension 934504585 - Control 1139953745 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the master record associated with this entry</source>
+          <target state="translated">Specifies the number of the master record associated with this entry</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension:pageextension70009201 - Control:O4N Source No.</note>
+        </trans-unit><trans-unit id="PageExtension 934504585 - Control 384633921 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the master record associated with this entry</source>
+          <target state="translated">Specifies the name of the master record associated with this entry</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension:pageextension70009201 - Control:O4N Source Name</note>
+        </trans-unit><trans-unit id="PageExtension 934504585 - Action 3094365984 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Card</source>
+          <target state="translated">Source Card</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension:pageextension70009201 - Action:O4N SourceCard</note>
+        </trans-unit><trans-unit id="PageExtension 934504585 - Action 3094365984 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show the card for the master record defined as the source for this entry</source>
+          <target state="translated">Show the card for the master record defined as the source for this entry</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension:pageextension70009201 - Action:O4N SourceCard</note>
+        </trans-unit><trans-unit id="TableExtension 209641987 - Field 384633921 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Name</source>
+          <target state="translated">Source Name</target><note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension:tableextension70009202 - Field:O4N Source Name</note>
+        </trans-unit></group></body></file></xliff>

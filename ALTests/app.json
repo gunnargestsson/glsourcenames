@@ -1,34 +1,35 @@
 {
-  "id": "fc4df91e-dfa4-4dc6-84d4-3aea630da8dd",
-  "name": "HelloWorld Unit Test",
-  "publisher": "Navision.guru",
-  "brief": "",
-  "description": "",
-  "version": "1.0.0.0",
-  "privacyStatement": "",
-  "EULA": "",
-  "help": "",
-  "url": "",
-  "logo": "",
-  "target": "Extension",
-  "showMyCode": true,
-  "features": [
-    "TranslationFile"
-  ],
+  "id": "35dbc8d5-a872-45cc-9809-2a3665b1850e",
+  "name": "G/L Source Names Tests",
+  "publisher": "Objects4NAV",
+  "brief":  "Test Tool for Source Names in G/L Entries",
+  "description":  "G/L Source Names adds the source name to the G/L Entries page.  Source Name is the customer in sales transaction and the vendor in purchase transactions.  This extension is used to test the functionality automatically.",
+  "version":  "1.0.0.0",
+  "privacyStatement":  "http://objects4nav.com/privacy",
+  "EULA":  "http://objects4nav.com/terms",
+  "help":  "http://objects4nav.com/glsourcenames",
+  "url":  "http://objects4nav.com",
+  "logo":  "Images\\Logo250x250.png",
   "capabilities": [],
   "dependencies": [
     {
-      "appId": "ea2c2ec3-4d1b-4063-82ce-b32ec1d25dfb",
-      "name": "HelloWorld",
-      "publisher": "Navision.guru",
-      "version": "1.0.0.0"
+      "name": "G/L Source Names",
+      "publisher": "Objects4NAV",
+      "version": "2.1.1.0",
+      "appId": "479e77f3-031a-49fe-bb6a-314464c6a9a8"
     }
   ],
   "screenshots": [],
-  "platform": "13.0.0.0",
-  "application": "13.0.0.0",
-  "idRange": {
-    "from": 50100,
-    "to": 50149
-  }
+  "platform": "12.0.12928.0",
+  "application": "12.0.21812.0",
+  "target": "Extension",
+  "showMyCode": true,
+  "idRange":  {
+                    "from":  70009240,
+                    "to":  70009249
+                },
+  "features": [
+    "TranslationFile"
+  ]  
+              
 }

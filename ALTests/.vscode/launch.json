@@ -5,13 +5,13 @@
                                "type":  "al",
                                "request":  "launch",
                                "name":  "Publish to local server",
-                               "server":  "http://W1",
-                               "port":  7049,
-                               "tenant":  "Default",
+                               "server":  "http://GLSOURCENAMES",
+                               "tenant":  "default",
                                "serverInstance":  "NAV",
                                "authentication":  "Windows",
-                               "startupObjectId":  130401,
-                               "startupObjectType":  "Page"
+                               "schemaUpdateMode":  "Synchronize",
+                               "startupObjectId": 130401,
+                               "startupObjectType": "Page"
                            }
                        ]
 }

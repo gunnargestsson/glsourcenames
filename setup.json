@@ -1,13 +1,54 @@
 ﻿{
-    "branchId":  "5e70ced0-ba68-47d0-ac83-a0b92ab5d164",
-    "dockerImage":  "microsoft/bcsandbox",
-    "dockerMemoryLimit": "4G",
-    "navVersion":  "13.0.0.0",
-    "navSolution":  "W1",
-    "projectName":  "W1",
-    "storeAllObjects":  "true",
-    "uidOffset":  "50100",
-    "objectProperties":  "true",
-    "datetimeCulture":  "en-US",
-    "targetPlatform":  "Dynamics365"
+  "branchId": "479e77f3-031a-49fe-bb6a-314464c6a9a8",
+  "dockerImage":  "bcinsider.azurecr.io/bcsandbox-master",
+  "navVersion":  "13.0.0.0",
+  "navSolution": "W1",
+  "projectName": "GLSOURCENAMES",
+  "baseBranch": "master",
+  "storeAllObjects": "true",
+  "uidOffset": "70009200",  
+  "versionList": "GLSN11.0",
+  "objectProperties": "true",
+  "datetimeCulture": "is-IS",
+  "targetPlatform": "Dynamics365",
+  "appId": "479e77f3-031a-49fe-bb6a-314464c6a9a8",
+  "appName": "G/L Source Names",
+  "appPublisher": "Objects4NAV",
+  "appVersion": "2.0.0.0",
+  "appCompatibilityId": "",
+  "appManifestName": "G/L Source Names",
+  "appManifestDescription": "G/L Source Names adds the source name to the G/L Entries page.  Source Name is the customer in sales transaction and the vendor in purchase transactions", 
+  "appBriefDescription": "Source Names in G/L Entries",
+  "appPrivacyStatement": "http://objects4nav.com/privacy",
+  "appEula": "http://objects4nav.com/terms",
+  "appHelp": "http://objects4nav.com/glsourcenames",
+  "appUrl": "http://objects4nav.com",
+  "appIcon": "Logo250x250",  
+  "appDependencies":
+    [
+  
+    ],
+  "appPrerequisites":
+    [
+  
+    ],
+  "permissionSets":
+    [
+  		{"id": "G/L-SOURCE NAMES",    "description": "Read G/L Source Names"},
+  		{"id": "G/L-SOURCE NAMES, E", "description": "Update G/L Source Names"},
+  		{"id": "G/L-SOURCE NAMES, S", "description": "Setup G/L Source Names"}
+  	],
+  "webServices":
+    [
+    
+    ],
+  "dotnetAddins":
+    [
+  
+    ],
+  "tableDatas":
+    [
+   
+    ]
 }
+
