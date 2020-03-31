@@ -53,5 +53,6 @@
     }],
     "features": [
         "TranslationFile"
-    ]
+    ],
+    "contextSensitiveHelpUrl": "https://objects4nav.com/glsourcenames/"
 }

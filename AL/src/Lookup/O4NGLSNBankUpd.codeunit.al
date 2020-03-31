@@ -7,7 +7,7 @@
 
     var
         GLSourceNamesMgt: Codeunit "O4N GL SN Mgt";
-        SourceType: Option " ",Customer,Vendor,"Bank Account","Fixed Asset",Employee;
+        SourceType: Enum "Gen. Journal Source Type";
 
     [EventSubscriber(ObjectType::Table, database::"Bank Account", 'OnAfterInsertEvent', '', true, false)]
     local procedure UpdateSourceNameOnBankAccInsert(var Rec: Record "Bank Account"; RunTrigger: Boolean);

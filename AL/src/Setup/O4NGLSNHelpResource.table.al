@@ -37,15 +37,15 @@
 
     procedure InitializeResources();
     begin
-        InitAssistedSetupHelpPageUrl;
-        InitAssistedSetupEmbedVideoUrl;
-        InitUsageHelpEmbedVideoUrl;
-        InitUsageHelpPageUrl;
-        InitIcon70x70;
-        InitIcon150x150;
-        InitIcon240x240;
-        InitIcon250x250;
-        InitIcon417x417;
+        InitAssistedSetupHelpPageUrl();
+        InitAssistedSetupEmbedVideoUrl();
+        InitUsageHelpEmbedVideoUrl();
+        InitUsageHelpPageUrl();
+        InitIcon70x70();
+        InitIcon150x150();
+        InitIcon240x240();
+        InitIcon250x250();
+        InitIcon417x417();
     end;
 
     procedure GetUrl(SetupCode: Code[50]): Text;
@@ -63,133 +63,135 @@
 
     procedure GetSetupHelpCode(): Code[50];
     var
-        SetupHelpCode: Label 'SETUPHELP', Locked = true;
+        SetupHelpCodeTxt: Label 'SETUPHELP', Locked = true;
     begin
-        exit(SetupHelpCode);
+        exit(SetupHelpCodeTxt);
     end;
 
     procedure GetSetupVideoCode(): Code[50];
     var
-        SetupVideoCode: Label 'SETUPVIDEO', Locked = true;
+        SetupVideoCodeTxt: Label 'SETUPVIDEO', Locked = true;
     begin
-        exit(SetupVideoCode);
+        exit(SetupVideoCodeTxt);
     end;
 
     procedure GetUsageHelpCode(): Code[50];
     var
-        UsageHelpCode: Label 'USAGEHELP', Locked = true;
+        UsageHelpCodeTxt: Label 'USAGEHELP', Locked = true;
     begin
-        exit(UsageHelpCode);
+        exit(UsageHelpCodeTxt);
     end;
 
     procedure GetUsageVideoCode(): Code[50];
     var
-        UsageVideoCode: Label 'USAGEVIDEO', Locked = true;
+        UsageVideoCodeTxt: Label 'USAGEVIDEO', Locked = true;
     begin
-        exit(UsageVideoCode);
+        exit(UsageVideoCodeTxt);
     end;
 
     procedure Get70PXIconCode(): Code[50];
     var
-        IconCode: Label 'GLSOURCENAMES_70PXICON', Locked = true;
+        IconCodeTxt: Label 'GLSOURCENAMES_70PXICON', Locked = true;
     begin
-        exit(IconCode)
+        exit(IconCodeTxt)
     end;
 
     procedure Get150PXIconCode(): Code[50];
     var
-        IconCode: Label 'GLSOURCENAMES_150PXICON', Locked = true;
+        IconCodeTxt: Label 'GLSOURCENAMES_150PXICON', Locked = true;
     begin
-        exit(IconCode)
+        exit(IconCodeTxt)
     end;
 
     procedure Get240PXIconCode(): Code[50];
     var
-        IconCode: Label 'GLSOURCENAMES_240PXICON', Locked = true;
+        IconCodeTxt: Label 'GLSOURCENAMES_240PXICON', Locked = true;
     begin
-        exit(IconCode)
+        exit(IconCodeTxt)
     end;
 
     procedure Get250PXIconCode(): Code[50];
     var
-        IconCode: Label 'GLSOURCENAMES_250PXICON', Locked = true;
+        IconCodeTxt: Label 'GLSOURCENAMES_250PXICON', Locked = true;
     begin
-        exit(IconCode)
+        exit(IconCodeTxt)
     end;
 
     procedure Get417PXIconCode(): Code[50];
     var
-        IconCode: Label 'GLSOURCENAMES_417PXICON', Locked = true;
+        IconCodeTxt: Label 'GLSOURCENAMES_417PXICON', Locked = true;
     begin
-        exit(IconCode)
+        exit(IconCodeTxt)
     end;
 
     local procedure InitAssistedSetupHelpPageUrl();
     var
-        SetupHelpUrl: Label 'http://Objects4NAV.com/GLSourceNames', Locked = true;
+        SetupHelpUrlTxt: Label 'http://Objects4NAV.com/GLSourceNames', Locked = true;
     begin
-        InitUrl(GetSetupHelpCode, SetupHelpUrl);
+        InitUrl(GetSetupHelpCode(), SetupHelpUrlTxt);
     end;
 
     local procedure InitAssistedSetupEmbedVideoUrl();
     var
-        SetupVideoUrl: Label 'https://www.youtube.com/embed/TYo1ZJ5jizs', Locked = true;
+        SetupVideoUrlTxt: Label 'https://www.youtube.com/embed/Ih7fuqwIR-Q', Locked = true;
     begin
-        InitUrl(GetSetupVideoCode, SetupVideoUrl);
+        InitUrl(GetSetupVideoCode(), SetupVideoUrlTxt);
     end;
 
     local procedure InitUsageHelpPageUrl();
     var
-        UsageHelpUrl: Label 'http://Objects4NAV.com/GLSourceNames', Locked = true;
+        UsageHelpUrlTxt: Label 'http://Objects4NAV.com/GLSourceNames', Locked = true;
     begin
-        InitUrl(GetUsageHelpCode, UsageHelpUrl);
+        InitUrl(GetUsageHelpCode(), UsageHelpUrlTxt);
     end;
 
     local procedure InitUsageHelpEmbedVideoUrl();
     var
-        UsageVideoUrl: Label 'https://www.youtube.com/embed/Xj5TATt7Pns', Locked = true;
+        UsageVideoUrlTxt: Label 'https://www.youtube.com/embed/7nlKDDpZIE8', Locked = true;
     begin
-        InitUrl(GetUsageVideoCode, UsageVideoUrl);
+        InitUrl(GetUsageVideoCode(), UsageVideoUrlTxt);
     end;
 
     local procedure InitIcon70x70();
     var
-        IconDescription: Label 'G/L Source Name Icon 70x70', Locked = true;
         GLSourceNameIcon: Codeunit "O4N GL SN Icon 70x70";
+        IconDescriptionTxt: Label 'G/L Source Name Icon 70x70', Locked = true;
     begin
-        InitIcon(Get70PXIconCode, IconDescription, GLSourceNameIcon.GetIcon());
+        InitIcon(Get70PXIconCode(), IconDescriptionTxt, GLSourceNameIcon.GetIcon());
     end;
 
     local procedure InitIcon150x150();
     var
-        IconDescription: Label 'G/L Source Name Icon 150x150', Locked = true;
         GLSourceNameIcon: Codeunit "O4N GL SN Icon 150x150";
+        IconDescriptionTxt: Label 'G/L Source Name Icon 150x150', Locked = true;
     begin
-        InitIcon(Get150PXIconCode, IconDescription, GLSourceNameIcon.GetIcon());
+        InitIcon(Get150PXIconCode(), IconDescriptionTxt, GLSourceNameIcon.GetIcon());
     end;
 
     local procedure InitIcon240x240();
     var
-        IconDescription: Label 'G/L Source Name Icon 240x240', Locked = true;
         GLSourceNameIcon: Codeunit "O4N GL SN Icon 240x240";
+        IconDescriptionTxt: Label 'G/L Source Name Icon 240x240', Locked = true;
+
     begin
-        InitIcon(Get70PXIconCode, IconDescription, GLSourceNameIcon.GetIcon());
+        InitIcon(Get70PXIconCode(), IconDescriptionTxt, GLSourceNameIcon.GetIcon());
     end;
 
     local procedure InitIcon250x250();
     var
-        IconDescription: Label 'G/L Source Name Icon 250x250', Locked = true;
         GLSourceNameIcon: Codeunit "O4N GL SN Icon 250x250";
+        IconDescriptionTxt: Label 'G/L Source Name Icon 250x250', Locked = true;
+
     begin
-        InitIcon(Get250PXIconCode, IconDescription, GLSourceNameIcon.GetIcon());
+        InitIcon(Get250PXIconCode(), IconDescriptionTxt, GLSourceNameIcon.GetIcon());
     end;
 
     local procedure InitIcon417x417();
     var
-        IconDescription: Label 'G/L Source Name Icon 417x417', Locked = true;
         GLSourceNameIcon: Codeunit "O4N GL SN Icon 417x417";
+        IconDescriptionTxt: Label 'G/L Source Name Icon 417x417', Locked = true;
     begin
-        InitIcon(Get417PXIconCode, IconDescription, GLSourceNameIcon.GetIcon());
+        InitIcon(Get417PXIconCode(), IconDescriptionTxt, GLSourceNameIcon.GetIcon());
     end;
 
     local procedure InitUrl(UrlCode: Code[50]; UrlLink: Text);
@@ -199,8 +201,8 @@
         with GLSourceNameHelpResource do
             if not GET(UrlCode) then begin
                 Code := UrlCode;
-                Url := UrlLink;
-                INSERT;
+                Url := CopyStr(UrlLink, 1, MaxStrLen(Url));
+                INSERT();
             end;
     end;
 
@@ -219,7 +221,7 @@
             if not GET(IconCode) then begin
                 Code := IconCode;
                 Icon.IMPORTSTREAM(InStr, IconDescription, 'image/png');
-                INSERT;
+                INSERT();
             end;
     end;
 }

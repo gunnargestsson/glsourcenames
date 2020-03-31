@@ -19,16 +19,15 @@ codeunit 70009249 "O4N GL Test Codeunits"
         VendLib: Codeunit "Library - Purchase";
         FALib: Codeunit "Library - Fixed Asset";
         EmplLib: Codeunit "Library - Human Resource";
-        SourceName: Text[50];
-        PageErr: Label 'Source Card: %1 error';
-        SourceNameUpdateFailesErr: Label 'Source Name Update failed for %1 %2';
+        SourceName: Text[100];
+        PageErr: Label 'Source Card: %1 error', Locked = true;
+        SourceNameUpdateFailesErr: Label 'Source Name Update failed for %1 %2', Locked = true;
 
     [Test]
     procedure TestRegisterAssistedSetup()
     var
-        AssistedSetupPage: TestPage "Assisted Setup";
         AssistedSetup: Codeunit "Assisted Setup";
-        AppMgt: Codeunit "O4N GL SN App Mgt.";
+        AssistedSetupPage: TestPage "Assisted Setup";
     begin
         // [SCENARIO] Discovery for assisted setup should find the G/L Source Names Setup Wizard
         // [GIVEN] An temporary instance of assisted setup   
@@ -36,14 +35,13 @@ codeunit 70009249 "O4N GL Test Codeunits"
         AssistedSetupPage.OpenView();
         AssistedSetupPage.Close();
         // [THEN] Assisted setup for G/L Source Names should be found
-        Assert.IsTrue(AssistedSetup.Exists(AppMgt.GetAppId(), page::"O4N GL SN Setup Wizard"), 'Failed to verify the Assisted Setup Page registered');
+        Assert.IsTrue(AssistedSetup.Exists(page::"O4N GL SN Setup Wizard"), 'Failed to verify the Assisted Setup Page registered');
     end;
 
     [Test]
     [HandlerFunctions('AssistedSetupMessageHandler,ConfirmAssistedSetupUpdateInvoke')]
     procedure TestAssistedSetup()
     var
-        GLAcc: Record "G/L Account";
         Cust: Record Customer;
         Vend: Record Vendor;
         BankAcc: Record "Bank Account";
@@ -81,7 +79,7 @@ codeunit 70009249 "O4N GL Test Codeunits"
     procedure TestCustomerCreationUpdateDeleteEvents()
     var
         Cust: record Customer;
-        SourceType: Option " ",Customer,Vendor,"Bank Account","Fixed Asset",Employee;
+        SourceType: Enum "Gen. Journal Source Type";
     begin
         // [SCENARIO] Create, update and delete of a master table should be reflected the source names lookup table
         // [GIVEN] Default setup
@@ -108,7 +106,7 @@ codeunit 70009249 "O4N GL Test Codeunits"
     procedure TestVendorCreationUpdateDeleteEvents()
     var
         Vend: record Vendor;
-        SourceType: Option " ",Customer,Vendor,"Bank Account","Fixed Asset",Employee;
+        SourceType: Enum "Gen. Journal Source Type";
     begin
         // [SCENARIO] Create, update and delete of a master table should be reflected the source names lookup table
         // [GIVEN] Default setup
@@ -135,7 +133,7 @@ codeunit 70009249 "O4N GL Test Codeunits"
     procedure TestBankAccountCreationUpdateDeleteEvents()
     var
         BankAcc: record "Bank Account";
-        SourceType: Option " ",Customer,Vendor,"Bank Account","Fixed Asset",Employee;
+        SourceType: Enum "Gen. Journal Source Type";
     begin
         // [SCENARIO] Create, update and delete of a master table should be reflected the source names lookup table
         // [GIVEN] Default setup
@@ -162,7 +160,7 @@ codeunit 70009249 "O4N GL Test Codeunits"
     procedure TestFixedAssetCreationUpdateDeleteEvents()
     var
         FA: Record "Fixed Asset";
-        SourceType: Option " ",Customer,Vendor,"Bank Account","Fixed Asset",Employee;
+        SourceType: Enum "Gen. Journal Source Type";
     begin
         // [SCENARIO] Create, update and delete of a master table should be reflected the source names lookup table
         // [GIVEN] Default setup
@@ -189,7 +187,7 @@ codeunit 70009249 "O4N GL Test Codeunits"
     procedure TestEmployeeCreationUpdateDeleteEvents()
     var
         Employee: Record Employee;
-        SourceType: Option " ",Customer,Vendor,"Bank Account","Fixed Asset",Employee;
+        SourceType: Enum "Gen. Journal Source Type";
     begin
         // [SCENARIO] Create, update and delete of a master table should be reflected the source names lookup table
         // [GIVEN] Default setup
@@ -203,7 +201,7 @@ codeunit 70009249 "O4N GL Test Codeunits"
         Employee."First Name" := 'New Name';
         Employee.Modify();
         // [THEN] source names should match the new name
-        TestSourceNameInLookupTable(SourceType::Employee, Employee."No.", CopyStr(Employee.FullName(), 1, 50));
+        TestSourceNameInLookupTable(SourceType::Employee, Employee."No.", CopyStr(Employee.FullName(), 1, MaxStrLen(Employee."First Name")));
 
         // [WHEN] Deleting a record
         Employee.Delete();
@@ -219,7 +217,7 @@ codeunit 70009249 "O4N GL Test Codeunits"
         GLEntry: Record "G/L Entry";
         Cust: record Customer;
         GLEntries: TestPage "General Ledger Entries";
-        SourceType: Option " ",Customer,Vendor,"Bank Account","Fixed Asset",Employee;
+        SourceType: Enum "Gen. Journal Source Type";
     begin
         // [SCENARIO] Test G/L Entry Source Card Lookup Action
         // [GIVEN] Default setup, new master record and G/L Entry
@@ -254,7 +252,7 @@ codeunit 70009249 "O4N GL Test Codeunits"
         GLEntry: Record "G/L Entry";
         Vend: record Vendor;
         GLEntries: TestPage "General Ledger Entries";
-        SourceType: Option " ",Customer,Vendor,"Bank Account","Fixed Asset",Employee;
+        SourceType: Enum "Gen. Journal Source Type";
     begin
         // [SCENARIO] Test G/L Entry Source Card Lookup Action
         // [GIVEN] Default setup, new master record and G/L Entry
@@ -289,7 +287,7 @@ codeunit 70009249 "O4N GL Test Codeunits"
         GLEntry: Record "G/L Entry";
         BankAcc: record "Bank Account";
         GLEntries: TestPage "General Ledger Entries";
-        SourceType: Option " ",Customer,Vendor,"Bank Account","Fixed Asset",Employee;
+        SourceType: Enum "Gen. Journal Source Type";
     begin
         // [SCENARIO] Test G/L Entry Source Card Lookup Action
         // [GIVEN] Default setup, new master record and G/L Entry
@@ -324,7 +322,7 @@ codeunit 70009249 "O4N GL Test Codeunits"
         GLEntry: Record "G/L Entry";
         FA: record "Fixed Asset";
         GLEntries: TestPage "General Ledger Entries";
-        SourceType: Option " ",Customer,Vendor,"Bank Account","Fixed Asset",Employee;
+        SourceType: Enum "Gen. Journal Source Type";
     begin
         // [SCENARIO] Test G/L Entry Source Card Lookup Action
         // [GIVEN] Default setup, new master record and G/L Entry
@@ -359,7 +357,7 @@ codeunit 70009249 "O4N GL Test Codeunits"
         GLEntry: Record "G/L Entry";
         Employee: record Employee;
         GLEntries: TestPage "General Ledger Entries";
-        SourceType: Option " ",Customer,Vendor,"Bank Account","Fixed Asset",Employee;
+        SourceType: Enum "Gen. Journal Source Type";
     begin
         // [SCENARIO] Test G/L Entry Source Card Lookup Action
         // [GIVEN] DeEmployeeult setup, new master record and G/L Entry
@@ -408,7 +406,7 @@ codeunit 70009249 "O4N GL Test Codeunits"
         EmplLib.SetupEmployeeNumberSeries();
     end;
 
-    local procedure CreateCLEntry(SourceType: Option; SourceNo: Code[20]; var GLEntry: Record "G/L Entry")
+    local procedure CreateCLEntry(SourceType: Enum "Gen. Journal Source Type"; SourceNo: Code[20]; var GLEntry: Record "G/L Entry")
     begin
         if not GLEntry.FindLast() then;
         GLEntry."Entry No." += 1;
@@ -440,7 +438,7 @@ codeunit 70009249 "O4N GL Test Codeunits"
         Assert.RecordCount(GLSourceName, ExpectedNoOfRecords);
     end;
 
-    local procedure TestSourceExistsInLookupTable(SourceType: Option; SourceNo: code[20])
+    local procedure TestSourceExistsInLookupTable(SourceType: Enum "Gen. Journal Source Type"; SourceNo: code[20])
     var
         GLSourceName: record "O4N GL SN";
     begin
@@ -449,7 +447,7 @@ codeunit 70009249 "O4N GL Test Codeunits"
         Assert.RecordIsNotEmpty(GLSourceName);
     end;
 
-    local procedure TestSourceNotExistsInLookupTable(SourceType: Option; SourceNo: code[20])
+    local procedure TestSourceNotExistsInLookupTable(SourceType: Enum "Gen. Journal Source Type"; SourceNo: code[20])
     var
         GLSourceName: record "O4N GL SN";
     begin
@@ -458,7 +456,7 @@ codeunit 70009249 "O4N GL Test Codeunits"
         Assert.RecordIsEmpty(GLSourceName);
     end;
 
-    local procedure TestSourceNameInLookupTable(SourceType: Option; SourceNo: code[20]; SourceName: Text[100])
+    local procedure TestSourceNameInLookupTable(SourceType: Enum "Gen. Journal Source Type"; SourceNo: code[20]; SourceName: Text[100])
     var
         GLSourceName: record "O4N GL SN";
     begin

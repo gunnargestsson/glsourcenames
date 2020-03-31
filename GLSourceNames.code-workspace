@@ -7,6 +7,9 @@
 			"path": "ALTests"
 		}
 	],
-	"settings": {	
+	"settings": {
+		"al.codeAnalyzers": ["${AppSourceCop}","${CodeCop}","${UICop}"],
+		"al.enableCodeAnalysis": true,
+		"CRS.FileNamePattern": "<ObjectNameShort>.<ObjectType>.al"
 	}
 }

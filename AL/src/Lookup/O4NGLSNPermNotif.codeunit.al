@@ -5,9 +5,6 @@
     begin
     end;
 
-    var
-        ShowAgainQst: Label 'Do you want to hide this notification in the future?';
-
     procedure ShowAssistedSetupToUser(MissingPermissionNotification: Notification);
     begin
         StartVideo('https://www.youtube.com/embed/h9qmD6AfqpQ');

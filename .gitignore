@@ -1,4 +1,5 @@
 *.app
 launch.json
 rad.json
+settings.json
 *.g.xlf
