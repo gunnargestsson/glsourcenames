@@ -15,22 +15,22 @@
             "name": "Application",
             "publisher": "Microsoft",
             "version": "16.0.0.0",
-            "appId": "c1335042-3002-4257-bf8a-75c898ccb1b8"
+            "id": "c1335042-3002-4257-bf8a-75c898ccb1b8"
         },
         {
-            "appId": "23de40a6-dfe8-4f80-80db-d70f83ce8caf",
+            "id": "23de40a6-dfe8-4f80-80db-d70f83ce8caf",
             "name": "Test Runner",
             "publisher": "Microsoft",
             "version": "16.0.0.0"
         },
         {
-            "appId": "dd0be2ea-f733-4d65-bb34-a28f4624fb14",
+            "id": "dd0be2ea-f733-4d65-bb34-a28f4624fb14",
             "name": "Library Assert",
             "publisher": "Microsoft",
             "version": "16.0.0.0"
         },
         {
-            "appId": "5d86850b-0d76-4eca-bd7b-951ad998e997",
+            "id": "5d86850b-0d76-4eca-bd7b-951ad998e997",
             "name": "Tests-TestLibraries",
             "publisher": "Microsoft",
             "version": "16.0.0.0"
@@ -39,11 +39,11 @@
             "name": "G/L Source Names",
             "publisher": "Objects4NAV",
             "version": "4.16.0.0",
-            "appId": "479e77f3-031a-49fe-bb6a-314464c6a9a8"
+            "id": "479e77f3-031a-49fe-bb6a-314464c6a9a8"
         }
     ],
     "screenshots": [],
-    "runtime": "4.0",
+    "runtime": "5.0",
     "platform": "16.0.0.0",
     "target": "Cloud",
     "showMyCode": true,

@@ -11,7 +11,7 @@
     "url": "http://objects4nav.com",
     "logo": "Images\\Logo250x250.png",
     "platform": "16.0.0.0",
-    "runtime": "4.0",
+    "runtime": "5.0",
     "showMyCode": true,
     "screenshots": [
         "Screenshots\\AssistedSetup.PNG",
@@ -25,7 +25,7 @@
             "name": "Application",
             "publisher": "Microsoft",
             "version": "16.0.0.0",
-            "appId": "c1335042-3002-4257-bf8a-75c898ccb1b8"
+            "id": "c1335042-3002-4257-bf8a-75c898ccb1b8"
         }
     ],
     "idRanges": [
