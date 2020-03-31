@@ -1,0 +1,11 @@
+{
+    "name" : "GLSourceNames",
+    "description": "Custom Rules",
+    "rules": [
+        {
+            "id": "AA0214",
+            "action": "none",
+            "justification": "Not working inside WHERE loop"
+        }
+    ]
+}
