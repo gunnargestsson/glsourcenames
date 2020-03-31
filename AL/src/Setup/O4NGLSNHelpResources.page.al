@@ -37,7 +37,7 @@
 
     trigger OnOpenPage();
     begin
-        InitializeResources;
+        InitializeResources();
     end;
 }
 
