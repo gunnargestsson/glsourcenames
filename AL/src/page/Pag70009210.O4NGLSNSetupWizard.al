@@ -448,11 +448,14 @@
   local procedure StoreSetup();
   var
     Setup : Record "O4N GL SN Setup";
+    AssistedSetup: Codeunit "Assisted Setup";
+    AppMgt: Codeunit "O4N GL SN App Mgt.";
   begin
     Status := Status::Completed;
     Setup.GET;
     Setup.TRANSFERFIELDS(Rec);
     Setup.MODIFY;
+    AssistedSetup.Complete(AppMgt.GetAppId(),page::"O4N GL SN Setup Wizard");
   end;
 
   local procedure StoreAccessControl();

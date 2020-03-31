@@ -14,7 +14,7 @@
     RequiredPermissionMissingErr : Label 'Required permissions for table "%1" is missing.  Can''t refresh lookup data.';
     ProcessCompleted : Label 'G/L Source Names lookup table update finished';
 
-  procedure AddSource(SourceType : Option;SourceNo : Code[20];SourceName : Text[50]);
+  procedure AddSource(SourceType : Option;SourceNo : Code[20];SourceName : Text[100]);
   var
     GLSourceName : Record "O4N GL SN";
   begin
@@ -43,7 +43,7 @@
     end;
   end;
 
-  procedure UpdateSource(SourceType : Option;SourceNo : Code[20];SourceName : Text[50]);
+  procedure UpdateSource(SourceType : Option;SourceNo : Code[20];SourceName : Text[100]);
   var
     GLSourceName : Record "O4N GL SN";
   begin

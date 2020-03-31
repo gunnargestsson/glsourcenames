@@ -22,7 +22,7 @@
         ELSE IF ("Source Type"=CONST("Fixed Asset")) "Fixed Asset"
         ELSE IF ("Source Type"=CONST(Employee)) Employee;
     }
-    field(3;"Source Name";Text[50])
+    field(3;"Source Name";Text[100])
     {
       Caption='Source Name';
       DataClassification=CustomerContent;

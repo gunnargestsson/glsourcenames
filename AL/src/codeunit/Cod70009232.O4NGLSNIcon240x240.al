@@ -5,10 +5,11 @@
   begin
   end;
 
-  procedure GetIcon(var TempBlob : Record TempBlob);
+  procedure GetIcon() IconDataAsBase64: Text
   begin
-    TempBlob.FromBase64String(IconSource);
+    IconDataAsBase64 := IconSource();
   end;
+
 
   local procedure IconSource() : Text;
   begin

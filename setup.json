@@ -1,7 +1,8 @@
 ﻿{
   "branchId": "479e77f3-031a-49fe-bb6a-314464c6a9a8",
   "dockerImage":  "bcinsider.azurecr.io/bcsandbox-master",
-  "navVersion":  "13.0.0.0",
+  "dockerTestLibraries": true,
+  "navVersion":  "15.0.0.0",
   "navSolution": "W1",
   "projectName": "GLSOURCENAMES",
   "baseBranch": "master",
@@ -49,6 +50,80 @@
   "tableDatas":
     [
    
-    ]
+    ],
+    "Languages":  [
+      {
+          "Language":  "cs-CZ"
+      },
+      {
+          "Language":  "da-DK"
+      },
+      {
+          "Language":  "de-AT"
+      },
+      {
+          "Language":  "de-CH"
+      },
+      {
+          "Language":  "en-AU"
+      },
+      {
+          "Language":  "en-CA"
+      },
+      {
+          "Language":  "en-GB"
+      },
+      {
+          "Language":  "en-NZ"
+      },
+      {
+          "Language":  "en-US"
+      },
+      {
+          "Language":  "es-ES"
+      },
+      {
+          "Language":  "es-MX"
+      },
+      {
+          "Language":  "fi-FI"
+      },
+      {
+          "Language":  "fr-BE"
+      },
+      {
+          "Language":  "fr-CA"
+      },
+      {
+          "Language":  "fr-CH"
+      },
+      {
+          "Language":  "fr-FR"
+      },
+      {
+          "Language":  "is-IS"
+      },
+      {
+          "Language":  "it-CH"
+      },
+      {
+          "Language":  "it-IT"
+      },
+      {
+          "Language":  "nb-NO"
+      },
+      {
+          "Language":  "nl-BE"
+      },
+      {
+          "Language":  "nl-NL"
+      },
+      {
+          "Language":  "ru-RU"
+      },
+      {
+          "Language":  "sv-SE"
+      }
+  ]    
 }
 
