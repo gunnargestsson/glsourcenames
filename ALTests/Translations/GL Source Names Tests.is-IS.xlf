@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?><xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd"><file datatype="xml" source-language="en-US" target-language="is-IS" original="G/L Source Names Tests"><body><group id="body"><trans-unit id="Codeunit 3782576244 - NamedType 4267712826" size-unit="char" translate="no" xml:space="preserve">
+          <source>Source Card: %1 error</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL Test Codeunits - NamedType PageErr</note>
+        </trans-unit><trans-unit id="Codeunit 3782576244 - NamedType 3215417974" size-unit="char" translate="no" xml:space="preserve">
+          <source>Source Name Update failed for %1 %2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL Test Codeunits - NamedType SourceNameUpdateFailesErr</note>
+        </trans-unit></group></body></file></xliff>
