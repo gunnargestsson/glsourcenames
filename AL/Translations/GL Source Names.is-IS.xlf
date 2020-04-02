@@ -1,557 +1,709 @@
-﻿<?xml version="1.0" encoding="utf-8"?><xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd"><file datatype="xml" source-language="en-US" target-language="is-IS" original="G/L Source Names"><body><group id="body"><trans-unit id="Table 102911037 - Field 1753214751 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="is-IS" original="G/L Source Names" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1900.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="body" datatype="resx">
+        <trans-unit id="Table 102911037 - Field 1753214751 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Source Type</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Tegund uppruna</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN - Field Source Type - Property Caption</note>
-        </trans-unit><trans-unit id="Table 102911037 - Field 1882905478 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 102911037 - Field 1882905478 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Source No.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Upprunanúmer</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN - Field Source No. - Property Caption</note>
-        </trans-unit><trans-unit id="Table 102911037 - Field 1343707150 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 102911037 - Field 1343707150 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Source Name</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Heiti uppruna</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN - Field Source Name - Property Caption</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 2508189916 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Code</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Kóti</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Field Code - Property Caption</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Field 4165234317 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 2508189916 - Field 4165234317 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Url</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Vefslóð</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Field Url - Property Caption</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Field 4036313429 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 2508189916 - Field 4036313429 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Icon</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Tákn</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Field Icon - Property Caption</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 245899503 - NamedType 403176189" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 2508189916 - Method 245899503 - NamedType 403176189" size-unit="char" translate="no" xml:space="preserve">
           <source>SETUPHELP</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method GetSetupHelpCode - NamedType SetupHelpCodeTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 2556269663 - NamedType 3221271229" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 2508189916 - Method 2556269663 - NamedType 3221271229" size-unit="char" translate="no" xml:space="preserve">
           <source>SETUPVIDEO</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method GetSetupVideoCode - NamedType SetupVideoCodeTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 2471557953 - NamedType 2142319931" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 2508189916 - Method 2471557953 - NamedType 2142319931" size-unit="char" translate="no" xml:space="preserve">
           <source>USAGEHELP</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method GetUsageHelpCode - NamedType UsageHelpCodeTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 4138924577 - NamedType 1678448939" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 2508189916 - Method 4138924577 - NamedType 1678448939" size-unit="char" translate="no" xml:space="preserve">
           <source>USAGEVIDEO</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method GetUsageVideoCode - NamedType UsageVideoCodeTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 2424527569 - NamedType 545700138" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 2508189916 - Method 2424527569 - NamedType 545700138" size-unit="char" translate="no" xml:space="preserve">
           <source>GLSOURCENAMES_70PXICON</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method Get70PXIconCode - NamedType IconCodeTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 2331078000 - NamedType 545700138" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 2508189916 - Method 2331078000 - NamedType 545700138" size-unit="char" translate="no" xml:space="preserve">
           <source>GLSOURCENAMES_150PXICON</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method Get150PXIconCode - NamedType IconCodeTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 2571162554 - NamedType 545700138" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 2508189916 - Method 2571162554 - NamedType 545700138" size-unit="char" translate="no" xml:space="preserve">
           <source>GLSOURCENAMES_240PXICON</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method Get240PXIconCode - NamedType IconCodeTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 1033616249 - NamedType 545700138" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 2508189916 - Method 1033616249 - NamedType 545700138" size-unit="char" translate="no" xml:space="preserve">
           <source>GLSOURCENAMES_250PXICON</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method Get250PXIconCode - NamedType IconCodeTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 1920203142 - NamedType 545700138" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 2508189916 - Method 1920203142 - NamedType 545700138" size-unit="char" translate="no" xml:space="preserve">
           <source>GLSOURCENAMES_417PXICON</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method Get417PXIconCode - NamedType IconCodeTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 3844081278 - NamedType 3205851063" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 2508189916 - Method 3844081278 - NamedType 3205851063" size-unit="char" translate="no" xml:space="preserve">
           <source>http://Objects4NAV.com/GLSourceNames</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method InitAssistedSetupHelpPageUrl - NamedType SetupHelpUrlTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 3245760214 - NamedType 3396491511" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 2508189916 - Method 3245760214 - NamedType 3396491511" size-unit="char" translate="no" xml:space="preserve">
           <source>https://www.youtube.com/embed/Ih7fuqwIR-Q</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method InitAssistedSetupEmbedVideoUrl - NamedType SetupVideoUrlTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 1060900626 - NamedType 4019408969" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 2508189916 - Method 1060900626 - NamedType 4019408969" size-unit="char" translate="no" xml:space="preserve">
           <source>http://Objects4NAV.com/GLSourceNames</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method InitUsageHelpPageUrl - NamedType UsageHelpUrlTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 1302256473 - NamedType 504037113" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 2508189916 - Method 1302256473 - NamedType 504037113" size-unit="char" translate="no" xml:space="preserve">
           <source>https://www.youtube.com/embed/7nlKDDpZIE8</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method InitUsageHelpEmbedVideoUrl - NamedType UsageVideoUrlTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 2484516267 - NamedType 1605096647" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 2508189916 - Method 2484516267 - NamedType 1605096647" size-unit="char" translate="no" xml:space="preserve">
           <source>G/L Source Name Icon 70x70</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method InitIcon70x70 - NamedType IconDescriptionTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 3378677603 - NamedType 1605096647" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 2508189916 - Method 3378677603 - NamedType 1605096647" size-unit="char" translate="no" xml:space="preserve">
           <source>G/L Source Name Icon 150x150</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method InitIcon150x150 - NamedType IconDescriptionTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 4000611587 - NamedType 1605096647" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 2508189916 - Method 4000611587 - NamedType 1605096647" size-unit="char" translate="no" xml:space="preserve">
           <source>G/L Source Name Icon 240x240</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method InitIcon240x240 - NamedType IconDescriptionTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 151507459 - NamedType 1605096647" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 2508189916 - Method 151507459 - NamedType 1605096647" size-unit="char" translate="no" xml:space="preserve">
           <source>G/L Source Name Icon 250x250</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method InitIcon250x250 - NamedType IconDescriptionTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 1328106787 - NamedType 1605096647" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 2508189916 - Method 1328106787 - NamedType 1605096647" size-unit="char" translate="no" xml:space="preserve">
           <source>G/L Source Name Icon 417x417</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method InitIcon417x417 - NamedType IconDescriptionTxt</note>
-        </trans-unit><trans-unit id="Table 3539689440 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 3539689440 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Primary Key</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Aðallykill</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Setup - Field Primary Key - Property Caption</note>
-        </trans-unit><trans-unit id="Table 3539689440 - Field 661833578 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 3539689440 - Field 661833578 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Registration E-Mail Address</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Netfang fyrir skráningu lausnar</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Setup - Field Registration E-Mail Address - Property Caption</note>
-        </trans-unit><trans-unit id="Table 3539689440 - Field 155626315 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 3539689440 - Field 155626315 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Installation Id</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Uppsetningarkenni</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Setup - Field Installation Id - Property Caption</note>
-        </trans-unit><trans-unit id="Table 3539689440 - Field 1635236888 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 3539689440 - Field 1635236888 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Registration Id</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Skráningarkenni</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Setup - Field Registration Id - Property Caption</note>
-        </trans-unit><trans-unit id="Table 3539689440 - Field 1413240321 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 3539689440 - Field 1413240321 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Next Registration Verification</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Næsta vottun skráningar</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Setup - Field Next Registration Verification - Property Caption</note>
-        </trans-unit><trans-unit id="Table 3539689440 - Field 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 3539689440 - Field 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Status</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Staða</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Setup - Field Status - Property Caption</note>
-        </trans-unit><trans-unit id="Table 3539689440 - Field 513339096 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 3539689440 - Field 513339096 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
           <source>Not Completed,Completed,Not Started,Seen,Watched,Read, </source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Ekki lokið,Lokið,Ekki hafið,Séð,Horft á,Lesið, </target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Setup - Field Status - Property OptionCaption</note>
-        </trans-unit><trans-unit id="Table 3539689440 - Field 62955203 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 3539689440 - Field 62955203 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Tour Id</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Kenni ferðar</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Setup - Field Tour Id - Property Caption</note>
-        </trans-unit><trans-unit id="Table 3539689440 - Field 448805223 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 3539689440 - Field 448805223 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Video Status</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Staða myndbands</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Setup - Field Video Status - Property Caption</note>
-        </trans-unit><trans-unit id="Table 3539689440 - Field 1358400863 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 3539689440 - Field 1358400863 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Help Status</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Staða hjálpar</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Setup - Field Help Status - Property Caption</note>
-        </trans-unit><trans-unit id="Table 3539689440 - Field 2362958084 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 3539689440 - Field 2362958084 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Tour Status</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Staða kynningar</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Setup - Field Tour Status - Property Caption</note>
-        </trans-unit><trans-unit id="Page 3539689440 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3539689440 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>G/L Source Name Setup</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Uppsetning upprunanafna fjárhags</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup - Property Caption</note>
-        </trans-unit><trans-unit id="Page 3539689440 - Control 661833578 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3539689440 - Control 661833578 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>The G/L Source Name Extension will be registered on this E-Mail Address.  When registering the registration key will be sent to this E-Mail Address.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Viðbótin fyrir upprunanöfn fjárhags verður skráð á þetta netfang.  Þegar skráningin fer fram veður skráningarlykill sendur á þetta netfang.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup - Control Registration E-Mail Address - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 3539689440 - Control 1413240321 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3539689440 - Control 1413240321 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the next date when the user will need to verify the product registration.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Tilgreinir næstu dagsetningu þegar notandi verður að sannreyna vöruskráningu.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup - Control Next Registration Verification - Property ToolTip</note>
-        </trans-unit><trans-unit id="Table 3047140855 - Field 3021697414 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 3047140855 - Field 3021697414 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>User Security ID</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Öryggiskenni notanda</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN User Setup - Field User Security ID - Property Caption</note>
-        </trans-unit><trans-unit id="Table 3047140855 - Field 4045127740 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 3047140855 - Field 4045127740 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Notification Id</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Kenni tilkynningar</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN User Setup - Field Notification Id - Property Caption</note>
-        </trans-unit><trans-unit id="Table 4126486020 - Field 3233782167 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 4126486020 - Field 3233782167 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Permission Level</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Heimildastaða</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Group Access - Field Permission Level - Property Caption</note>
-        </trans-unit><trans-unit id="Table 4126486020 - Field 3233782167 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 4126486020 - Field 3233782167 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
           <source>Read,Update</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Lesa,Breyta</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Group Access - Field Permission Level - Property OptionCaption</note>
-        </trans-unit><trans-unit id="Table 4126486020 - Field 43241205 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 4126486020 - Field 43241205 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>User Group Code</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Kóti notendahóps</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Group Access - Field User Group Code - Property Caption</note>
-        </trans-unit><trans-unit id="Table 4126486020 - Field 1341274843 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 4126486020 - Field 1341274843 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>User Group Name</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Heiti notendahóps</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Group Access - Field User Group Name - Property Caption</note>
-        </trans-unit><trans-unit id="Table 4126486020 - Field 2831955675 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 4126486020 - Field 2831955675 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Has Permission</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Hefur heimildir</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Group Access - Field Has Permission - Property Caption</note>
-        </trans-unit><trans-unit id="Table 4126486020 - Field 2038419342 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 4126486020 - Field 2038419342 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Assign Permission</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Úthluta heimildum</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Group Access - Field Assign Permission - Property Caption</note>
-        </trans-unit><trans-unit id="Table 4126486020 - Field 1061021719 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 4126486020 - Field 1061021719 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Remove Permission</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Fjarlægja heimildir</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Group Access - Field Remove Permission - Property Caption</note>
-        </trans-unit><trans-unit id="Table 1175440386 - Field 3233782167 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 1175440386 - Field 3233782167 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Permission Level</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Heimildastaða</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN User Access - Field Permission Level - Property Caption</note>
-        </trans-unit><trans-unit id="Table 1175440386 - Field 3233782167 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 1175440386 - Field 3233782167 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
           <source>Read,Update</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Lesa,Breyta</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN User Access - Field Permission Level - Property OptionCaption</note>
-        </trans-unit><trans-unit id="Table 1175440386 - Field 3021697414 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 1175440386 - Field 3021697414 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>User Security ID</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Öryggiskenni notanda</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN User Access - Field User Security ID - Property Caption</note>
-        </trans-unit><trans-unit id="Table 1175440386 - Field 3174909667 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 1175440386 - Field 3174909667 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Access Via User Group Code</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Aðgangur í gegnum kóta notandahópa</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN User Access - Field Access Via User Group Code - Property Caption</note>
-        </trans-unit><trans-unit id="Table 1175440386 - Field 129688762 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 1175440386 - Field 129688762 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>User Name</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Notandanafn</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN User Access - Field User Name - Property Caption</note>
-        </trans-unit><trans-unit id="Table 1175440386 - Field 1581469095 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 1175440386 - Field 1581469095 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>User Full Name</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Fullt nafn notanda</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN User Access - Field User Full Name - Property Caption</note>
-        </trans-unit><trans-unit id="Table 1175440386 - Field 2831955675 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 1175440386 - Field 2831955675 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Has Permission</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Hefur heimildir</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN User Access - Field Has Permission - Property Caption</note>
-        </trans-unit><trans-unit id="Table 1175440386 - Field 2038419342 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 1175440386 - Field 2038419342 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Assign Permission</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Úthluta heimildum</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN User Access - Field Assign Permission - Property Caption</note>
-        </trans-unit><trans-unit id="Table 1175440386 - Field 1061021719 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 1175440386 - Field 1061021719 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Remove Permission</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Fjarlægja heimildir</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN User Access - Field Remove Permission - Property Caption</note>
-        </trans-unit><trans-unit id="Table 1175440386 - Field 2439937807 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Table 1175440386 - Field 2439937807 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Updated Via User Group</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Uppfæra í gegnum notandahóp</target>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN User Access - Field Updated Via User Group - Property Caption</note>
-        </trans-unit><trans-unit id="Codeunit 1923820039 - NamedType 2407060480" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Codeunit 1923820039 - NamedType 2407060480" size-unit="char" translate="yes" xml:space="preserve">
           <source>Populating G/L Source Names...</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Fylli út í uppflettigögn fjárhags fyrir upprunanöfn...</target>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL SN Mgt - NamedType ProcessInfoMsg</note>
-        </trans-unit><trans-unit id="Codeunit 1923820039 - NamedType 2069865725" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Codeunit 1923820039 - NamedType 2069865725" size-unit="char" translate="yes" xml:space="preserve">
           <source>Required permissions for table "%1" is missing.  Can't refresh lookup data.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2">%1 for the current table name</note>
+          <target state="translated">Nauðsynlegar heimildir til breytingar á töflu "%1" eru ekki fyrir hendi.  Get ekki uppfært uppflettigögn.</target>
+          <note from="Developer" annotates="general" priority="2">%1 for the current table name</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL SN Mgt - NamedType RequiredPermissionMissingErr</note>
-        </trans-unit><trans-unit id="Codeunit 1923820039 - NamedType 3966355649" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Codeunit 1923820039 - NamedType 3966355649" size-unit="char" translate="yes" xml:space="preserve">
           <source>G/L Source Names lookup table update finished</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Uppfærsla á uppflettigögnum fyrir upprunanöfn fjárhags er lokið</target>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL SN Mgt - NamedType ProcessCompletedMsg</note>
-        </trans-unit><trans-unit id="Codeunit 1706989871 - NamedType 2490350265" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Codeunit 1706989871 - NamedType 2490350265" size-unit="char" translate="no" xml:space="preserve">
           <source>G/L-SOURCE NAMES, S</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL Source Name Install - NamedType PermissionSetToSetupGLSourceNamesTxt</note>
-        </trans-unit><trans-unit id="Codeunit 1706989871 - NamedType 1445113611" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Codeunit 1706989871 - NamedType 1445113611" size-unit="char" translate="no" xml:space="preserve">
           <source>G/L-SOURCE NAMES, E</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL Source Name Install - NamedType PermissionSetToUpdateGLSourceNamesTxt</note>
-        </trans-unit><trans-unit id="Codeunit 1706989871 - NamedType 2052999027" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Codeunit 1706989871 - NamedType 2052999027" size-unit="char" translate="no" xml:space="preserve">
           <source>G/L-SOURCE NAMES</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL Source Name Install - NamedType PermissionSetToUserGLSourceNamesTxt</note>
-        </trans-unit><trans-unit id="Codeunit 3280080720 - NamedType 2782421492" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Codeunit 3280080720 - NamedType 2782421492" size-unit="char" translate="yes" xml:space="preserve">
           <source>Source is not defined</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Uppruni er ekki tilgreindur</target>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL Show Source Card - NamedType NoSourceDefinedErr</note>
-        </trans-unit><trans-unit id="Codeunit 3280080720 - NamedType 1672472045" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Codeunit 3280080720 - NamedType 1672472045" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 %2 %3 not found</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2">%1 = Tablecaption, %2 = Fieldcaption, %3 = No. value</note>
+          <target state="translated">%1 %2 %3 finnst ekki</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Tablecaption, %2 = Fieldcaption, %3 = No. value</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL Show Source Card - NamedType SourceNotFoundErr</note>
-        </trans-unit><trans-unit id="Codeunit 3732620711 - NamedType 3329025740" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Codeunit 3732620711 - NamedType 3329025740" size-unit="char" translate="no" xml:space="preserve">
           <source>1dd20373-27f8-4c68-a7b4-aab7ca199b98</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL SN Notifications - NamedType NewFeatuerNotificationIdTxt</note>
-        </trans-unit><trans-unit id="Codeunit 3732620711 - NamedType 1542739173" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Codeunit 3732620711 - NamedType 1542739173" size-unit="char" translate="yes" xml:space="preserve">
           <source>We have added a new feature to the General Ledger Entries.  Now you can see the Source Name column!</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Við höfum bætt nýrri virkni í fjárhagsfærslur.  Núna getur þú séð dálk fyrir upprunanafn!</target>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL SN Notifications - NamedType NewFeatureMessageTxt</note>
-        </trans-unit><trans-unit id="Codeunit 3732620711 - NamedType 3624917100" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Codeunit 3732620711 - NamedType 3624917100" size-unit="char" translate="yes" xml:space="preserve">
           <source>Show me the details</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Sýndu mér meira</target>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL SN Notifications - NamedType NewFeatureLinkTxt</note>
-        </trans-unit><trans-unit id="Codeunit 3732620711 - NamedType 2082415633" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Codeunit 3732620711 - NamedType 2082415633" size-unit="char" translate="no" xml:space="preserve">
           <source>4fa8230a-53e5-4182-8423-373dc6f23f9d</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL SN Notifications - NamedType MissingPermissionNotificationIdTxt</note>
-        </trans-unit><trans-unit id="Codeunit 3732620711 - NamedType 1372440744" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Codeunit 3732620711 - NamedType 1372440744" size-unit="char" translate="yes" xml:space="preserve">
           <source>You don't have permissions to use our new feature that will show Source Names.  Please contact your administrator.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Þú hefur ekki nægjanlegar heimildir til að nota nýju virknina sem sýnir upprunanafn í fjárhagsfærslu.  Vinsamlega hafðu samband við yfirnotanda.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL SN Notifications - NamedType MissingPermissionMessageTxt</note>
-        </trans-unit><trans-unit id="Codeunit 3732620711 - NamedType 1986711657" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Codeunit 3732620711 - NamedType 1986711657" size-unit="char" translate="yes" xml:space="preserve">
           <source>What should I show?</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Hvað á ég að sýna?</target>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL SN Notifications - NamedType MissingPermissionLinkTxt</note>
-        </trans-unit><trans-unit id="Codeunit 1005735586 - NamedType 2809503709" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Codeunit 1005735586 - NamedType 2809503709" size-unit="char" translate="no" xml:space="preserve">
           <source>G/L-SOURCE NAMES</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL SN Permission Mgt - NamedType ReadRoleIdTxt</note>
-        </trans-unit><trans-unit id="Codeunit 1005735586 - NamedType 1805334412" size-unit="char" translate="no" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Codeunit 1005735586 - NamedType 1805334412" size-unit="char" translate="no" xml:space="preserve">
           <source>G/L-SOURCE NAMES, E</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <target state="new"></target>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL SN Permission Mgt - NamedType UpdateRoleIdTxt</note>
-        </trans-unit><trans-unit id="Codeunit 3669574782 - NamedType 2021711790" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Codeunit 3669574782 - NamedType 2021711790" size-unit="char" translate="yes" xml:space="preserve">
           <source>Set up G/L Source Names</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Setja upp upprunanöfn fjárhagsfærslna</target>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL SN Assisted Setup - NamedType GLSourceNamesTxt</note>
-        </trans-unit><trans-unit id="Codeunit 3669574782 - NamedType 2069865725" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Codeunit 3669574782 - NamedType 2069865725" size-unit="char" translate="yes" xml:space="preserve">
           <source>You have not been granted required access rights to start the Assisted Setup.\\The Assisted Setup for G/L Source Names is about assigning the required permissions to users.  To be able to assign permissions you need to be granted either the SUPER og SECURITY permission set.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Þér hefur ekki verið úthlutað nauðsynlegum heimildum til að ræsa uppsetningu með hjálp.\\Uppsetning með hjálp fyrir upprunanúmer fjárhags snýst um að úthluta heimildum til notenda.  Til að geta úthlutað heimildum verður þú að hafa heimildasamstæðu SUPER eða SECURITY á þínu notandaspjaldi.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL SN Assisted Setup - NamedType RequiredPermissionMissingErr</note>
-        </trans-unit><trans-unit id="Codeunit 3669574782 - Method 2104127805 - NamedType 3941653687" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Codeunit 3669574782 - Method 2104127805 - NamedType 3941653687" size-unit="char" translate="yes" xml:space="preserve">
           <source>Add the Source Name field to G/L Entries and a direct link to the source entity card.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Bæta reit fyrir upprunanafn í fjárhagsfærslur og beinum tengli yfir á upprunaspjald.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL SN Assisted Setup - Method AddToAssistedSetup - NamedType AboutTxt</note>
-        </trans-unit><trans-unit id="Page 371913171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 371913171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>G/L Source Name List</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Upprunalisti fjárhags</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN List - Property Caption</note>
-        </trans-unit><trans-unit id="Page 371913171 - Control 1753214751 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 371913171 - Control 1753214751 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the source type that specifies where the entry was created.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Tilgreinir upprunategund sem segir til um hvar færslan var mynduð.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN List - Control Source Type - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 371913171 - Control 1882905478 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 371913171 - Control 1882905478 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the source no. that specifies where the entry was created.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Tilgreinir upprunanúmer sem segir til um hvar færslan var mynduð.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN List - Control Source No. - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 371913171 - Control 1343707150 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 371913171 - Control 1343707150 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the source name that specifies where the entry was created.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Tilgreinir upprunanafn sem segir til um hvar færslan var mynduð.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN List - Control Source Name - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 549180695 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 549180695 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>G/L Source Names DrillDown</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Köfun í upprunanöfn fjárhags</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SNs DrillDown - Property Caption</note>
-        </trans-unit><trans-unit id="Page 4287144797 - Control 3004954119 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 4287144797 - Control 3004954119 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the code for the help resource</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Tilgreinir kóða fyrir hjálparforða.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Help Resources - Control Code - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 4287144797 - Control 4165234317 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 4287144797 - Control 4165234317 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the url for the help resource</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Tilgreinir vefslóð fyrir hjálparforða.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Help Resources - Control Url - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 4287144797 - Control 4036313429 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 4287144797 - Control 4036313429 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the icon for the help resource</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Tilgreinir táknmynd fyrir hjálparforða.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Help Resources - Control Icon - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 3595059435 - Control 3233782167 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3595059435 - Control 3233782167 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Indicates whether members of this user group have full access or just read access to G/L Source Names Lookup table</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Tilgreinir hvort að meðlimir í þessum hópi hafa fullar heimildir eða bara lesheimildir í uppflettitöflu fjárhagsuppruna</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Group ListPart - Control Permission Level - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 3595059435 - Control 43241205 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3595059435 - Control 43241205 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the code representing the user group.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Tilgreinir kóða sem einkennir notandahóp.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Group ListPart - Control User Group Code - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 3595059435 - Control 1341274843 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3595059435 - Control 1341274843 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the user group name.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Tilgreinir nafn notandahóps.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Group ListPart - Control User Group Name - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 3595059435 - Control 2831955675 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3595059435 - Control 2831955675 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Indicates whether the user that are member of this user group already have required permissions</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Tilgreinir hvort að notandi sem er meðlimur í þessum notendahóp hefur nú þegar nauðsynlega heimildir</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Group ListPart - Control Has Permission - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 3595059435 - Control 2038419342 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3595059435 - Control 2038419342 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>This will assign the required permission to the members of this user group when the wizard completes.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Þessi aðgerð mun úthluta nauðsynlegum heimildum á meðlimi þessa notendahóps þegar uppsetningu með hjálp er lokið.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Group ListPart - Control Assign Permission - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 3595059435 - Control 1061021719 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3595059435 - Control 1061021719 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>This will remove current permission from the members of this user group when the wizard completes.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Þessi aðgerð fjarlægir núverandi heimildir frá meðlimum þessa notendahóps þegar uppsetningu með hjálp er lokið.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Group ListPart - Control Remove Permission - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>G/L Source Name Setup</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Uppsetning upprunanafna fjárhags</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Property Caption</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Control 1294017311 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Control 1294017311 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the wizard logo.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Tilgreinir táknmynd leiðsagnarálfs.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Control MediaRepositoryStandard - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Control 1039248434 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Control 1039248434 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the wizard logo.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Tilgreinir táknmynd leiðsagnarálfs.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Control MediaRepositoryDone - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Control 118272148 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Control 118272148 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Welcome to G/L Source Name Setup</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Velkomin(n) í uppsetningu upprunanafna fjárhags</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Control Welcome to G/L Source Name Setup - Property Caption</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Control 1612614122 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Control 1612614122 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>To be able to use Source Names on G/L Entries, users must have required permissions.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Til þess að geta notað upprunanöfn fjárhags verða notendur að hafa nauðsynlegar heimildir.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Control Group18 - Property InstructionalText</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Control 974917505 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Control 974917505 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>Users that can update master tables, like; Customer, Vendor, Bank Account, Fixed Asset and Employee, must be able to update the G/L Source Name lookup table.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Notendur sem geta uppfært stofntöflur eins og viðskiptamenn, lánardrottna, bankareikninga, eignir og starfsmenn, verða að geta uppfært uppflettitöflu fyrir upprunanöfn fjárhags.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Control Group19 - Property InstructionalText</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Control 3647570164 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Control 3647570164 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Let's go!</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Hefjumst handa!</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Control Let's go! - Property Caption</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Control 1134365254 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Control 1134365254 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>Choose Set Defaults and all required permissions will be automatically assigned to user group members and users based on current permissions to the G/L Entries and the above master tables.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Veldu Sjálfgefnar stillingar og kerfið mun sjálfkrafa úthluta öllum nauðsynlegum heimildum á meðlimi notendahópa og notendur miðað við núverandi heimildir í fjárhagsfærslur og ofangreindar spjaldskrár.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Control Group70009201 - Property InstructionalText</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Control 727926705 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Control 727926705 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>Choose Next so you can manually set up permissions for users and groups.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Veldu Áfram ef þú vilt handvirkt setja upp heimildir fyrir notendur og hópa.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Control Group22 - Property InstructionalText</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Control 1548525519 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Control 1548525519 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>Check the Assign or Remove Permisson Box to change read permission for the user group members</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Veljið boxin að úthluta eða fjarlægja heimildir til lestrar fyrir meðlimi notendahóps</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Control Group2 - Property InstructionalText</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Control 3658412756 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Control 3658412756 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>User Groups requiring read access</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Notendahópar sem þurfa lestrarheimild</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Control GroupsWithReadAccess - Property Caption</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Control 3580960544 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Control 3580960544 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>Check the Assign or Remove Permisson Box to change both read and update permission for the user group members</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Veljið boxin til að úthluta eða fjarlægja heimildir til lestrar og uppfærslu úthlutað á meðlimi notendahóps</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Control Group1000000002 - Property InstructionalText</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Control 2987393997 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Control 2987393997 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>User Groups requiring update access</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Notendahópar sem þurfa breytingarheimild</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Control GroupsWithUpdateAccess - Property Caption</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Control 1199083099 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Control 1199083099 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>Check the Assign or Remove Permisson Box to change read permission for the user.  User Group members should be managed through the user group only.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Check the Assign or Remove Permisson Box to change read permission for the user.  User Group members should be managed through the user group only.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Control Group1000000007 - Property InstructionalText</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Control 2940688026 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Control 2940688026 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Users requiring read access</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Notendur sem þurfa lestrarheimild</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Control UsersWithReadAccess - Property Caption</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Control 2474476333 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Control 2474476333 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>Check the Assign or Remove Permisson Box to change both read and update permission for the user.  User Group members should be managed through the user group only</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Veljið boxin til að úthluta eða fjarlægja heimildir til lestrar og uppfærslu úthlutað á notana.  Meðlimir notendahóps ættu að taka stillingar frá notandahópnum.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Control Group1000000005 - Property InstructionalText</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Control 2103052239 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Control 2103052239 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Users requiring update access</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Notendur sem þurfa uppfærsluheimildir</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Control UsersWithUpdateAccess - Property Caption</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Control 3916409790 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Control 3916409790 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>Enter the Registration details.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Setjið inn skráningarupplýsingar.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Control Group27 - Property InstructionalText</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Control 661833578 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Control 661833578 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Your registration will only be stored in Dynamics365.  Your E-Mail Address is not shared with anyone.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Skráningin þín verður vistuð í Dynamics365.  Netfanginu verður ekki deilt með öðrum aðila.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Control Registration E-Mail Address - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Control 4153939316 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Control 4153939316 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>We suggest that you refresh the data in G/L Source Names lookup table before finishing this wizard.  You can come back here any time to refresh the lookup table again</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Við mælum með að þú uppfærir gögnin í uppflettigögn uppruna fjárhags áður en þú lýkur uppsetningu með hjálp.  Þú getur komið hingað aftur hvenær sem er til að uppfæra uppflettitöfluna aftur.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Control Group70009203 - Property InstructionalText</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Control 1546979963 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Control 1546979963 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>That's it!</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Þá er það komið!</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Control That's it! - Property Caption</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Control 1365623322 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Control 1365623322 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>To refresh the data in the G/L Source Name lookup table, choose Update G/L Source Names.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Til að uppfæra gögnin í uppflettigögn uppruna fjárhags, veljið Uppfæra uppflettitöflu.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Control Group23 - Property InstructionalText</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Control 2641016556 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Control 2641016556 - Property 1968111052" size-unit="char" translate="yes" xml:space="preserve">
           <source>To enable Source Names in G/L Entries, choose Finish.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Til að virkja upprunanöfn í fjárhagsfærslum, veljið Ljúka.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Control Group25 - Property InstructionalText</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Action 2438272767 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Action 2438272767 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Back</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Til baka</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Action ActionBack - Property Caption</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Action 2438272767 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Action 2438272767 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Return to the previous page.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Hverfa aftur til fyrri síðu.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Action ActionBack - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Action 914282563 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Action 914282563 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Next</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Áfram</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Action ActionNext - Property Caption</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Action 914282563 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Action 914282563 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Move to next page.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Halda áfram á næstu síðu.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Action ActionNext - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Action 2679202735 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Action 2679202735 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Set Defaults</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Sjálfgefnar stillingar</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Action ActionDefault - Property Caption</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Action 2679202735 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Action 2679202735 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Updates Permissions to all users and user groups as suggested</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Uppfærir heimildir fyrir alla notendur og notandahópa samkvæmt tillögu</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Action ActionDefault - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Action 1986928548 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Action 1986928548 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Update G/L Source Names</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Uppfæra uppflettitöflu</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Action ActionUpdateSourceLookup - Property Caption</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Action 1986928548 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Action 1986928548 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>This action will update the G/L Source Names lookup table</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Þessi aðgerð mun uppfæra uppflettigögn fjárhags</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Action ActionUpdateSourceLookup - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Action 3259912055 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Action 3259912055 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Finish</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Ljúka</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Action ActionFinish - Property Caption</note>
-        </trans-unit><trans-unit id="Page 3431183161 - Action 3259912055 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - Action 3259912055 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Apply configuration and exit the wizard.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Staðfesta uppsetningu og ljúka uppsetningarálfi.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - Action ActionFinish - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 3431183161 - NamedType 3476492343" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - NamedType 3476492343" size-unit="char" translate="yes" xml:space="preserve">
           <source>G/L Source Names have not been set up.\\Are you sure you want to exit?</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Upprunanöfn í fjárhagsfærslum hafa ekki verið virkjuð.\\Viltu samt hætta?</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - NamedType NAVNotSetUpQst</note>
-        </trans-unit><trans-unit id="Page 3431183161 - NamedType 601425374" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 3431183161 - NamedType 601425374" size-unit="char" translate="yes" xml:space="preserve">
           <source>Registration E-Mail Address is missing</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Netfang fyrir skráningu lausnar vantar</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Setup Wizard - NamedType RegistrationEMailAddressMissingErr</note>
-        </trans-unit><trans-unit id="Page 86709904 - Control 3233782167 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 86709904 - Control 3233782167 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Indicates whether the user has full access or just read access to G/L Source Names Lookup table</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Tilgreinir hvort að notandinn hefur fullar heimildir eða bara lesheimildir í uppflettitöflu upprunanafna fjárhags</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Users ListPart - Control Permission Level - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 86709904 - Control 129688762 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 86709904 - Control 129688762 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the user's name. If the user is required to present credentials when starting the client, this is the name that the user must present.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Tilgreinir nafn notandans. Þurfi notandi að leggja fram skilríki við ræsingu biðlarans er þetta nafnið sem notandinn þarf að nota.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Users ListPart - Control User Name - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 86709904 - Control 1581469095 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 86709904 - Control 1581469095 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the full name of the user.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Tilgreinir fullt nafn notandans.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Users ListPart - Control User Full Name - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 86709904 - Control 539887058 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 86709904 - Control 539887058 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>User Group Member</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Meðlimur í notendahópi</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Users ListPart - Control User Group Member - Property Caption</note>
-        </trans-unit><trans-unit id="Page 86709904 - Control 539887058 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 86709904 - Control 539887058 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Indicates if this user is a member of a user group in one of the previous steps.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Tilgreinir hvort að notandi er meðlimur í notendahópi í einu að undanförnum skrefum.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Users ListPart - Control User Group Member - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 86709904 - Control 2831955675 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 86709904 - Control 2831955675 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Indicates whether the user already has required permissions</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Tilgreinir hvort að notandinn hefur nú þegar nauðsynlegar heimildir</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Users ListPart - Control Has Permission - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 86709904 - Control 2038419342 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 86709904 - Control 2038419342 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>This will assign the required permission to this user when the wizard completes.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Þessi aðgerð mun úthluta nauðsynlegum heimildur á þennan notanda þegar uppsetningu með hjálp er lokið.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Users ListPart - Control Assign Permission - Property ToolTip</note>
-        </trans-unit><trans-unit id="Page 86709904 - Control 1061021719 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+        </trans-unit>
+        <trans-unit id="Page 86709904 - Control 1061021719 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>This will remove current permission from this user when the wizard completes.</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Þessi aðgerð mun fjarlægja núverandi heimildir frá þessum notanda þegar uppsetningu með hjálp er lokið.</target>
           <note from="Xliff Generator" annotates="general" priority="3">Page O4N GL SN Users ListPart - Control Remove Permission - Property ToolTip</note>
-        </trans-unit><trans-unit id="PageExtension 3643431607 - Control 1195644 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1887905131">
+        </trans-unit>
+        <trans-unit id="PageExtension 3643431607 - Control 1195644 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the type of the master record associated with this entry</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Tilgreinir tegund spjaldskrár sem tilheyrir þessari færslu</target>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension O4N Ext GL Entries - Control O4N Source Type - Property ToolTip</note>
-        </trans-unit><trans-unit id="PageExtension 3643431607 - Control 1139953745 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1887905131">
+        </trans-unit>
+        <trans-unit id="PageExtension 3643431607 - Control 1139953745 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the number of the master record associated with this entry</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Tilgreinir númer spjaldskrár sem tengist þessari færslu</target>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension O4N Ext GL Entries - Control O4N Source No. - Property ToolTip</note>
-        </trans-unit><trans-unit id="PageExtension 3643431607 - Control 384633921 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1887905131">
+        </trans-unit>
+        <trans-unit id="PageExtension 3643431607 - Control 384633921 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the name of the master record associated with this entry</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Tilgreinir nafn spjaldskrár sem tilheyrir þessari færslu</target>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension O4N Ext GL Entries - Control O4N Source Name - Property ToolTip</note>
-        </trans-unit><trans-unit id="PageExtension 3643431607 - Action 3094365984 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1887905131">
+        </trans-unit>
+        <trans-unit id="PageExtension 3643431607 - Action 3094365984 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Source Card</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Upprunaspjald</target>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension O4N Ext GL Entries - Action O4N SourceCard - Property Caption</note>
-        </trans-unit><trans-unit id="PageExtension 3643431607 - Action 3094365984 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1887905131">
+        </trans-unit>
+        <trans-unit id="PageExtension 3643431607 - Action 3094365984 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Show the card for the master record defined as the source for this entry</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Sýna spjaldið fyrir færsluna sem er tilgreind sem uppruni fyrir þessa færslu</target>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension O4N Ext GL Entries - Action O4N SourceCard - Property ToolTip</note>
-        </trans-unit><trans-unit id="TableExtension 4198449013 - Field 384633921 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2825951060">
+        </trans-unit>
+        <trans-unit id="TableExtension 4198449013 - Field 384633921 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Source Name</source>
-          <target state="needs-translation"></target><note from="Developer" annotates="general" priority="2"></note>
+          <target state="translated">Heiti uppruna</target>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension O4N Ext GLEntry - Field O4N Source Name - Property Caption</note>
-        </trans-unit></group></body></file></xliff>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
