@@ -36,7 +36,10 @@
                     GLSourceNameMgt.PopulateSourceTable();
                 end;
             '4.0.0.636':
-                RecreateHelpResources();
+                begin
+                    RecreateHelpResources();
+                    GLSourceNameMgt.Refresh(true);
+                end;
         end;
     end;
 
