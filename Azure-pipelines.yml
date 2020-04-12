@@ -1,0 +1,158 @@
+trigger:
+- master
+
+pr:
+- master
+  
+pool:
+  name: Default
+
+variables:
+  image_name: mcr.microsoft.com/businesscentral/sandbox
+  container_name: glsourcenames
+  license_file: C:\AdvaniaGIT\License\6433432-16.flf
+
+stages:
+- stage: Build
+  displayName: Build Stage
+  jobs:
+  - job: Build
+    displayName: Build Job
+    pool:
+      name: Default
+    workspace:
+      clean: all       
+    steps:
+      - task: PowerShell@1    
+        displayName: Create build container
+        inputs:
+          scriptType: inlineScript
+          inlineScript: >
+            Update-Module navcontainerhelper -Force;
+            Import-Module navcontainerhelper -DisableNameChecking;
+            $Password = (New-Guid).ToString().SubString(0,15) + ',.!A';
+            $Credential = New-Object System.Management.Automation.PSCredential($env:USERNAME, (ConvertTo-SecureString $Password -AsPlainText -Force));        
+            New-NavContainer -accept_eula -accept_outdated -containerName $(container_name) -auth NavUserPassword -credential $Credential -image $(image_name) -licenseFile $(license_file) -doNotExportObjectsToText -restart no -shortcuts None -includeTestToolkit -includeTestLibrariesOnly -updateHosts;
+            Set-Content -Value (ConvertFrom-SecureString -SecureString $Credential.Password) -Encoding UTF8 -Path 'C:\ProgramData\NavContainerHelper\Extensions\$(container_name)\My\Container.info';
+
+      - task: PowerShell@1
+        displayName: Copy source into container folder
+        inputs:
+          scriptType: inlineScript
+          inlineScript: >
+            $SourceDir = 'C:\ProgramData\NavContainerHelper\Extensions\$(container_name)\Source';
+            New-Item $SourceDir -ItemType Directory;
+            Copy-Item '$(Build.SourcesDirectory)\*' $SourceDir -Recurse -Force;
+
+      - task: PowerShell@1
+        displayName: Publish and install dependencies into container
+        inputs:
+          scriptType: inlineScript
+          inlineScript: >          
+            Import-Module navcontainerhelper -DisableNameChecking;
+            $SourceDir = 'C:\ProgramData\NavContainerHelper\Extensions\$(container_name)\Source\Dependencies';
+            if (Test-Path $SourceDir) {
+              Get-ChildItem -Path $SourceDir -Filter '*.app' | Sort-Object -Property Name | % {Publish-NavContainerApp '$(container_name)' -appFile $_.FullName -skipVerification -sync -install -language is-IS}
+            }
+
+      - task: PowerShell@1
+        displayName: Set Build ID in app.json
+        inputs:
+          scriptType: inlineScript
+          inlineScript: >
+            $SourceDir = 'C:\ProgramData\NavContainerHelper\Extensions\$(container_name)\Source';
+            $WorkspaceFile = Get-ChildItem -Path $SourceDir -Filter "*.code-workspace";
+            $WorkspaceFolders = (Get-Content -Path $WorkspaceFile.FullName -Encoding UTF8 | ConvertFrom-Json).folders;
+            $WorkspaceFolders | % {
+              $ExtensionAppJsonFile = (Join-Path (Join-Path $SourceDir $_.path) 'app.json');
+              $ExtensionAppJsonObject = Get-Content -Raw -Path $ExtensionAppJsonFile | ConvertFrom-Json;
+              $VersionParts = $ExtensionAppJsonObject.Version.Split('.');
+              $VersionParts[2] = '$(Build.BuildId)';
+              $ExtensionAppJsonObject.Version = [System.String]::Join(".",$VersionParts);
+              $ExtensionAppJsonObject | ConvertTo-Json | set-content $ExtensionAppJsonFile }
+              
+      - task: PowerShell@1
+        displayName: Compile app
+        inputs:
+          scriptType: inlineScript
+          inlineScript: >
+            Import-Module navcontainerhelper -DisableNameChecking;
+            $SourceDir = 'C:\ProgramData\NavContainerHelper\Extensions\$(container_name)\Source';
+            $DependenciesDir = 'C:\ProgramData\NavContainerHelper\Extensions\$(container_name)\Source\Dependencies';
+            $Credential = New-Object System.Management.Automation.PSCredential($env:USERNAME, (ConvertTo-SecureString (Get-Content -Encoding UTF8 -Path 'C:\ProgramData\NavContainerHelper\Extensions\$(container_name)\My\Container.info')));
+            $WorkspaceFile = Get-ChildItem -Path $SourceDir -Filter "*.code-workspace";
+            $WorkspaceFolders = (Get-Content -Path $WorkspaceFile.FullName -Encoding UTF8 | ConvertFrom-Json).folders;
+            if (Test-Path $DependenciesDir) {
+              $WorkspaceFolders | % {Compile-AppInNavContainer -containerName $(container_name) -appProjectFolder (Join-Path $SourceDir $_.path) -credential $Credential -appSymbolsFolder $DependenciesDir -AzureDevOps -FailOn 'error' -CopyAppToSymbolsFolder}
+            } else {
+              $WorkspaceFolders | % {Compile-AppInNavContainer -containerName $(container_name) -appProjectFolder (Join-Path $SourceDir $_.path) -credential $Credential -AzureDevOps -FailOn 'error' -CopyAppToSymbolsFolder -Verbose}
+            }
+
+      - task: PowerShell@1
+        displayName: Publish and install app into container
+        inputs:
+          scriptType: inlineScript
+          inlineScript: >          
+            Import-Module navcontainerhelper -DisableNameChecking;
+            $SourceDir = 'C:\ProgramData\NavContainerHelper\Extensions\$(container_name)\Source';
+            $WorkspaceFile = Get-ChildItem -Path $SourceDir -Filter "*.code-workspace";
+            $WorkspaceFolders = (Get-Content -Path $WorkspaceFile.FullName -Encoding UTF8 | ConvertFrom-Json).folders;
+            $WorkspaceFolders | % {Get-ChildItem  (Join-Path $SourceDir (Join-Path $_.path 'output'))} | % {Publish-NavContainerApp '$(container_name)' -appFile $_.FullName -skipVerification -sync -install -language is-IS}
+
+      - task: PowerShell@1
+        displayName: Run tests
+        inputs:
+          scriptType: inlineScript
+          inlineScript: >
+            $Credential = New-Object System.Management.Automation.PSCredential($env:USERNAME, (ConvertTo-SecureString (Get-Content -Encoding UTF8 -Path 'C:\ProgramData\NavContainerHelper\Extensions\$(container_name)\My\Container.info')));        
+            Import-Module navcontainerhelper -DisableNameChecking;
+            $ResultPath = 'C:\ProgramData\NavContainerHelper\Extensions\$(container_name)\my\Results.xml';        
+            Run-TestsInBcContainer -containerName '$(container_name)' -credential $Credential -detailed -AzureDevOps warning -XUnitResultFileName $ResultPath -debugMode
+
+      - task: PublishTestResults@2
+        displayName: Upload test results    
+        inputs:
+          failTaskOnFailedTests: true
+          testResultsFormat: XUnit
+          testResultsFiles: '*.xml'
+          searchFolder: C:\ProgramData\NavContainerHelper\Extensions\$(container_name)\my
+
+      - task: PowerShell@1
+        displayName: Compile app without test
+        condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))        
+        inputs:
+          scriptType: inlineScript
+          inlineScript: >
+            Import-Module navcontainerhelper -DisableNameChecking;
+            $SourceDir = 'C:\ProgramData\NavContainerHelper\Extensions\$(container_name)\Source';
+            $Credential = New-Object System.Management.Automation.PSCredential($env:USERNAME, (ConvertTo-SecureString (Get-Content -Encoding UTF8 -Path 'C:\ProgramData\NavContainerHelper\Extensions\$(container_name)\My\Container.info')));
+            $WorkspaceFile = Get-ChildItem -Path $SourceDir -Filter "*.code-workspace";
+            $WorkspaceFolders = (Get-Content -Path $WorkspaceFile.FullName -Encoding UTF8 | ConvertFrom-Json).folders;
+            $WorkspaceFolders | % {Remove-Item -Path (join-path (Join-Path $SourceDir $_.path) 'test') -Recurse -Force -ErrorAction SilentlyContinue};
+            $WorkspaceFolders | % {Remove-Item -Path (join-path (Join-Path $SourceDir $_.path) 'output') -Recurse -Force -ErrorAction SilentlyContinue};
+            $WorkspaceFolders | % {if ($_.path -inotmatch 'test') {Compile-AppInNavContainer -containerName '$(container_name)' -appProjectFolder (Join-Path $SourceDir $_.path) -credential $Credential -AzureDevOps -FailOn 'error'}}
+
+      - task: PowerShell@1
+        displayName: Copy app into build artifacts staging folder
+        inputs:
+          scriptType: inlineScript
+          inlineScript: >
+            $SourceDir = 'C:\ProgramData\NavContainerHelper\Extensions\$(container_name)\Source';
+            $WorkspaceFile = Get-ChildItem -Path $SourceDir -Filter "*.code-workspace";
+            $WorkspaceFolders = (Get-Content -Path $WorkspaceFile.FullName -Encoding UTF8 | ConvertFrom-Json).folders;
+            $WorkspaceFolders | % {Copy-Item (Join-Path (Join-Path $SourceDir $_.path) '\output\*.app') '$(Build.ArtifactStagingDirectory)'}
+
+      - task: PublishPipelineArtifact@1
+        displayName: Publish pipeline artifact
+        inputs:
+          ArtifactName: App Package
+          targetPath: $(Build.ArtifactStagingDirectory)
+
+      - task: PowerShell@1
+        displayName: Remove build container
+        inputs:
+          scriptType: inlineScript
+          inlineScript: >
+            Import-Module navcontainerhelper -DisableNameChecking;
+            Remove-NavContainer $(container_name)
+        condition: always()
