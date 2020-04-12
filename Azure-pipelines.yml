@@ -37,7 +37,7 @@ stages:
             Import-Module navcontainerhelper -DisableNameChecking;
             $Password = (New-Guid).ToString().SubString(0,15) + ',.!A';
             $Credential = New-Object System.Management.Automation.PSCredential($env:USERNAME, (ConvertTo-SecureString $Password -AsPlainText -Force));        
-            New-NavContainer -accept_eula -accept_outdated -containerName $(container_name) -auth NavUserPassword -credential $Credential -image $(image_name) -licenseFile $(LicenseUrl) -doNotExportObjectsToText -restart no -shortcuts None -includeTestToolkit -includeTestLibrariesOnly -updateHosts;
+            New-BCContainer -accept_eula -accept_outdated -containerName $(container_name) -auth NavUserPassword -credential $Credential -image $(image_name) -licenseFile $(LicenseUrl) -doNotExportObjectsToText -restart no -shortcuts None -includeTestToolkit -includeTestLibrariesOnly -updateHosts;
             Set-Content -Value (ConvertFrom-SecureString -SecureString $Credential.Password) -Encoding UTF8 -Path 'C:\ProgramData\NavContainerHelper\Extensions\$(container_name)\My\Container.info';
 
       - task: PowerShell@1
@@ -57,7 +57,7 @@ stages:
             Import-Module navcontainerhelper -DisableNameChecking;
             $SourceDir = 'C:\ProgramData\NavContainerHelper\Extensions\$(container_name)\Source\Dependencies';
             if (Test-Path $SourceDir) {
-              Get-ChildItem -Path $SourceDir -Filter '*.app' | Sort-Object -Property Name | % {Publish-NavContainerApp '$(container_name)' -appFile $_.FullName -skipVerification -sync -install -language is-IS}
+              Get-ChildItem -Path $SourceDir -Filter '*.app' | Sort-Object -Property Name | % {Publish-BCContainerApp '$(container_name)' -appFile $_.FullName -skipVerification -sync -install -language is-IS}
             }
 
       - task: PowerShell@1
@@ -101,7 +101,7 @@ stages:
             $certFile = Join-Path $SourceDir "cert.pfx";
             Invoke-WebRequest -Uri $(CertificateUrl) -OutFile $certFile;
             $WorkspaceFolders = (Get-Content -Path $WorkspaceFile.FullName -Encoding UTF8 | ConvertFrom-Json).folders;            
-            $WorkspaceFolders | % {Get-ChildItem  (Join-Path $SourceDir (Join-Path $_.path 'output'))} | % {Sign-BCContainerApp -containerName '$(container_name)' -appFile $_.FullName -pfxFile $certFile -pfxPassword $(CertificatePassword)}
+            $WorkspaceFolders | % {Get-ChildItem  (Join-Path $SourceDir (Join-Path $_.path 'output'))} | % {Sign-BCContainerApp -containerName '$(container_name)' -appFile $_.FullName -pfxFile $certFile -pfxPassword (ConvertTo-SecureString -String $(CertificatePassword) -AsPlainText -Force)}
 
       - task: PowerShell@1
         displayName: Publish and install app into container
@@ -112,7 +112,7 @@ stages:
             $SourceDir = 'C:\ProgramData\NavContainerHelper\Extensions\$(container_name)\Source';
             $WorkspaceFile = Get-ChildItem -Path $SourceDir -Filter "*.code-workspace";
             $WorkspaceFolders = (Get-Content -Path $WorkspaceFile.FullName -Encoding UTF8 | ConvertFrom-Json).folders;
-            $WorkspaceFolders | % {Get-ChildItem  (Join-Path $SourceDir (Join-Path $_.path 'output'))} | % {Publish-NavContainerApp '$(container_name)' -appFile $_.FullName -skipVerification -sync -install -language is-IS}
+            $WorkspaceFolders | % {Get-ChildItem  (Join-Path $SourceDir (Join-Path $_.path 'output'))} | % {Publish-BCContainerApp '$(container_name)' -appFile $_.FullName -skipVerification -sync -install -language is-IS}
 
       - task: PowerShell@1
         displayName: Run tests
@@ -165,5 +165,5 @@ stages:
           scriptType: inlineScript
           inlineScript: >
             Import-Module navcontainerhelper -DisableNameChecking;
-            Remove-NavContainer $(container_name)
+            Remove-BCContainer $(container_name)
         condition: always()
