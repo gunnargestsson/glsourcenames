@@ -98,9 +98,10 @@ stages:
             Import-Module navcontainerhelper -DisableNameChecking;
             $SourceDir = 'C:\ProgramData\NavContainerHelper\Extensions\$(container_name)\Source';
             $WorkspaceFile = Get-ChildItem -Path $SourceDir -Filter "*.code-workspace";
-            $certFile = Get-Item -path "c:\AdvaniaGIT\License\Kappi*.p7b";
-            $WorkspaceFolders = (Get-Content -Path $WorkspaceFile.FullName -Encoding UTF8 | ConvertFrom-Json).folders;
-            $WorkspaceFolders | % {Get-ChildItem  (Join-Path $SourceDir (Join-Path $_.path 'output'))} | % {Sign-BCContainerApp -containerName '$(container_name)' -appFile $_.FullName -pfxFile $certFile.FullName}
+            $certFile = Join-Path $SourceDir "cert.pfx";
+            Invoke-WebRequest -Uri $(CertificateUrl) -OutFile $certFile;
+            $WorkspaceFolders = (Get-Content -Path $WorkspaceFile.FullName -Encoding UTF8 | ConvertFrom-Json).folders;            
+            $WorkspaceFolders | % {Get-ChildItem  (Join-Path $SourceDir (Join-Path $_.path 'output'))} | % {Sign-BCContainerApp -containerName '$(container_name)' -appFile $_.FullName -pfxFile $certFile -pfxPassword $(CertificatePassword)}
 
       - task: PowerShell@1
         displayName: Publish and install app into container
