@@ -91,7 +91,7 @@ stages:
             $WorkspaceFolders | % {Compile-AppInNavContainer -containerName $(container_name) -appProjectFolder (Join-Path $SourceDir $_.path) -credential $Credential -appSymbolsFolder $DependenciesDir -AzureDevOps -FailOn 'error' -CopyAppToSymbolsFolder}
 
       - task: PowerShell@1
-        displayName: Sign apps into container
+        displayName: Sign apps
         inputs:
           scriptType: inlineScript
           inlineScript: >          
@@ -122,7 +122,8 @@ stages:
             $Credential = New-Object System.Management.Automation.PSCredential($env:USERNAME, (ConvertTo-SecureString (Get-Content -Encoding UTF8 -Path 'C:\ProgramData\NavContainerHelper\Extensions\$(container_name)\My\Container.info')));        
             Import-Module navcontainerhelper -DisableNameChecking;
             $ResultPath = 'C:\ProgramData\NavContainerHelper\Extensions\$(container_name)\my\Results.xml';
-            $tests = Get-TestsFromBCContainer -containerName '$(container_name)' -credential $Credential -ignoreGroups -testSuite "DEFAULT" -debugMode
+            $tests = Get-TestsFromBCContainer -containerName '$(container_name)' -credential $Credential -ignoreGroups -testSuite "DEFAULT" -debugMode;
+            Write-Host "Found $($tests.Count) to execute...";
             $tests | % {
                 if (-not (Run-TestsInBcContainer -containerName '$(container_name)' -credential $Credential -XUnitResultFileName $ResultPath -AppendToXUnitResultFile:(!$first) -testSuite "DEFAULT" -testCodeunit $_.Id -returnTrueIfAllPassed -restartContainerAndRetry)) { $rerunTests += $_ }
                 $first = $false
