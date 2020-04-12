@@ -123,13 +123,15 @@ stages:
             Import-Module navcontainerhelper -DisableNameChecking;
             $ResultPath = 'C:\ProgramData\NavContainerHelper\Extensions\$(container_name)\my\Results.xml';
             $testSuite = 'DEFAULT';
+            $rerunTests = @();
+            $first = $true;
             $tests = Get-TestsFromBCContainer -containerName '$(container_name)' -credential $Credential -ignoreGroups -testSuite $testSuite -debugMode;
             Write-Host "Found $($tests.Count) to execute...";
             $tests | % {
                 if (-not (Run-TestsInBcContainer -containerName '$(container_name)' -credential $Credential -XUnitResultFileName $ResultPath -AppendToXUnitResultFile:(!$first) -testSuite $testSuite -testCodeunit $_.Id -returnTrueIfAllPassed -restartContainerAndRetry)) { $rerunTests += $_ }
                 $first = $false
             }
-            if ($rerunTests.Count -gt 0 -and $reRunFailedTests) {
+            if ($rerunTests.Count -gt 0) {
                 Restart-BCContainer -containerName '$(container_name)'
                 $rerunTests | % {
                   if (-not (Run-TestsInBcContainer -containerName '$(container_name)' -credential $credential -XUnitResultFileName $ResultPath -AppendToXUnitResultFile:(!$first) -testSuite $testSuite -testCodeunit $_.Id -returnTrueIfAllPassed -restartContainerAndRetry)) { $failedTests += $_ }
