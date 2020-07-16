@@ -1,6 +1,13 @@
 trigger:
 - '*'
 
+schedules:
+- cron: "0 4 * * 6"
+  displayName: Weekly midnight build
+  branches:
+    include:
+    - master
+
 variables:
 - group: BusinessCentral16
 - group: InsiderBuilds
