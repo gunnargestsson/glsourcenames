@@ -1,13 +1,10 @@
 trigger:
 - '*'
-  
-schedules:
-- cron: 0 3 * * Sun
-    displayName: Schedule weekly builds
-    branches:
-    include: ['master']
-    always: true
-    
+
+variables:
+- group: BusinessCentral16
+- group: InsiderBuilds
+
 extends:
   template: CI.yml
   parameters:
