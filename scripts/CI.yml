@@ -3,10 +3,6 @@ parameters:
   displayName: 'Specify build platform version'
   type: string
   default: "current"
-- name: internalBuild
-  displayName: 'Specify usage of InsiderSaS Token'
-  type: boolean
-  default: false
 
 stages:
 - stage: Build
