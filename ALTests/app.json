@@ -10,13 +10,7 @@
     "help": "http://objects4nav.com/glsourcenames",
     "url": "http://objects4nav.com",
     "logo": "Images\\Logo250x250.png",
-    "dependencies": [
-        {
-            "name": "Application",
-            "publisher": "Microsoft",
-            "version": "16.0.0.0",
-            "id": "c1335042-3002-4257-bf8a-75c898ccb1b8"
-        },
+    "dependencies": [        
         {
             "id": "23de40a6-dfe8-4f80-80db-d70f83ce8caf",
             "name": "Test Runner",
@@ -45,6 +39,7 @@
     "screenshots": [],
     "runtime": "5.0",
     "platform": "16.0.0.0",
+    "application": "16.0.0.0",
     "target": "Cloud",
     "showMyCode": true,
     "idRanges":[ {
