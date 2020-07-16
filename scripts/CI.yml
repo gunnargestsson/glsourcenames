@@ -1,8 +1,14 @@
+parameters:
+- name: version
+  displayName: 'Specify build platform version'
+  type: string
+  default: "current"
+  
 stages:
 - stage: Build
   jobs:
   - job: Build
-    variables:
+    variables:      
       build.clean: all
       platform: x64
       appVersion: "4.16"

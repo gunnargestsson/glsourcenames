@@ -10,9 +10,5 @@ schedules:
     
 extends:
   template: CI.yml
-  variables:
-  - group: BusinessCentral16
-  - group: InsiderBuild
-
-
-    
+  parameters:
+    version: "nextminor"
