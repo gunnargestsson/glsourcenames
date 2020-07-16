@@ -1,16 +1,3 @@
-trigger:
-  - '*'
-
-schedules:
-  - cron: 0 3 * * Sun
-    displayName: Schedule weekly builds
-    branches:
-      include: ['master']
-    always: true
-
-variables:
-  - group: BusinessCentral16
-  
 stages:
 - stage: Build
   jobs:
