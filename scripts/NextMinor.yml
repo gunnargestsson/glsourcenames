@@ -3,6 +3,8 @@ trigger:
 
 variables:
 - group: InsiderBuild
+
+variables:
   version: "nextminor"
     
 extends:

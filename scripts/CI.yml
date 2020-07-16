@@ -8,12 +8,14 @@ schedules:
       include: ['master']
     always: true
 
+variables:
+  - group: BusinessCentral16
+  
 stages:
 - stage: Build
   jobs:
   - job: Build
     variables:
-    - group: BusinessCentral16
       build.clean: all
       platform: x64
       appVersion: "4.16"
