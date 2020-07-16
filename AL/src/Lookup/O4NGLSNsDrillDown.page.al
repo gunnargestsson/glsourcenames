@@ -17,7 +17,7 @@
 
     trigger OnOpenPage();
     begin
-        if FINDFIRST() then
+        if Rec.FINDFIRST() then
             GLShowSourceCard.ShowSourceNameCard(Rec);
         ERROR('');
     end;

@@ -26,59 +26,51 @@
         LocalTempUserAccess: Record "O4N GL SN User Access" temporary;
         LocalTempGroupAccess: Record "O4N GL SN Group Access" temporary;
     begin
-        with LocalTempGroupAccess do begin
-            COPY(TempGroupAccess, true);
-            SETRANGE("Has Permission", false);
-            MODIFYALL("Assign Permission", true);
-        end;
-        with LocalTempUserAccess do begin
-            COPY(TempUserAccess, true);
-            SETRANGE("Has Permission", false);
-            MODIFYALL("Assign Permission", true);
-        end;
+        LocalTempGroupAccess.COPY(TempGroupAccess, true);
+        LocalTempGroupAccess.SETRANGE("Has Permission", false);
+        LocalTempGroupAccess.MODIFYALL("Assign Permission", true);
+        LocalTempUserAccess.COPY(TempUserAccess, true);
+        LocalTempUserAccess.SETRANGE("Has Permission", false);
+        LocalTempUserAccess.MODIFYALL("Assign Permission", true);
     end;
 
     local procedure UpdateUserAccessControl(var TempUserAccess: Record "O4N GL SN User Access" temporary);
     var
         LocalTempUserAccess: Record "O4N GL SN User Access" temporary;
     begin
-        with LocalTempUserAccess do begin
-            COPY(TempUserAccess, true);
-            SETRANGE("Assign Permission", true);
-            SETRANGE("Updated Via User Group", false);
-            if FIND('-') then
-                repeat
-                    AddUserAccess("User Security ID", "Permission Level");
-                until NEXT() = 0;
-            SETRANGE("Assign Permission");
-            SETRANGE("Remove Permission", true);
-            if FIND('-') then
-                repeat
-                    RemoveUserAccess("User Security ID", "Permission Level");
-                until NEXT() = 0;
-            RESET();
-        end;
+        LocalTempUserAccess.COPY(TempUserAccess, true);
+        LocalTempUserAccess.SETRANGE("Assign Permission", true);
+        LocalTempUserAccess.SETRANGE("Updated Via User Group", false);
+        if LocalTempUserAccess.FIND('-') then
+            repeat
+                AddUserAccess(LocalTempUserAccess."User Security ID", LocalTempUserAccess."Permission Level");
+            until LocalTempUserAccess.NEXT() = 0;
+        LocalTempUserAccess.SETRANGE("Assign Permission");
+        LocalTempUserAccess.SETRANGE("Remove Permission", true);
+        if LocalTempUserAccess.FIND('-') then
+            repeat
+                RemoveUserAccess(LocalTempUserAccess."User Security ID", LocalTempUserAccess."Permission Level");
+            until LocalTempUserAccess.NEXT() = 0;
+        LocalTempUserAccess.RESET();
     end;
 
     local procedure UpdateGroupAccessControl(var TempGroupAccess: Record "O4N GL SN Group Access" temporary);
     var
         LocalTempGroupAccess: Record "O4N GL SN Group Access" temporary;
     begin
-        with LocalTempGroupAccess do begin
-            COPY(TempGroupAccess, true);
-            SETRANGE("Assign Permission", true);
-            if FIND('-') then
-                repeat
-                    AddGroupAccess("User Group Code", "Permission Level");
-                until NEXT() = 0;
-            SETRANGE("Assign Permission");
-            SETRANGE("Remove Permission", true);
-            if FIND('-') then
-                repeat
-                    RemoveGroupAccess("User Group Code", "Permission Level");
-                until NEXT() = 0;
-            RESET();
-        end;
+        LocalTempGroupAccess.COPY(TempGroupAccess, true);
+        LocalTempGroupAccess.SETRANGE("Assign Permission", true);
+        if LocalTempGroupAccess.FIND('-') then
+            repeat
+                AddGroupAccess(LocalTempGroupAccess."User Group Code", LocalTempGroupAccess."Permission Level");
+            until LocalTempGroupAccess.NEXT() = 0;
+        LocalTempGroupAccess.SETRANGE("Assign Permission");
+        LocalTempGroupAccess.SETRANGE("Remove Permission", true);
+        if LocalTempGroupAccess.FIND('-') then
+            repeat
+                RemoveGroupAccess(LocalTempGroupAccess."User Group Code", LocalTempGroupAccess."Permission Level");
+            until LocalTempGroupAccess.NEXT() = 0;
+        LocalTempGroupAccess.RESET();
     end;
 
     local procedure GetReadOnlyMembers(var TempUserAccess: Record "O4N GL SN User Access" temporary; var TempGroupAccess: Record "O4N GL SN Group Access" temporary);
@@ -109,62 +101,56 @@
 
     local procedure CopyUserGroups(var TempUserGroup: Record "User Group" temporary; var TempGroupAccess: Record "O4N GL SN Group Access" temporary; PermissionLevel: Option);
     begin
-        with TempUserGroup do
-            if FIND('-') then
-                repeat
-                    TempGroupAccess.INIT();
-                    TempGroupAccess."Permission Level" := PermissionLevel;
-                    TempGroupAccess."User Group Code" := Code;
-                    TempGroupAccess."Has Permission" := GroupHasAccess(Code, PermissionLevel);
-                    TempGroupAccess.INSERT();
-                until NEXT() = 0;
+        if TempUserGroup.FIND('-') then
+            repeat
+                TempGroupAccess.INIT();
+                TempGroupAccess."Permission Level" := PermissionLevel;
+                TempGroupAccess."User Group Code" := TempUserGroup.Code;
+                TempGroupAccess."Has Permission" := GroupHasAccess(TempUserGroup.Code, PermissionLevel);
+                TempGroupAccess.INSERT();
+            until TempUserGroup.NEXT() = 0;
     end;
 
     local procedure CopyUsers(var TempUser: Record User temporary; var TempUserAccess: Record "O4N GL SN User Access" temporary; var TempGroupAccess: Record "O4N GL SN Group Access" temporary; PermissionLevel: Option);
     begin
-        with TempUser do
-            if FIND('-') then
-                repeat
-                    TempUserAccess.INIT();
-                    TempUserAccess."Permission Level" := PermissionLevel;
-                    TempUserAccess."User Security ID" := "User Security ID";
-                    TempUserAccess."Access Via User Group Code" := HasAccessViaGroup(TempUserAccess, TempGroupAccess);
-                    TempUserAccess."Updated Via User Group" := TempUserAccess."Access Via User Group Code" <> '';
-                    TempUserAccess."Has Permission" := UserHasAccess("User Security ID", PermissionLevel);
-                    TempUserAccess.INSERT();
-                until NEXT() = 0;
+        if TempUser.FIND('-') then
+            repeat
+                TempUserAccess.INIT();
+                TempUserAccess."Permission Level" := PermissionLevel;
+                TempUserAccess."User Security ID" := TempUser."User Security ID";
+                TempUserAccess."Access Via User Group Code" := HasAccessViaGroup(TempUserAccess, TempGroupAccess);
+                TempUserAccess."Updated Via User Group" := TempUserAccess."Access Via User Group Code" <> '';
+                TempUserAccess."Has Permission" := UserHasAccess(TempUser."User Security ID", PermissionLevel);
+                TempUserAccess.INSERT();
+            until TempUser.NEXT() = 0;
     end;
 
     local procedure WhoThatCanView(TableId: Integer; var TempUser: Record User temporary; var TempUserGroup: Record "User Group" temporary);
     var
         Permission: Record Permission;
     begin
-        with Permission do begin
-            SETRANGE("Object Type", "Object Type"::"Table Data");
-            SETRANGE("Object ID", TableId);
-            SETRANGE("Read Permission", "Read Permission"::Yes);
-            if FINDSET() then
-                repeat
-                    AddUsersFromAccessControl("Role ID", TempUser);
-                    AddGroupFromAccessControl("Role ID", TempUserGroup);
-                until NEXT() = 0;
-        end;
+        Permission.SETRANGE("Object Type", Permission."Object Type"::"Table Data");
+        Permission.SETRANGE("Object ID", TableId);
+        Permission.SETRANGE("Read Permission", Permission."Read Permission"::Yes);
+        if Permission.FINDSET() then
+            repeat
+                AddUsersFromAccessControl(Permission."Role ID", TempUser);
+                AddGroupFromAccessControl(Permission."Role ID", TempUserGroup);
+            until Permission.NEXT() = 0;
     end;
 
     local procedure WhoThatCanUpdate(TableId: Integer; var TempUser: Record User temporary; var TempUserGroup: Record "User Group" temporary);
     var
         Permission: Record Permission;
     begin
-        with Permission do begin
-            SETRANGE("Object Type", "Object Type"::"Table Data");
-            SETRANGE("Object ID", TableId);
-            SETRANGE("Modify Permission", "Modify Permission"::Yes);
-            if FINDSET() then
-                repeat
-                    AddUsersFromAccessControl("Role ID", TempUser);
-                    AddGroupFromAccessControl("Role ID", TempUserGroup);
-                until NEXT() = 0;
-        end;
+        Permission.SETRANGE("Object Type", Permission."Object Type"::"Table Data");
+        Permission.SETRANGE("Object ID", TableId);
+        Permission.SETRANGE("Modify Permission", Permission."Modify Permission"::Yes);
+        if Permission.FINDSET() then
+            repeat
+                AddUsersFromAccessControl(Permission."Role ID", TempUser);
+                AddGroupFromAccessControl(Permission."Role ID", TempUserGroup);
+            until Permission.NEXT() = 0;
     end;
 
     local procedure AddUsersFromAccessControl(PermissionSetId: Code[20]; var TempUser: Record User temporary);
@@ -172,18 +158,16 @@
         AccessControl: Record "Access Control";
         User: Record User;
     begin
-        with AccessControl do begin
-            SETRANGE("Role ID", PermissionSetId);
-            SETFILTER("Company Name", '%1|%2', COMPANYNAME, '');
-            if FINDSET() then
-                repeat
-                    if not TempUser.GET("User Security ID") then
-                        if User.GET("User Security ID") then begin
-                            TempUser := User;
-                            TempUser.INSERT();
-                        end;
-                until NEXT() = 0;
-        end;
+        AccessControl.SETRANGE("Role ID", PermissionSetId);
+        AccessControl.SETFILTER("Company Name", '%1|%2', COMPANYNAME, '');
+        if AccessControl.FINDSET() then
+            repeat
+                if not TempUser.GET(AccessControl."User Security ID") then
+                    if User.GET(AccessControl."User Security ID") then begin
+                        TempUser := User;
+                        TempUser.INSERT();
+                    end;
+            until AccessControl.NEXT() = 0;
     end;
 
     local procedure AddGroupFromAccessControl(PermissionSetId: Code[20]; var TempUserGroup: Record "User Group" temporary);
@@ -191,18 +175,16 @@
         UserGroup: Record "User Group";
         AccessControl: Record "User Group Access Control";
     begin
-        with AccessControl do begin
-            SETRANGE("Role ID", PermissionSetId);
-            SETFILTER("Company Name", '%1|%2', COMPANYNAME, '');
-            if FINDSET() then
-                repeat
-                    if not TempUserGroup.GET("User Group Code") then
-                        if UserGroup.GET("User Group Code") then begin
-                            TempUserGroup := UserGroup;
-                            TempUserGroup.INSERT();
-                        end;
-                until NEXT() = 0;
-        end;
+        AccessControl.SETRANGE("Role ID", PermissionSetId);
+        AccessControl.SETFILTER("Company Name", '%1|%2', COMPANYNAME, '');
+        if AccessControl.FINDSET() then
+            repeat
+                if not TempUserGroup.GET(AccessControl."User Group Code") then
+                    if UserGroup.GET(AccessControl."User Group Code") then begin
+                        TempUserGroup := UserGroup;
+                        TempUserGroup.INSERT();
+                    end;
+            until AccessControl.NEXT() = 0;
     end;
 
     local procedure HasAccessViaGroup(TempUserAccess: Record "O4N GL SN User Access" temporary; var TempGroupAccess: Record "O4N GL SN Group Access" temporary): Code[20];
@@ -211,16 +193,14 @@
         TempUserGroupAccess: Record "O4N GL SN Group Access" temporary;
     begin
         UserGroupMember.SETRANGE("User Security ID", TempUserAccess."User Security ID");
-        with TempUserGroupAccess do begin
-            COPY(TempGroupAccess, true);
-            SETRANGE("Permission Level", "Permission Level");
-            if FIND('-') then
-                repeat
-                    UserGroupMember.SETRANGE("User Group Code", "User Group Code");
-                    if UserGroupMember.FINDFIRST() then
-                        exit(UserGroupMember."User Group Code");
-                until NEXT() = 0;
-        end;
+        TempUserGroupAccess.COPY(TempGroupAccess, true);
+        TempUserGroupAccess.SETRANGE("Permission Level", TempUserGroupAccess."Permission Level");
+        if TempUserGroupAccess.FIND('-') then
+            repeat
+                UserGroupMember.SETRANGE("User Group Code", TempUserGroupAccess."User Group Code");
+                if UserGroupMember.FINDFIRST() then
+                    exit(UserGroupMember."User Group Code");
+            until TempUserGroupAccess.NEXT() = 0;
     end;
 
     local procedure UserHasAccess(UserSid: Guid; PermissionLevel: Option Read,Update): Boolean;
@@ -230,19 +210,17 @@
         AppGuid: Guid;
     begin
         EVALUATE(AppGuid, AppMgt.GetAppId());
-        with AccessControl do begin
-            SETRANGE("User Security ID", UserSid);
-            SETFILTER("Company Name", '%1|%2', COMPANYNAME, '');
-            SETRANGE("App ID", AppGuid);
-            SETRANGE(Scope, Scope::Tenant);
-            case PermissionLevel of
-                PermissionLevel::Read:
-                    SETRANGE("Role ID", ReadRoleIdTxt);
-                PermissionLevel::Update:
-                    SETRANGE("Role ID", UpdateRoleIdTxt);
-            end;
-            exit(not ISEMPTY);
+        AccessControl.SETRANGE("User Security ID", UserSid);
+        AccessControl.SETFILTER("Company Name", '%1|%2', COMPANYNAME, '');
+        AccessControl.SETRANGE("App ID", AppGuid);
+        AccessControl.SETRANGE(Scope, AccessControl.Scope::Tenant);
+        case PermissionLevel of
+            PermissionLevel::Read:
+                AccessControl.SETRANGE("Role ID", ReadRoleIdTxt);
+            PermissionLevel::Update:
+                AccessControl.SETRANGE("Role ID", UpdateRoleIdTxt);
         end;
+        exit(not AccessControl.ISEMPTY());
     end;
 
     local procedure GroupHasAccess(GroupCode: Code[20]; PermissionLevel: Option Read,Update): Boolean;
@@ -252,18 +230,16 @@
         AppGuid: Guid;
     begin
         EVALUATE(AppGuid, AppMgt.GetAppId());
-        with UserGroupPermissionSet do begin
-            SETRANGE("User Group Code", GroupCode);
-            SETRANGE("App ID", AppGuid);
-            SETRANGE(Scope, Scope::Tenant);
-            case PermissionLevel of
-                PermissionLevel::Read:
-                    SETRANGE("Role ID", ReadRoleIdTxt);
-                PermissionLevel::Update:
-                    SETRANGE("Role ID", UpdateRoleIdTxt);
-            end;
-            exit(not ISEMPTY);
+        UserGroupPermissionSet.SETRANGE("User Group Code", GroupCode);
+        UserGroupPermissionSet.SETRANGE("App ID", AppGuid);
+        UserGroupPermissionSet.SETRANGE(Scope, UserGroupPermissionSet.Scope::Tenant);
+        case PermissionLevel of
+            PermissionLevel::Read:
+                UserGroupPermissionSet.SETRANGE("Role ID", ReadRoleIdTxt);
+            PermissionLevel::Update:
+                UserGroupPermissionSet.SETRANGE("Role ID", UpdateRoleIdTxt);
         end;
+        exit(not UserGroupPermissionSet.ISEMPTY());
     end;
 
     local procedure AddUserAccess(UserSid: Guid; PermissionLevel: Option Read,Update): Boolean;
@@ -273,20 +249,18 @@
         AppGuid: Guid;
     begin
         EVALUATE(AppGuid, AppMgt.GetAppId());
-        with AccessControl do begin
-            INIT();
-            "User Security ID" := UserSid;
-            "App ID" := AppGuid;
-            "Company Name" := CopyStr(COMPANYNAME(), 1, MaxStrLen("Company Name"));
-            Scope := Scope::Tenant;
-            case PermissionLevel of
-                PermissionLevel::Read:
-                    "Role ID" := ReadRoleIdTxt;
-                PermissionLevel::Update:
-                    "Role ID" := UpdateRoleIdTxt;
-            end;
-            INSERT(true);
+        AccessControl.INIT();
+        AccessControl."User Security ID" := UserSid;
+        AccessControl."App ID" := AppGuid;
+        AccessControl."Company Name" := CopyStr(COMPANYNAME(), 1, MaxStrLen(AccessControl."Company Name"));
+        AccessControl.Scope := AccessControl.Scope::Tenant;
+        case PermissionLevel of
+            PermissionLevel::Read:
+                AccessControl."Role ID" := ReadRoleIdTxt;
+            PermissionLevel::Update:
+                AccessControl."Role ID" := UpdateRoleIdTxt;
         end;
+        AccessControl.INSERT(true);
     end;
 
     local procedure AddGroupAccess(GroupCode: Code[20]; PermissionLevel: Option Read,Update): Boolean;
@@ -296,19 +270,17 @@
         AppGuid: Guid;
     begin
         EVALUATE(AppGuid, AppMgt.GetAppId());
-        with UserGroupPermissionSet do begin
-            INIT();
-            "User Group Code" := GroupCode;
-            "App ID" := AppGuid;
-            Scope := Scope::Tenant;
-            case PermissionLevel of
-                PermissionLevel::Read:
-                    "Role ID" := ReadRoleIdTxt;
-                PermissionLevel::Update:
-                    "Role ID" := UpdateRoleIdTxt;
-            end;
-            INSERT(true);
+        UserGroupPermissionSet.INIT();
+        UserGroupPermissionSet."User Group Code" := GroupCode;
+        UserGroupPermissionSet."App ID" := AppGuid;
+        UserGroupPermissionSet.Scope := UserGroupPermissionSet.Scope::Tenant;
+        case PermissionLevel of
+            PermissionLevel::Read:
+                UserGroupPermissionSet."Role ID" := ReadRoleIdTxt;
+            PermissionLevel::Update:
+                UserGroupPermissionSet."Role ID" := UpdateRoleIdTxt;
         end;
+        UserGroupPermissionSet.INSERT(true);
     end;
 
     local procedure RemoveUserAccess(UserSid: Guid; PermissionLevel: Option Read,Update): Boolean;
@@ -318,19 +290,17 @@
         AppGuid: Guid;
     begin
         EVALUATE(AppGuid, AppMgt.GetAppId());
-        with AccessControl do begin
-            SETRANGE("User Security ID", UserSid);
-            SETFILTER("Company Name", '%1|%2', COMPANYNAME, '');
-            SETRANGE("App ID", AppGuid);
-            SETRANGE(Scope, Scope::Tenant);
-            case PermissionLevel of
-                PermissionLevel::Read:
-                    SETRANGE("Role ID", ReadRoleIdTxt);
-                PermissionLevel::Update:
-                    SETRANGE("Role ID", UpdateRoleIdTxt);
-            end;
-            DELETEALL(true);
+        AccessControl.SETRANGE("User Security ID", UserSid);
+        AccessControl.SETFILTER("Company Name", '%1|%2', COMPANYNAME, '');
+        AccessControl.SETRANGE("App ID", AppGuid);
+        AccessControl.SETRANGE(Scope, AccessControl.Scope::Tenant);
+        case PermissionLevel of
+            PermissionLevel::Read:
+                AccessControl.SETRANGE("Role ID", ReadRoleIdTxt);
+            PermissionLevel::Update:
+                AccessControl.SETRANGE("Role ID", UpdateRoleIdTxt);
         end;
+        AccessControl.DELETEALL(true);
     end;
 
     local procedure RemoveGroupAccess(GroupCode: Code[20]; PermissionLevel: Option Read,Update): Boolean;
@@ -340,18 +310,16 @@
         AppGuid: Guid;
     begin
         EVALUATE(AppGuid, AppMgt.GetAppId());
-        with UserGroupPermissionSet do begin
-            SETRANGE("User Group Code", GroupCode);
-            SETRANGE("App ID", AppGuid);
-            SETRANGE(Scope, Scope::Tenant);
-            case PermissionLevel of
-                PermissionLevel::Read:
-                    SETRANGE("Role ID", ReadRoleIdTxt);
-                PermissionLevel::Update:
-                    SETRANGE("Role ID", UpdateRoleIdTxt);
-            end;
-            DELETEALL(true);
+        UserGroupPermissionSet.SETRANGE("User Group Code", GroupCode);
+        UserGroupPermissionSet.SETRANGE("App ID", AppGuid);
+        UserGroupPermissionSet.SETRANGE(Scope, UserGroupPermissionSet.Scope::Tenant);
+        case PermissionLevel of
+            PermissionLevel::Read:
+                UserGroupPermissionSet.SETRANGE("Role ID", ReadRoleIdTxt);
+            PermissionLevel::Update:
+                UserGroupPermissionSet.SETRANGE("Role ID", UpdateRoleIdTxt);
         end;
+        UserGroupPermissionSet.DELETEALL(true);
     end;
 }
 

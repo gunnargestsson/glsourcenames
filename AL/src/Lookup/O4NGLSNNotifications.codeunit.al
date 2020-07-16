@@ -36,13 +36,11 @@
         MissingPermissionNotification: Notification;
     begin
         if GetNotificationHasBeenShown(GetMissingPermissionNotificationId()) then exit;
-        with MissingPermissionNotification do begin
-            ID := GetMissingPermissionNotificationId();
-            MESSAGE := MissingPermissionMessageTxt;
-            SCOPE := NOTIFICATIONSCOPE::LocalScope;
-            ADDACTION(MissingPermissionLinkTxt, CODEUNIT::"O4N GL SN Perm. Notif.", 'ShowAssistedSetupToUser');
-            SEND();
-        end;
+        MissingPermissionNotification.ID := GetMissingPermissionNotificationId();
+        MissingPermissionNotification.MESSAGE := MissingPermissionMessageTxt;
+        MissingPermissionNotification.SCOPE := NOTIFICATIONSCOPE::LocalScope;
+        MissingPermissionNotification.ADDACTION(MissingPermissionLinkTxt, CODEUNIT::"O4N GL SN Perm. Notif.", 'ShowAssistedSetupToUser');
+        MissingPermissionNotification.SEND();
         SetNotificationHasBeenShown(GetMissingPermissionNotificationId());
     end;
 
@@ -51,13 +49,11 @@
         NewFeatureNotification: Notification;
     begin
         if GetNotificationHasBeenShown(GetNewFeatuerNotificationId()) then exit;
-        with NewFeatureNotification do begin
-            ID := GetNewFeatuerNotificationId();
-            MESSAGE := NewFeatureMessageTxt;
-            SCOPE := NOTIFICATIONSCOPE::LocalScope;
-            ADDACTION(NewFeatureLinkTxt, CODEUNIT::"O4N GL SN Feature Notif.", 'ShowDetailsToUser');
-            SEND();
-        end;
+        NewFeatureNotification.ID := GetNewFeatuerNotificationId();
+        NewFeatureNotification.MESSAGE := NewFeatureMessageTxt;
+        NewFeatureNotification.SCOPE := NOTIFICATIONSCOPE::LocalScope;
+        NewFeatureNotification.ADDACTION(NewFeatureLinkTxt, CODEUNIT::"O4N GL SN Feature Notif.", 'ShowDetailsToUser');
+        NewFeatureNotification.SEND();
         SetNotificationHasBeenShown(GetNewFeatuerNotificationId());
     end;
 
@@ -79,17 +75,14 @@
 
     local procedure GetNotificationHasBeenShown(NotificationId: Guid): Boolean;
     begin
-        with GLSourceNameUserSetup do
-            exit(GET(USERSECURITYID(), NotificationId));
+        exit(GLSourceNameUserSetup.GET(USERSECURITYID(), NotificationId));
     end;
 
     local procedure SetNotificationHasBeenShown(NotificationId: Guid);
     begin
-        with GLSourceNameUserSetup do begin
-            "User Security ID" := USERSECURITYID();
-            "Notification Id" := NotificationId;
-            INSERT();
-        end;
+        GLSourceNameUserSetup."User Security ID" := USERSECURITYID();
+        GLSourceNameUserSetup."Notification Id" := NotificationId;
+        GLSourceNameUserSetup.INSERT();
     end;
 }
 

@@ -15,12 +15,10 @@
     var
         AccessControl: Record "Access Control";
     begin
-        with AccessControl do begin
-            SETRANGE("User Security ID", USERSECURITYID());
-            SETFILTER("Role ID", '%1|%2', 'SUPER', 'SECURITY');
-            if ISEMPTY then
-                ERROR(RequiredPermissionMissingErr);
-        end;
+        AccessControl.SETRANGE("User Security ID", USERSECURITYID());
+        AccessControl.SETFILTER("Role ID", '%1|%2', 'SUPER', 'SECURITY');
+        if AccessControl.ISEMPTY() then
+            ERROR(RequiredPermissionMissingErr);
     end;
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Assisted Setup", 'OnRegister', '', true, false)]
@@ -34,14 +32,12 @@
 
     local procedure InitializeSetup();
     begin
-        with Setup do
-            if not Get() then begin
-                INIT();
-                INSERT();
-            end;
+        if not Setup.Get() then begin
+            Setup.INIT();
+            Setup.INSERT();
+        end;
 
-        with HelpResource do
-            InitializeResources();
+        HelpResource.InitializeResources();
     end;
 
     local procedure AddToAssistedSetup();

@@ -33,21 +33,20 @@
 
     local procedure ShowGLEntrySourceCard(GLEntry: Record "G/L Entry");
     begin
-        with GLEntry do
-            case "Source Type" of
-                "Source Type"::Customer:
-                    ShowCustCard("Source No.");
-                "Source Type"::Vendor:
-                    ShowVendCard("Source No.");
-                "Source Type"::"Bank Account":
-                    ShowBankAccCard("Source No.");
-                "Source Type"::"Fixed Asset":
-                    ShowFixedAssetCard("Source No.");
-                "Source Type"::Employee:
-                    ShowEmployeeCard("Source No.");
-                else
-                    ERROR(NoSourceDefinedErr);
-            end;
+        case GLEntry."Source Type" of
+            GLEntry."Source Type"::Customer:
+                ShowCustCard(GLEntry."Source No.");
+            GLEntry."Source Type"::Vendor:
+                ShowVendCard(GLEntry."Source No.");
+            GLEntry."Source Type"::"Bank Account":
+                ShowBankAccCard(GLEntry."Source No.");
+            GLEntry."Source Type"::"Fixed Asset":
+                ShowFixedAssetCard(GLEntry."Source No.");
+            GLEntry."Source Type"::Employee:
+                ShowEmployeeCard(GLEntry."Source No.");
+            else
+                ERROR(NoSourceDefinedErr);
+        end;
     end;
 
     local procedure ShowCustCard(No: Code[20]);

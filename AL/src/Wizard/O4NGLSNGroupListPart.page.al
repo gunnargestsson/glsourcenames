@@ -15,33 +15,33 @@
         {
             repeater(Group)
             {
-                field("Permission Level"; "Permission Level")
+                field("Permission Level"; Rec."Permission Level")
                 {
                     ApplicationArea = Basic, Suite;
                     Editable = false;
                     ToolTip = 'Indicates whether members of this user group have full access or just read access to G/L Source Names Lookup table';
                     Visible = false;
                 }
-                field("User Group Code"; "User Group Code")
+                field("User Group Code"; Rec."User Group Code")
                 {
                     ApplicationArea = Basic, Suite;
                     Editable = false;
                     Visible = false;
                     ToolTip = 'Specifies the code representing the user group.';
                 }
-                field("User Group Name"; "User Group Name")
+                field("User Group Name"; Rec."User Group Name")
                 {
                     ApplicationArea = Basic, Suite;
                     Editable = false;
                     ToolTip = 'Specifies the user group name.';
                 }
-                field("Has Permission"; "Has Permission")
+                field("Has Permission"; Rec."Has Permission")
                 {
                     ApplicationArea = Basic, Suite;
                     Editable = false;
                     ToolTip = 'Indicates whether the user that are member of this user group already have required permissions';
                 }
-                field("Assign Permission"; "Assign Permission")
+                field("Assign Permission"; Rec."Assign Permission")
                 {
                     ApplicationArea = Basic, Suite;
                     Editable = NOT HasPermission;
@@ -49,13 +49,13 @@
 
                     trigger OnValidate();
                     begin
-                        GlobalTempUserAccess.SETRANGE("Permission Level", "Permission Level");
-                        GlobalTempUserAccess.SETRANGE("Access Via User Group Code", "User Group Code");
+                        GlobalTempUserAccess.SETRANGE("Permission Level", Rec."Permission Level");
+                        GlobalTempUserAccess.SETRANGE("Access Via User Group Code", Rec."User Group Code");
                         GlobalTempUserAccess.SETRANGE("Updated Via User Group", true);
-                        GlobalTempUserAccess.MODIFYALL("Assign Permission", "Assign Permission");
+                        GlobalTempUserAccess.MODIFYALL("Assign Permission", Rec."Assign Permission");
                     end;
                 }
-                field("Remove Permission"; "Remove Permission")
+                field("Remove Permission"; Rec."Remove Permission")
                 {
                     ApplicationArea = Basic, Suite;
                     Editable = HasPermission;
@@ -63,10 +63,10 @@
 
                     trigger OnValidate();
                     begin
-                        GlobalTempUserAccess.SETRANGE("Permission Level", "Permission Level");
-                        GlobalTempUserAccess.SETRANGE("Access Via User Group Code", "User Group Code");
+                        GlobalTempUserAccess.SETRANGE("Permission Level", Rec."Permission Level");
+                        GlobalTempUserAccess.SETRANGE("Access Via User Group Code", Rec."User Group Code");
                         GlobalTempUserAccess.SETRANGE("Updated Via User Group", true);
-                        GlobalTempUserAccess.MODIFYALL("Remove Permission", "Remove Permission");
+                        GlobalTempUserAccess.MODIFYALL("Remove Permission", Rec."Remove Permission");
                     end;
                 }
             }
@@ -88,7 +88,7 @@
 
     procedure Set(var TempGroupAccess: Record "O4N GL SN Group Access" temporary; var TempUserAccess: Record "O4N GL SN User Access" temporary);
     begin
-        COPY(TempGroupAccess, true);
+        Rec.COPY(TempGroupAccess, true);
         GlobalTempUserAccess.COPY(TempUserAccess, true);
     end;
 }

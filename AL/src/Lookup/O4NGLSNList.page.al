@@ -13,17 +13,17 @@
         {
             repeater(Group)
             {
-                field("Source Type"; "Source Type")
+                field("Source Type"; Rec."Source Type")
                 {
                     ApplicationArea = Basic, Suite;
                     ToolTip = 'Specifies the source type that specifies where the entry was created.';
                 }
-                field("Source No."; "Source No.")
+                field("Source No."; Rec."Source No.")
                 {
                     ApplicationArea = Basic, Suite;
                     ToolTip = 'Specifies the source no. that specifies where the entry was created.';
                 }
-                field("Source Name"; "Source Name")
+                field("Source Name"; Rec."Source Name")
                 {
                     ApplicationArea = Basic, Suite;
                     ToolTip = 'Specifies the source name that specifies where the entry was created.';

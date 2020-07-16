@@ -18,17 +18,15 @@
     var
         GLSourceName: Record "O4N GL SN";
     begin
-        with GLSourceName do begin
-            if not WRITEPERMISSION then exit;
-            if GET(SourceType, SourceNo) then
-                UpdateSource(SourceType, SourceNo, SourceName)
-            else begin
-                INIT();
-                "Source Type" := SourceType;
-                "Source No." := SourceNo;
-                "Source Name" := SourceName;
-                INSERT();
-            end;
+        if not GLSourceName.WRITEPERMISSION then exit;
+        if GLSourceName.GET(SourceType, SourceNo) then
+            UpdateSource(SourceType, SourceNo, SourceName)
+        else begin
+            GLSourceName.INIT();
+            GLSourceName."Source Type" := SourceType;
+            GLSourceName."Source No." := SourceNo;
+            GLSourceName."Source Name" := SourceName;
+            GLSourceName.INSERT();
         end;
     end;
 
@@ -36,27 +34,23 @@
     var
         GLSourceName: Record "O4N GL SN";
     begin
-        with GLSourceName do begin
-            if not WRITEPERMISSION then exit;
-            if GET(SourceType, SourceNo) then
-                DELETE();
-        end;
+        if not GLSourceName.WRITEPERMISSION then exit;
+        if GLSourceName.GET(SourceType, SourceNo) then
+            GLSourceName.DELETE();
     end;
 
     procedure UpdateSource(SourceType: Enum "Gen. Journal Source Type"; SourceNo: Code[20]; SourceName: Text[100]);
     var
         GLSourceName: Record "O4N GL SN";
     begin
-        with GLSourceName do begin
-            if not WRITEPERMISSION then exit;
-            if GET(SourceType, SourceNo) then begin
-                "Source Type" := SourceType;
-                "Source No." := SourceNo;
-                "Source Name" := SourceName;
-                MODIFY();
-            end else
-                AddSource(SourceType, SourceNo, SourceName);
-        end;
+        if not GLSourceName.WRITEPERMISSION then exit;
+        if GLSourceName.GET(SourceType, SourceNo) then begin
+            GLSourceName."Source Type" := SourceType;
+            GLSourceName."Source No." := SourceNo;
+            GLSourceName."Source Name" := SourceName;
+            GLSourceName.MODIFY();
+        end else
+            AddSource(SourceType, SourceNo, SourceName);
     end;
 
     procedure Refresh(HideMessage: Boolean);
@@ -68,24 +62,18 @@
         FixedAsset: Record "Fixed Asset";
         Employee: Record Employee;
     begin
-        with GLSourceName do
-            if not WRITEPERMISSION then
-                ERROR(RequiredPermissionMissingErr);
-        with Customer do
-            if not READPERMISSION then
-                ERROR(RequiredPermissionMissingErr);
-        with Vendor do
-            if not READPERMISSION then
-                ERROR(RequiredPermissionMissingErr);
-        with BankAccount do
-            if not READPERMISSION then
-                ERROR(RequiredPermissionMissingErr);
-        with FixedAsset do
-            if not READPERMISSION then
-                ERROR(RequiredPermissionMissingErr);
-        with Employee do
-            if not READPERMISSION then
-                ERROR(RequiredPermissionMissingErr);
+        if not GLSourceName.WRITEPERMISSION then
+            ERROR(RequiredPermissionMissingErr);
+        if not Customer.READPERMISSION then
+            ERROR(RequiredPermissionMissingErr);
+        if not vendor.READPERMISSION then
+            ERROR(RequiredPermissionMissingErr);
+        if not BankAccount.READPERMISSION then
+            ERROR(RequiredPermissionMissingErr);
+        if not FixedAsset.READPERMISSION then
+            ERROR(RequiredPermissionMissingErr);
+        if not Employee.READPERMISSION then
+            ERROR(RequiredPermissionMissingErr);
         GLSourceName.DELETEALL();
         PopulateSourceTable();
         if not HideMessage then
@@ -126,24 +114,21 @@
         NoField: FieldRef;
         NameField: FieldRef;
     begin
-        with RecRef do begin
-            GETTABLE(RecVariant);
-            if FINDSET() then
-                repeat
-                    NoField := FIELD(1);
-                    NameField := FIELD(2);
-                    AddSource(SourceType, FORMAT(NoField.VALUE), FORMAT(NameField.VALUE));
-                until NEXT() = 0;
-        end;
+        RecRef.GETTABLE(RecVariant);
+        if RecRef.FINDSET() then
+            repeat
+                NoField := RecRef.FIELD(1);
+                NameField := RecRef.FIELD(2);
+                AddSource(SourceType, FORMAT(NoField.VALUE), FORMAT(NameField.VALUE));
+            until RecRef.NEXT() = 0;
     end;
 
     procedure AddEmployeeTable(SourceType: Enum "Gen. Journal Source Type"; Employee: Record Employee);
     begin
-        with Employee do
-            if FINDSET() then
-                repeat
-                    AddSource(SourceType, Employee."No.", CopyStr(Employee.FullName(), 1, 100));
-                until NEXT() = 0;
+        if Employee.FINDSET() then
+            repeat
+                AddSource(SourceType, Employee."No.", CopyStr(Employee.FullName(), 1, 100));
+            until Employee.NEXT() = 0;
     end;
 
 }

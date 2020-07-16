@@ -23,15 +23,13 @@
     var
         AccessControl: Record "Access Control";
     begin
-        with AccessControl do begin
-            SETFILTER("Role ID", '%1|%2', 'SUPER', 'SECURITY');
-            if FINDSET() then
-                repeat
-                    AddUserAccess("User Security ID", PermissionSetToUserGLSourceNamesTxt);
-                    AddUserAccess("User Security ID", PermissionSetToUpdateGLSourceNamesTxt);
-                    AddUserAccess("User Security ID", PermissionSetToSetupGLSourceNamesTxt);
-                until NEXT() = 0;
-        end;
+        AccessControl.SETFILTER("Role ID", '%1|%2', 'SUPER', 'SECURITY');
+        if AccessControl.FINDSET() then
+            repeat
+                AddUserAccess(AccessControl."User Security ID", PermissionSetToUserGLSourceNamesTxt);
+                AddUserAccess(AccessControl."User Security ID", PermissionSetToUpdateGLSourceNamesTxt);
+                AddUserAccess(AccessControl."User Security ID", PermissionSetToSetupGLSourceNamesTxt);
+            until AccessControl.NEXT() = 0;
     end;
 
     local procedure AddUserAccess(AssignToUser: Guid; PermissionSet: Code[20]);
@@ -41,15 +39,13 @@
         AppGuid: Guid;
     begin
         EVALUATE(AppGuid, AppMgt.GetAppId());
-        with AccessControl do begin
-            INIT();
-            "User Security ID" := AssignToUser;
-            "App ID" := AppGuid;
-            Scope := Scope::Tenant;
-            "Role ID" := PermissionSet;
-            if not FIND() then
-                INSERT(true);
-        end;
+        AccessControl.INIT();
+        AccessControl."User Security ID" := AssignToUser;
+        AccessControl."App ID" := AppGuid;
+        AccessControl.Scope := AccessControl.Scope::Tenant;
+        AccessControl."Role ID" := PermissionSet;
+        if not AccessControl.FIND() then
+            AccessControl.INSERT(true);
     end;
 
     local procedure RecreateHelpResources()

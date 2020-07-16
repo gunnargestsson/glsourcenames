@@ -6,14 +6,14 @@
     {
         addafter("Bal. Account No.")
         {
-            field("O4N Source Type"; "Source Type")
+            field("O4N Source Type"; Rec."Source Type")
             {
                 AccessByPermission = TableData "O4N GL SN" = R;
                 ApplicationArea = Basic, Suite;
                 ToolTip = 'Specifies the type of the master record associated with this entry';
                 Editable = false;
             }
-            field("O4N Source No."; "Source No.")
+            field("O4N Source No."; Rec."Source No.")
             {
                 AccessByPermission = TableData "O4N GL SN" = R;
                 ApplicationArea = Basic, Suite;
@@ -21,7 +21,7 @@
                 Visible = false;
                 Editable = false;
             }
-            field("O4N Source Name"; "O4N Source Name")
+            field("O4N Source Name"; Rec."O4N Source Name")
             {
                 AccessByPermission = TableData "O4N GL SN" = R;
                 ApplicationArea = Basic, Suite;

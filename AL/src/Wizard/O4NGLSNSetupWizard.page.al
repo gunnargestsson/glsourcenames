@@ -121,7 +121,7 @@
                 {
                     ShowCaption = false;
                     InstructionalText = 'Enter the Registration details.';
-                    field("Registration E-Mail Address"; "Registration E-Mail Address")
+                    field("Registration E-Mail Address"; Rec."Registration E-Mail Address")
                     {
                         ApplicationArea = Basic, Suite;
                         ToolTip = 'Your registration will only be stored in Dynamics365.  Your E-Mail Address is not shared with anyone.';
@@ -185,7 +185,7 @@
                 begin
                     case Step of
                         Step::Registration:
-                            if "Registration E-Mail Address" = '' then
+                            if Rec."Registration E-Mail Address" = '' then
                                 ERROR(RegistrationEMailAddressMissingErr);
                     end;
 
@@ -207,11 +207,11 @@
                     PermissionMgt: Codeunit "O4N GL SN Permission Mgt";
                 begin
                     PermissionMgt.SuggestAccessControl(TempUserAccess, TempGroupAccess);
-                    if "Registration E-Mail Address" = '' then
+                    if Rec."Registration E-Mail Address" = '' then
                         if CompanyInformation.GET() then
-                            "Registration E-Mail Address" := CopyStr(CompanyInformation."E-Mail", 1, MaxStrLen("Registration E-Mail Address"));
+                            Rec."Registration E-Mail Address" := CopyStr(CompanyInformation."E-Mail", 1, MaxStrLen(Rec."Registration E-Mail Address"));
 
-                    if "Registration E-Mail Address" = '' then
+                    if Rec."Registration E-Mail Address" = '' then
                         Step := Step::Registration
                     else
                         Step := Step::Finish;
@@ -263,13 +263,13 @@
         AssistedSetupMgt: Codeunit "O4N GL SN Assisted Setup";
     begin
         AssistedSetupMgt.VerifyUserAccess();
-        INIT();
+        Rec.INIT();
         if not Setup.GET() then begin
             Setup.INIT();
             Setup.INSERT();
         end;
-        TRANSFERFIELDS(Setup);
-        INSERT();
+        Rec.TRANSFERFIELDS(Setup);
+        Rec.INSERT();
 
         PermissionMgt.GetAccessControl(TempUserAccess, TempGroupAccess);
         CurrPage.GroupsWithReadAccess.PAGE.Set(TempGroupAccess, TempUserAccess);
@@ -434,21 +434,17 @@
         RegistrationVisible := false;
         FinalStepVisible := false;
 
-        with TempUserAccess do begin
-            SETRANGE("Permission Level", "Permission Level"::Read);
-            UserReadEnabled := not ISEMPTY;
-            SETRANGE("Permission Level", "Permission Level"::Update);
-            UserUpdateEnabled := not ISEMPTY;
-            SETRANGE("Permission Level");
-        end;
+        TempUserAccess.SETRANGE("Permission Level", TempUserAccess."Permission Level"::Read);
+        UserReadEnabled := not ISEMPTY;
+        TempUserAccess.SETRANGE("Permission Level", TempUserAccess."Permission Level"::Update);
+        UserUpdateEnabled := not ISEMPTY;
+        TempUserAccess.SETRANGE("Permission Level");
 
-        with TempGroupAccess do begin
-            SETRANGE("Permission Level", "Permission Level"::Read);
-            UserGroupReadEnabled := not ISEMPTY;
-            SETRANGE("Permission Level", "Permission Level"::Update);
-            UserGroupUpdateEnabled := not ISEMPTY;
-            SETRANGE("Permission Level");
-        end;
+        TempGroupAccess.SETRANGE("Permission Level", TempGroupAccess."Permission Level"::Read);
+        UserGroupReadEnabled := not ISEMPTY;
+        TempGroupAccess.SETRANGE("Permission Level", TempGroupAccess."Permission Level"::Update);
+        UserGroupUpdateEnabled := not ISEMPTY;
+        TempGroupAccess.SETRANGE("Permission Level");
     end;
 
     local procedure StoreSetup();

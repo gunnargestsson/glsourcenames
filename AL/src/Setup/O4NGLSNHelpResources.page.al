@@ -12,17 +12,17 @@
         {
             repeater(Group)
             {
-                field("Code"; Code)
+                field("Code"; Rec.Code)
                 {
                     ApplicationArea = Basic, Suite;
                     ToolTip = 'Specifies the code for the help resource';
                 }
-                field(Url; Url)
+                field(Url; Rec.Url)
                 {
                     ApplicationArea = Basic, Suite;
                     ToolTip = 'Specifies the url for the help resource';
                 }
-                field(Icon; Icon)
+                field(Icon; Rec.Icon)
                 {
                     ApplicationArea = Basic, Suite;
                     ToolTip = 'Specifies the icon for the help resource';
@@ -37,7 +37,7 @@
 
     trigger OnOpenPage();
     begin
-        InitializeResources();
+        Rec.InitializeResources();
     end;
 }
 
