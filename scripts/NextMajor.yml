@@ -2,9 +2,9 @@ trigger:
 - master
 
 variables:
-    - group: InsiderBuild
-    version: "nextmajor"
+- group: InsiderBuild
+  version: "nextmajor"
     
 extends:
-    template: CI.yml
+  template: CI.yml
     

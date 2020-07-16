@@ -2,8 +2,8 @@ trigger:
 - master
 
 variables:
-    version: "currens"
+  version: "current"
     
 extends:
-    template: CI.yml
+  template: CI.yml
     
