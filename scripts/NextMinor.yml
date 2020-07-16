@@ -13,7 +13,6 @@ extends:
   variables:
   - group: BusinessCentral16
   - group: InsiderBuild
-  - name: version
-    value: "nextminor"
+
 
     
