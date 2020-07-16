@@ -5,4 +5,4 @@ variables:
 - group: BusinessCentral16
 
 extends:
-    template: CI.yml
+  template: CI.yml

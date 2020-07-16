@@ -6,6 +6,6 @@ variables:
 - group: InsiderBuilds
 
 extends:
-    template: CI.yml
-    parameters:
+  template: CI.yml
+  parameters:
     version: "nextmajor"
