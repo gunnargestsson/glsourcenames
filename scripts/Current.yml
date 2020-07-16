@@ -1,0 +1,9 @@
+trigger:
+- master
+
+variables:
+    version: "currens"
+    
+extends:
+    template: CI.yml
+    

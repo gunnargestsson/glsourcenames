@@ -13,9 +13,10 @@ stages:
   jobs:
   - job: Build
     variables:
+    - group: BusinessCentral16
       build.clean: all
       platform: x64
-      appVersion: "1.0"
+      appVersion: "4.16"
       appBuild: $[counter(variables['appVersion'],0)]
       appRevision: 0
       createRuntimePackages: False

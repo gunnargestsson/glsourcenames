@@ -1,0 +1,10 @@
+trigger:
+- master
+
+variables:
+    - group: InsiderBuild
+    version: "nextmajor"
+    
+extends:
+    template: CI.yml
+    
