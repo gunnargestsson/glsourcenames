@@ -7,13 +7,13 @@ schedules:
     branches:
     include: ['master']
     always: true
-
-variables:
-- group: BusinessCentral16
-- group: InsiderBuild
-- name: version
-  value: "nextminor"
     
 extends:
   template: CI.yml
+  variables:
+  - group: BusinessCentral16
+  - group: InsiderBuild
+  - name: version
+    value: "nextminor"
+
     
