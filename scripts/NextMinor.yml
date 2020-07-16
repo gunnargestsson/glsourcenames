@@ -12,3 +12,4 @@ extends:
   template: CI.yml
   parameters:
     version: "nextminor"
+    internalBuild: true

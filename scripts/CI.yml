@@ -3,7 +3,11 @@ parameters:
   displayName: 'Specify build platform version'
   type: string
   default: "current"
-  
+- name: internalBuild
+  displayName: 'Specify usage of InsiderSaS Token'
+  type: boolean
+  default: false
+
 stages:
 - stage: Build
   jobs:
@@ -26,7 +30,7 @@ stages:
       inputs:
         targetType: filePath
         filePath: 'scripts\Read-Settings.ps1'
-        arguments: '-appVersion "$(appVersion).$(appBuild).$(appRevision)"'
+        arguments: '-appVersion "$(appVersion).$(appBuild).$(appRevision)" -version ${{ parameters.version }}'
         failOnStderr: true
     
     - task: PowerShell@2
