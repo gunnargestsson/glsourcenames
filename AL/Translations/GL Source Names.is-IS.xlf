@@ -22,78 +22,6 @@
           <source>Icon</source>
           <target state="translated">Tákn</target><note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Field Icon - Property Caption</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 245899503 - NamedType 403176189" size-unit="char" translate="no" xml:space="preserve">
-          <source>SETUPHELP</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method GetSetupHelpCode - NamedType SetupHelpCodeTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 2556269663 - NamedType 3221271229" size-unit="char" translate="no" xml:space="preserve">
-          <source>SETUPVIDEO</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method GetSetupVideoCode - NamedType SetupVideoCodeTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 2471557953 - NamedType 2142319931" size-unit="char" translate="no" xml:space="preserve">
-          <source>USAGEHELP</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method GetUsageHelpCode - NamedType UsageHelpCodeTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 4138924577 - NamedType 1678448939" size-unit="char" translate="no" xml:space="preserve">
-          <source>USAGEVIDEO</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method GetUsageVideoCode - NamedType UsageVideoCodeTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 2424527569 - NamedType 545700138" size-unit="char" translate="no" xml:space="preserve">
-          <source>GLSOURCENAMES_70PXICON</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method Get70PXIconCode - NamedType IconCodeTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 2331078000 - NamedType 545700138" size-unit="char" translate="no" xml:space="preserve">
-          <source>GLSOURCENAMES_150PXICON</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method Get150PXIconCode - NamedType IconCodeTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 2571162554 - NamedType 545700138" size-unit="char" translate="no" xml:space="preserve">
-          <source>GLSOURCENAMES_240PXICON</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method Get240PXIconCode - NamedType IconCodeTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 1033616249 - NamedType 545700138" size-unit="char" translate="no" xml:space="preserve">
-          <source>GLSOURCENAMES_250PXICON</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method Get250PXIconCode - NamedType IconCodeTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 1920203142 - NamedType 545700138" size-unit="char" translate="no" xml:space="preserve">
-          <source>GLSOURCENAMES_417PXICON</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method Get417PXIconCode - NamedType IconCodeTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 3844081278 - NamedType 3205851063" size-unit="char" translate="no" xml:space="preserve">
-          <source>http://Objects4NAV.com/GLSourceNames</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method InitAssistedSetupHelpPageUrl - NamedType SetupHelpUrlTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 3245760214 - NamedType 3396491511" size-unit="char" translate="no" xml:space="preserve">
-          <source>https://www.youtube.com/embed/Ih7fuqwIR-Q</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method InitAssistedSetupEmbedVideoUrl - NamedType SetupVideoUrlTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 1060900626 - NamedType 4019408969" size-unit="char" translate="no" xml:space="preserve">
-          <source>http://Objects4NAV.com/GLSourceNames</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method InitUsageHelpPageUrl - NamedType UsageHelpUrlTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 1302256473 - NamedType 504037113" size-unit="char" translate="no" xml:space="preserve">
-          <source>https://www.youtube.com/embed/7nlKDDpZIE8</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method InitUsageHelpEmbedVideoUrl - NamedType UsageVideoUrlTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 2484516267 - NamedType 1605096647" size-unit="char" translate="no" xml:space="preserve">
-          <source>G/L Source Name Icon 70x70</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method InitIcon70x70 - NamedType IconDescriptionTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 3378677603 - NamedType 1605096647" size-unit="char" translate="no" xml:space="preserve">
-          <source>G/L Source Name Icon 150x150</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method InitIcon150x150 - NamedType IconDescriptionTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 4000611587 - NamedType 1605096647" size-unit="char" translate="no" xml:space="preserve">
-          <source>G/L Source Name Icon 240x240</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method InitIcon240x240 - NamedType IconDescriptionTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 151507459 - NamedType 1605096647" size-unit="char" translate="no" xml:space="preserve">
-          <source>G/L Source Name Icon 250x250</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method InitIcon250x250 - NamedType IconDescriptionTxt</note>
-        </trans-unit><trans-unit id="Table 2508189916 - Method 1328106787 - NamedType 1605096647" size-unit="char" translate="no" xml:space="preserve">
-          <source>G/L Source Name Icon 417x417</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN Help Resource - Method InitIcon417x417 - NamedType IconDescriptionTxt</note>
         </trans-unit><trans-unit id="Table 3539689440 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Primary Key</source>
           <target state="translated">Aðallykill</target><note from="Developer" annotates="general" priority="2"></note>
@@ -238,30 +166,14 @@
           <source>G/L Source Names lookup table update finished</source>
           <target state="translated">Uppfærsla á uppflettigögnum fyrir upprunanöfn fjárhags er lokið</target><note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL SN Mgt - NamedType ProcessCompletedMsg</note>
-        </trans-unit><trans-unit id="Codeunit 1706989871 - NamedType 2490350265" size-unit="char" translate="no" xml:space="preserve">
-          <source>G/L-SOURCE NAMES, S</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL Source Name Install - NamedType PermissionSetToSetupGLSourceNamesTxt</note>
-        </trans-unit><trans-unit id="Codeunit 1706989871 - NamedType 1445113611" size-unit="char" translate="no" xml:space="preserve">
-          <source>G/L-SOURCE NAMES, E</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL Source Name Install - NamedType PermissionSetToUpdateGLSourceNamesTxt</note>
-        </trans-unit><trans-unit id="Codeunit 1706989871 - NamedType 2052999027" size-unit="char" translate="no" xml:space="preserve">
-          <source>G/L-SOURCE NAMES</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL Source Name Install - NamedType PermissionSetToUserGLSourceNamesTxt</note>
         </trans-unit><trans-unit id="Codeunit 3280080720 - NamedType 2782421492" size-unit="char" translate="yes" xml:space="preserve">
           <source>Source is not defined</source>
           <target state="translated">Uppruni er ekki tilgreindur</target><note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL Show Source Card - NamedType NoSourceDefinedErr</note>
         </trans-unit><trans-unit id="Codeunit 3280080720 - NamedType 1672472045" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 %2 %3 not found</source>
-          <target state="translated">%1 %2 %3 finnst ekki</target><note from="Developer" annotates="general" priority="2">%1 = Tablecaption, %2 = Fieldcaption, %3 = No. value</note>
+          <target state="translated">%1 %2 %3 finnst ekki</target><note from="Developer" annotates="general" priority="2">%1 = TableCaption(), %2 = Fieldcaption, %3 = No. value</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL Show Source Card - NamedType SourceNotFoundErr</note>
-        </trans-unit><trans-unit id="Codeunit 3732620711 - NamedType 3329025740" size-unit="char" translate="no" xml:space="preserve">
-          <source>1dd20373-27f8-4c68-a7b4-aab7ca199b98</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL SN Notifications - NamedType NewFeatuerNotificationIdTxt</note>
         </trans-unit><trans-unit id="Codeunit 3732620711 - NamedType 1542739173" size-unit="char" translate="yes" xml:space="preserve">
           <source>We have added a new feature to the General Ledger Entries.  Now you can see the Source Name column!</source>
           <target state="translated">Við höfum bætt nýrri virkni í fjárhagsfærslur.  Núna getur þú séð dálk fyrir upprunanafn!</target><note from="Developer" annotates="general" priority="2"></note>
@@ -270,10 +182,6 @@
           <source>Show me the details</source>
           <target state="translated">Sýndu mér meira</target><note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL SN Notifications - NamedType NewFeatureLinkTxt</note>
-        </trans-unit><trans-unit id="Codeunit 3732620711 - NamedType 2082415633" size-unit="char" translate="no" xml:space="preserve">
-          <source>4fa8230a-53e5-4182-8423-373dc6f23f9d</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL SN Notifications - NamedType MissingPermissionNotificationIdTxt</note>
         </trans-unit><trans-unit id="Codeunit 3732620711 - NamedType 1372440744" size-unit="char" translate="yes" xml:space="preserve">
           <source>You don't have permissions to use our new feature that will show Source Names.  Please contact your administrator.</source>
           <target state="translated">Þú hefur ekki nægjanlegar heimildir til að nota nýju virknina sem sýnir upprunanafn í fjárhagsfærslu.  Vinsamlega hafðu samband við yfirnotanda.</target><note from="Developer" annotates="general" priority="2"></note>
@@ -282,14 +190,6 @@
           <source>What should I show?</source>
           <target state="translated">Hvað á ég að sýna?</target><note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL SN Notifications - NamedType MissingPermissionLinkTxt</note>
-        </trans-unit><trans-unit id="Codeunit 1005735586 - NamedType 2809503709" size-unit="char" translate="no" xml:space="preserve">
-          <source>G/L-SOURCE NAMES</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL SN Permission Mgt - NamedType ReadRoleIdTxt</note>
-        </trans-unit><trans-unit id="Codeunit 1005735586 - NamedType 1805334412" size-unit="char" translate="no" xml:space="preserve">
-          <source>G/L-SOURCE NAMES, E</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL SN Permission Mgt - NamedType UpdateRoleIdTxt</note>
         </trans-unit><trans-unit id="Codeunit 3669574782 - NamedType 2021711790" size-unit="char" translate="yes" xml:space="preserve">
           <source>Set up G/L Source Names</source>
           <target state="translated">Setja upp upprunanöfn fjárhagsfærslna</target><note from="Developer" annotates="general" priority="2"></note>
