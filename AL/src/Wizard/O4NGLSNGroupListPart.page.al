@@ -79,7 +79,7 @@
 
     trigger OnAfterGetCurrRecord();
     begin
-        HasPermission := "Has Permission";
+        HasPermission := Rec."Has Permission";
     end;
 
     var

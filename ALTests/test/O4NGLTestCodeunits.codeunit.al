@@ -460,12 +460,10 @@ codeunit 70009249 "O4N GL Test Codeunits"
     var
         GLSourceName: record "O4N GL SN";
     begin
-        with GLSourceName do begin
-            SetRange("Source Type", SourceType);
-            SetRange("Source No.", SourceNo);
-            FindFirst();
-            Assert.AreEqual(SourceName, "Source Name", StrSubstNo(SourceNameUpdateFailesErr, "Source Type", "Source No."));
-        end;
+        GLSourceName.SetRange("Source Type", SourceType);
+        GLSourceName.SetRange("Source No.", SourceNo);
+        GLSourceName.FindFirst();
+        Assert.AreEqual(SourceName, GLSourceName."Source Name", StrSubstNo(SourceNameUpdateFailesErr, GLSourceName."Source Type", GLSourceName."Source No."));
     end;
 
 
