@@ -38,15 +38,15 @@
     /// <param name="TempGroupAccess">Parameter of type Record "O4N GL SN Group Access" temporary.</param>
     procedure SuggestAccessControl(var TempUserAccess: Record "O4N GL SN User Access" temporary; var TempGroupAccess: Record "O4N GL SN Group Access" temporary);
     var
-        LocalTempUserAccess: Record "O4N GL SN User Access" temporary;
-        LocalTempGroupAccess: Record "O4N GL SN Group Access" temporary;
+        TempUserAccessLocal: Record "O4N GL SN User Access" temporary;
+        TempGroupAccessLocal: Record "O4N GL SN Group Access" temporary;
     begin
-        LocalTempGroupAccess.COPY(TempGroupAccess, true);
-        LocalTempGroupAccess.SETRANGE("Has Permission", false);
-        LocalTempGroupAccess.MODIFYALL("Assign Permission", true);
-        LocalTempUserAccess.COPY(TempUserAccess, true);
-        LocalTempUserAccess.SETRANGE("Has Permission", false);
-        LocalTempUserAccess.MODIFYALL("Assign Permission", true);
+        TempGroupAccessLocal.COPY(TempGroupAccess, true);
+        TempGroupAccessLocal.SETRANGE("Has Permission", false);
+        TempGroupAccessLocal.MODIFYALL("Assign Permission", true);
+        TempUserAccessLocal.COPY(TempUserAccess, true);
+        TempUserAccessLocal.SETRANGE("Has Permission", false);
+        TempUserAccessLocal.MODIFYALL("Assign Permission", true);
     end;
 
     /// <summary> 
@@ -55,22 +55,22 @@
     /// <param name="TempUserAccess">Parameter of type Record "O4N GL SN User Access" temporary.</param>
     local procedure UpdateUserAccessControl(var TempUserAccess: Record "O4N GL SN User Access" temporary);
     var
-        LocalTempUserAccess: Record "O4N GL SN User Access" temporary;
+        TempUserAccessLocal: Record "O4N GL SN User Access" temporary;
     begin
-        LocalTempUserAccess.COPY(TempUserAccess, true);
-        LocalTempUserAccess.SETRANGE("Assign Permission", true);
-        LocalTempUserAccess.SETRANGE("Updated Via User Group", false);
-        if LocalTempUserAccess.FIND('-') then
+        TempUserAccessLocal.COPY(TempUserAccess, true);
+        TempUserAccessLocal.SETRANGE("Assign Permission", true);
+        TempUserAccessLocal.SETRANGE("Updated Via User Group", false);
+        if TempUserAccessLocal.FIND('-') then
             repeat
-                AddUserAccess(LocalTempUserAccess."User Security ID", LocalTempUserAccess."Permission Level");
-            until LocalTempUserAccess.NEXT() = 0;
-        LocalTempUserAccess.SETRANGE("Assign Permission");
-        LocalTempUserAccess.SETRANGE("Remove Permission", true);
-        if LocalTempUserAccess.FIND('-') then
+                AddUserAccess(TempUserAccessLocal."User Security ID", TempUserAccessLocal."Permission Level");
+            until TempUserAccessLocal.NEXT() = 0;
+        TempUserAccessLocal.SETRANGE("Assign Permission");
+        TempUserAccessLocal.SETRANGE("Remove Permission", true);
+        if TempUserAccessLocal.FIND('-') then
             repeat
-                RemoveUserAccess(LocalTempUserAccess."User Security ID", LocalTempUserAccess."Permission Level");
-            until LocalTempUserAccess.NEXT() = 0;
-        LocalTempUserAccess.RESET();
+                RemoveUserAccess(TempUserAccessLocal."User Security ID", TempUserAccessLocal."Permission Level");
+            until TempUserAccessLocal.NEXT() = 0;
+        TempUserAccessLocal.RESET();
     end;
 
     /// <summary> 
@@ -79,21 +79,21 @@
     /// <param name="TempGroupAccess">Parameter of type Record "O4N GL SN Group Access" temporary.</param>
     local procedure UpdateGroupAccessControl(var TempGroupAccess: Record "O4N GL SN Group Access" temporary);
     var
-        LocalTempGroupAccess: Record "O4N GL SN Group Access" temporary;
+        TempGroupAccessLocal: Record "O4N GL SN Group Access" temporary;
     begin
-        LocalTempGroupAccess.COPY(TempGroupAccess, true);
-        LocalTempGroupAccess.SETRANGE("Assign Permission", true);
-        if LocalTempGroupAccess.FIND('-') then
+        TempGroupAccessLocal.COPY(TempGroupAccess, true);
+        TempGroupAccessLocal.SETRANGE("Assign Permission", true);
+        if TempGroupAccessLocal.FIND('-') then
             repeat
-                AddGroupAccess(LocalTempGroupAccess."User Group Code", LocalTempGroupAccess."Permission Level");
-            until LocalTempGroupAccess.NEXT() = 0;
-        LocalTempGroupAccess.SETRANGE("Assign Permission");
-        LocalTempGroupAccess.SETRANGE("Remove Permission", true);
-        if LocalTempGroupAccess.FIND('-') then
+                AddGroupAccess(TempGroupAccessLocal."User Group Code", TempGroupAccessLocal."Permission Level");
+            until TempGroupAccessLocal.NEXT() = 0;
+        TempGroupAccessLocal.SETRANGE("Assign Permission");
+        TempGroupAccessLocal.SETRANGE("Remove Permission", true);
+        if TempGroupAccessLocal.FIND('-') then
             repeat
-                RemoveGroupAccess(LocalTempGroupAccess."User Group Code", LocalTempGroupAccess."Permission Level");
-            until LocalTempGroupAccess.NEXT() = 0;
-        LocalTempGroupAccess.RESET();
+                RemoveGroupAccess(TempGroupAccessLocal."User Group Code", TempGroupAccessLocal."Permission Level");
+            until TempGroupAccessLocal.NEXT() = 0;
+        TempGroupAccessLocal.RESET();
     end;
 
     /// <summary> 

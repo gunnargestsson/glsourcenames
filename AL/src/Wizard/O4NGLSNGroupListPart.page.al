@@ -49,10 +49,10 @@
 
                     trigger OnValidate();
                     begin
-                        GlobalTempUserAccess.SETRANGE("Permission Level", Rec."Permission Level");
-                        GlobalTempUserAccess.SETRANGE("Access Via User Group Code", Rec."User Group Code");
-                        GlobalTempUserAccess.SETRANGE("Updated Via User Group", true);
-                        GlobalTempUserAccess.MODIFYALL("Assign Permission", Rec."Assign Permission");
+                        TempUserAccessGlobal.SETRANGE("Permission Level", Rec."Permission Level");
+                        TempUserAccessGlobal.SETRANGE("Access Via User Group Code", Rec."User Group Code");
+                        TempUserAccessGlobal.SETRANGE("Updated Via User Group", true);
+                        TempUserAccessGlobal.MODIFYALL("Assign Permission", Rec."Assign Permission");
                     end;
                 }
                 field("Remove Permission"; Rec."Remove Permission")
@@ -63,10 +63,10 @@
 
                     trigger OnValidate();
                     begin
-                        GlobalTempUserAccess.SETRANGE("Permission Level", Rec."Permission Level");
-                        GlobalTempUserAccess.SETRANGE("Access Via User Group Code", Rec."User Group Code");
-                        GlobalTempUserAccess.SETRANGE("Updated Via User Group", true);
-                        GlobalTempUserAccess.MODIFYALL("Remove Permission", Rec."Remove Permission");
+                        TempUserAccessGlobal.SETRANGE("Permission Level", Rec."Permission Level");
+                        TempUserAccessGlobal.SETRANGE("Access Via User Group Code", Rec."User Group Code");
+                        TempUserAccessGlobal.SETRANGE("Updated Via User Group", true);
+                        TempUserAccessGlobal.MODIFYALL("Remove Permission", Rec."Remove Permission");
                     end;
                 }
             }
@@ -83,7 +83,7 @@
     end;
 
     var
-        GlobalTempUserAccess: Record "O4N GL SN User Access" temporary;
+        TempUserAccessGlobal: Record "O4N GL SN User Access" temporary;
         HasPermission: Boolean;
 
     /// <summary> 
@@ -94,7 +94,7 @@
     procedure Set(var TempGroupAccess: Record "O4N GL SN Group Access" temporary; var TempUserAccess: Record "O4N GL SN User Access" temporary);
     begin
         Rec.COPY(TempGroupAccess, true);
-        GlobalTempUserAccess.COPY(TempUserAccess, true);
+        TempUserAccessGlobal.COPY(TempUserAccess, true);
     end;
 }
 
