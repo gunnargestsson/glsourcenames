@@ -15,7 +15,7 @@
     "versions": [        
         {
             "version": "current",
-            "artifact": "bcartifacts.azureedge.net/sandbox/16/is/Latest",
+            "artifact": "bcartifacts.azureedge.net/sandbox/17/is/Latest",
             "imageName": "ci",
             "insiderBuild": false
         },
