@@ -14,6 +14,12 @@
         RequiredPermissionMissingErr: Label 'Required permissions for table "%1" is missing.  Can''t refresh lookup data.', Comment = '%1 for the current table name';
         ProcessCompletedMsg: Label 'G/L Source Names lookup table update finished';
 
+    /// <summary> 
+    /// Description for AddSource.
+    /// </summary>
+    /// <param name="SourceType">Parameter of type Enum "Gen. Journal Source Type".</param>
+    /// <param name="SourceNo">Parameter of type Code[20].</param>
+    /// <param name="SourceName">Parameter of type Text[100].</param>
     procedure AddSource(SourceType: Enum "Gen. Journal Source Type"; SourceNo: Code[20]; SourceName: Text[100]);
     var
         GLSourceName: Record "O4N GL SN";
@@ -30,6 +36,11 @@
         end;
     end;
 
+    /// <summary> 
+    /// Description for RemoveSource.
+    /// </summary>
+    /// <param name="SourceType">Parameter of type Enum "Gen. Journal Source Type".</param>
+    /// <param name="SourceNo">Parameter of type Code[20].</param>
     procedure RemoveSource(SourceType: Enum "Gen. Journal Source Type"; SourceNo: Code[20]);
     var
         GLSourceName: Record "O4N GL SN";
@@ -39,6 +50,12 @@
             GLSourceName.DELETE();
     end;
 
+    /// <summary> 
+    /// Description for UpdateSource.
+    /// </summary>
+    /// <param name="SourceType">Parameter of type Enum "Gen. Journal Source Type".</param>
+    /// <param name="SourceNo">Parameter of type Code[20].</param>
+    /// <param name="SourceName">Parameter of type Text[100].</param>
     procedure UpdateSource(SourceType: Enum "Gen. Journal Source Type"; SourceNo: Code[20]; SourceName: Text[100]);
     var
         GLSourceName: Record "O4N GL SN";
@@ -53,6 +70,10 @@
             AddSource(SourceType, SourceNo, SourceName);
     end;
 
+    /// <summary> 
+    /// Description for Refresh.
+    /// </summary>
+    /// <param name="HideMessage">Parameter of type Boolean.</param>
     procedure Refresh(HideMessage: Boolean);
     var
         GLSourceName: Record "O4N GL SN";
@@ -80,6 +101,9 @@
             MESSAGE(ProcessCompletedMsg);
     end;
 
+    /// <summary> 
+    /// Description for PopulateSourceTable.
+    /// </summary>
     procedure PopulateSourceTable();
     var
         GLSourceName: Record "O4N GL SN";
@@ -108,6 +132,11 @@
         end;
     end;
 
+    /// <summary> 
+    /// Description for AddSourceTable.
+    /// </summary>
+    /// <param name="SourceType">Parameter of type Enum "Gen. Journal Source Type".</param>
+    /// <param name="RecVariant">Parameter of type Variant.</param>
     procedure AddSourceTable(SourceType: Enum "Gen. Journal Source Type"; RecVariant: Variant);
     var
         RecRef: RecordRef;
@@ -123,6 +152,11 @@
             until RecRef.NEXT() = 0;
     end;
 
+    /// <summary> 
+    /// Description for AddEmployeeTable.
+    /// </summary>
+    /// <param name="SourceType">Parameter of type Enum "Gen. Journal Source Type".</param>
+    /// <param name="Employee">Parameter of type Record Employee.</param>
     procedure AddEmployeeTable(SourceType: Enum "Gen. Journal Source Type"; Employee: Record Employee);
     begin
         if Employee.FINDSET() then

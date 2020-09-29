@@ -76,6 +76,10 @@
     var
         HasPermission: Boolean;
 
+    /// <summary> 
+    /// Description for Set.
+    /// </summary>
+    /// <param name="TempUserAccess">Parameter of type Record "O4N GL SN User Access" temporary.</param>
     procedure Set(var TempUserAccess: Record "O4N GL SN User Access" temporary);
     begin
         Rec.COPY(TempUserAccess, true);

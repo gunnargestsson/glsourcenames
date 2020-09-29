@@ -32,6 +32,11 @@
             until AccessControl.NEXT() = 0;
     end;
 
+    /// <summary> 
+    /// Description for AddUserAccess.
+    /// </summary>
+    /// <param name="AssignToUser">Parameter of type Guid.</param>
+    /// <param name="PermissionSet">Parameter of type Code[20].</param>
     local procedure AddUserAccess(AssignToUser: Guid; PermissionSet: Code[20]);
     var
         AccessControl: Record "Access Control";
@@ -48,6 +53,9 @@
             AccessControl.INSERT(true);
     end;
 
+    /// <summary> 
+    /// Description for RecreateHelpResources.
+    /// </summary>
     local procedure RecreateHelpResources()
     var
         HelpResources: Record "O4N GL SN Help Resource";

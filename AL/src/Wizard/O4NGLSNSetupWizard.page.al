@@ -284,7 +284,7 @@
     trigger OnQueryClosePage(CloseAction: Action): Boolean;
     begin
         if CloseAction = ACTION::OK then
-            if Status = Status::"Not Completed" then
+            if Rec.Status = Rec.Status::"Not Completed" then
                 if not CONFIRM(NAVNotSetUpQst, false) then
                     ERROR('');
     end;
@@ -313,6 +313,9 @@
         NAVNotSetUpQst: Label 'G/L Source Names have not been set up.\\Are you sure you want to exit?';
         RegistrationEMailAddressMissingErr: Label 'Registration E-Mail Address is missing';
 
+    /// <summary> 
+    /// Description for EnableControls.
+    /// </summary>
     local procedure EnableControls();
     begin
         ResetControls();
@@ -335,6 +338,9 @@
         end;
     end;
 
+    /// <summary> 
+    /// Description for FinishAction.
+    /// </summary>
     local procedure FinishAction();
     begin
         StoreSetup();
@@ -342,6 +348,10 @@
         CurrPage.CLOSE();
     end;
 
+    /// <summary> 
+    /// Description for NextStep.
+    /// </summary>
+    /// <param name="Backwards">Parameter of type Boolean.</param>
     local procedure NextStep(Backwards: Boolean);
     begin
         if Backwards then begin
@@ -357,6 +367,10 @@
         EnableControls();
     end;
 
+    /// <summary> 
+    /// Description for StepEnabled.
+    /// </summary>
+    /// <returns>Return variable "Boolean".</returns>
     local procedure StepEnabled(): Boolean;
     begin
         case Step of
@@ -377,6 +391,9 @@
         end;
     end;
 
+    /// <summary> 
+    /// Description for ShowStartStep.
+    /// </summary>
     local procedure ShowStartStep();
     begin
         FirstStepVisible := true;
@@ -384,45 +401,66 @@
         BackActionEnabled := false;
     end;
 
+    /// <summary> 
+    /// Description for ShowUserGroupReadStep.
+    /// </summary>
     local procedure ShowUserGroupReadStep();
     begin
         UserGroupReadVisible := true;
         BackActionEnabled := true;
     end;
 
+    /// <summary> 
+    /// Description for ShowUserGroupUpdateStup.
+    /// </summary>
     local procedure ShowUserGroupUpdateStup();
     begin
         UserGroupUpdateVisible := true;
         BackActionEnabled := true;
     end;
 
+    /// <summary> 
+    /// Description for ShowUserReadStep.
+    /// </summary>
     local procedure ShowUserReadStep();
     begin
         UserReadVisible := true;
         BackActionEnabled := true;
     end;
 
+    /// <summary> 
+    /// Description for ShowUserUpdateSetup.
+    /// </summary>
     local procedure ShowUserUpdateSetup();
     begin
         UserUpdateVisible := true;
         BackActionEnabled := true;
     end;
 
+    /// <summary> 
+    /// Description for ShowRegistrationStep.
+    /// </summary>
     local procedure ShowRegistrationStep();
     begin
         RegistrationVisible := true;
         BackActionEnabled := true;
     end;
 
+    /// <summary> 
+    /// Description for ShowFinishStep.
+    /// </summary>
     local procedure ShowFinishStep();
     begin
         FinalStepVisible := true;
         NextActionEnabled := false;
     end;
 
+    /// <summary> 
+    /// Description for ResetControls.
+    /// </summary>
     local procedure ResetControls();
     begin
-        FinishActionEnabled := "Registration E-Mail Address" <> '';
+        FinishActionEnabled := Rec."Registration E-Mail Address" <> '';
         BackActionEnabled := true;
         NextActionEnabled := true;
 
@@ -435,30 +473,36 @@
         FinalStepVisible := false;
 
         TempUserAccess.SETRANGE("Permission Level", TempUserAccess."Permission Level"::Read);
-        UserReadEnabled := not ISEMPTY;
+        UserReadEnabled := not Rec.IsEmpty();
         TempUserAccess.SETRANGE("Permission Level", TempUserAccess."Permission Level"::Update);
-        UserUpdateEnabled := not ISEMPTY;
+        UserUpdateEnabled := not Rec.IsEmpty();
         TempUserAccess.SETRANGE("Permission Level");
 
         TempGroupAccess.SETRANGE("Permission Level", TempGroupAccess."Permission Level"::Read);
-        UserGroupReadEnabled := not ISEMPTY;
+        UserGroupReadEnabled := not Rec.IsEmpty();
         TempGroupAccess.SETRANGE("Permission Level", TempGroupAccess."Permission Level"::Update);
-        UserGroupUpdateEnabled := not ISEMPTY;
+        UserGroupUpdateEnabled := not Rec.IsEmpty();
         TempGroupAccess.SETRANGE("Permission Level");
     end;
 
+    /// <summary> 
+    /// Description for StoreSetup.
+    /// </summary>
     local procedure StoreSetup();
     var
         Setup: Record "O4N GL SN Setup";
         AssistedSetup: Codeunit "Assisted Setup";
     begin
-        Status := Status::Completed;
+        Rec.Status := Rec.Status::Completed;
         Setup.GET();
         Setup.TRANSFERFIELDS(Rec);
         Setup.MODIFY();
         AssistedSetup.Complete(page::"O4N GL SN Setup Wizard");
     end;
 
+    /// <summary> 
+    /// Description for StoreAccessControl.
+    /// </summary>
     local procedure StoreAccessControl();
     var
         PermissionMgt: Codeunit "O4N GL SN Permission Mgt";
@@ -466,6 +510,9 @@
         PermissionMgt.SetAccessControl(TempUserAccess, TempGroupAccess);
     end;
 
+    /// <summary> 
+    /// Description for LoadTopBanners.
+    /// </summary>
     local procedure LoadTopBanners();
     begin
         if MediaRepositoryStandard.GET('AssistedSetup-NoText-400px.png', FORMAT(CURRENTCLIENTTYPE)) and

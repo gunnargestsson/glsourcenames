@@ -86,6 +86,11 @@
         GlobalTempUserAccess: Record "O4N GL SN User Access" temporary;
         HasPermission: Boolean;
 
+    /// <summary> 
+    /// Description for Set.
+    /// </summary>
+    /// <param name="TempGroupAccess">Parameter of type Record "O4N GL SN Group Access" temporary.</param>
+    /// <param name="TempUserAccess">Parameter of type Record "O4N GL SN User Access" temporary.</param>
     procedure Set(var TempGroupAccess: Record "O4N GL SN Group Access" temporary; var TempUserAccess: Record "O4N GL SN User Access" temporary);
     begin
         Rec.COPY(TempGroupAccess, true);

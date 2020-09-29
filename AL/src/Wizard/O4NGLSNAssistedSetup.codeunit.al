@@ -11,6 +11,9 @@
         GLSourceNamesTxt: Label 'Set up G/L Source Names';
         RequiredPermissionMissingErr: Label 'You have not been granted required access rights to start the Assisted Setup.\\The Assisted Setup for G/L Source Names is about assigning the required permissions to users.  To be able to assign permissions you need to be granted either the SUPER og SECURITY permission set.';
 
+    /// <summary> 
+    /// Description for VerifyUserAccess.
+    /// </summary>
     procedure VerifyUserAccess();
     var
         AccessControl: Record "Access Control";
@@ -21,6 +24,9 @@
             ERROR(RequiredPermissionMissingErr);
     end;
 
+    /// <summary> 
+    /// Description for OnRegisterAssistedSetup.
+    /// </summary>
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Assisted Setup", 'OnRegister', '', true, false)]
     local procedure OnRegisterAssistedSetup();
     begin
@@ -30,6 +36,9 @@
         AddToAssistedSetup();
     end;
 
+    /// <summary> 
+    /// Description for InitializeSetup.
+    /// </summary>
     local procedure InitializeSetup();
     begin
         if not Setup.Get() then begin
@@ -40,6 +49,9 @@
         HelpResource.InitializeResources();
     end;
 
+    /// <summary> 
+    /// Description for AddToAssistedSetup.
+    /// </summary>
     local procedure AddToAssistedSetup();
     var
         HelpResources: Record "O4N GL SN Help Resource";

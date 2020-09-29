@@ -1,14 +1,14 @@
 {
     "version":  "0.2.0",
-    "configurations":  [        
+    "configurations":  [                         
                            {
                                "type":  "al",
                                "request":  "launch",
                                "name":  "Local Sandbox (GLSN-dev)",
-                               "server":  "http://GLSN-dev",
-                               "serverInstance":  "BC",
-                               "port":  7049,
-                               "tenant":  "",
+                               "server":  "https://traefik.kappi.is",                               
+                               "serverInstance":  "insiderdev",
+                               "port":  443,
+                               "tenant":  "default",
                                "authentication":  "UserPassword",
                                "startupObjectId":  130451,
                                "startupObjectType":  "Page",

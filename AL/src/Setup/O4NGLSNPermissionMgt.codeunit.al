@@ -9,18 +9,33 @@
         ReadRoleIdTxt: Label 'G/L-SOURCE NAMES', Locked = true;
         UpdateRoleIdTxt: Label 'G/L-SOURCE NAMES, E', Locked = true;
 
+    /// <summary> 
+    /// Description for GetAccessControl.
+    /// </summary>
+    /// <param name="TempUserAccess">Parameter of type Record "O4N GL SN User Access" temporary.</param>
+    /// <param name="TempGroupAccess">Parameter of type Record "O4N GL SN Group Access" temporary.</param>
     procedure GetAccessControl(var TempUserAccess: Record "O4N GL SN User Access" temporary; var TempGroupAccess: Record "O4N GL SN Group Access" temporary);
     begin
         GetReadOnlyMembers(TempUserAccess, TempGroupAccess);
         GetUpdateMembers(TempUserAccess, TempGroupAccess);
     end;
 
+    /// <summary> 
+    /// Description for SetAccessControl.
+    /// </summary>
+    /// <param name="TempUserAccess">Parameter of type Record "O4N GL SN User Access" temporary.</param>
+    /// <param name="TempGroupAccess">Parameter of type Record "O4N GL SN Group Access" temporary.</param>
     procedure SetAccessControl(var TempUserAccess: Record "O4N GL SN User Access" temporary; var TempGroupAccess: Record "O4N GL SN Group Access" temporary);
     begin
         UpdateUserAccessControl(TempUserAccess);
         UpdateGroupAccessControl(TempGroupAccess);
     end;
 
+    /// <summary> 
+    /// Description for SuggestAccessControl.
+    /// </summary>
+    /// <param name="TempUserAccess">Parameter of type Record "O4N GL SN User Access" temporary.</param>
+    /// <param name="TempGroupAccess">Parameter of type Record "O4N GL SN Group Access" temporary.</param>
     procedure SuggestAccessControl(var TempUserAccess: Record "O4N GL SN User Access" temporary; var TempGroupAccess: Record "O4N GL SN Group Access" temporary);
     var
         LocalTempUserAccess: Record "O4N GL SN User Access" temporary;
@@ -34,6 +49,10 @@
         LocalTempUserAccess.MODIFYALL("Assign Permission", true);
     end;
 
+    /// <summary> 
+    /// Description for UpdateUserAccessControl.
+    /// </summary>
+    /// <param name="TempUserAccess">Parameter of type Record "O4N GL SN User Access" temporary.</param>
     local procedure UpdateUserAccessControl(var TempUserAccess: Record "O4N GL SN User Access" temporary);
     var
         LocalTempUserAccess: Record "O4N GL SN User Access" temporary;
@@ -54,6 +73,10 @@
         LocalTempUserAccess.RESET();
     end;
 
+    /// <summary> 
+    /// Description for UpdateGroupAccessControl.
+    /// </summary>
+    /// <param name="TempGroupAccess">Parameter of type Record "O4N GL SN Group Access" temporary.</param>
     local procedure UpdateGroupAccessControl(var TempGroupAccess: Record "O4N GL SN Group Access" temporary);
     var
         LocalTempGroupAccess: Record "O4N GL SN Group Access" temporary;
@@ -73,6 +96,11 @@
         LocalTempGroupAccess.RESET();
     end;
 
+    /// <summary> 
+    /// Description for GetReadOnlyMembers.
+    /// </summary>
+    /// <param name="TempUserAccess">Parameter of type Record "O4N GL SN User Access" temporary.</param>
+    /// <param name="TempGroupAccess">Parameter of type Record "O4N GL SN Group Access" temporary.</param>
     local procedure GetReadOnlyMembers(var TempUserAccess: Record "O4N GL SN User Access" temporary; var TempGroupAccess: Record "O4N GL SN Group Access" temporary);
     var
         TempUser: Record User temporary;
@@ -84,6 +112,11 @@
         CopyUsers(TempUser, TempUserAccess, TempGroupAccess, TempGroupAccess."Permission Level"::Read);
     end;
 
+    /// <summary> 
+    /// Description for GetUpdateMembers.
+    /// </summary>
+    /// <param name="TempUserAccess">Parameter of type Record "O4N GL SN User Access" temporary.</param>
+    /// <param name="TempGroupAccess">Parameter of type Record "O4N GL SN Group Access" temporary.</param>
     local procedure GetUpdateMembers(var TempUserAccess: Record "O4N GL SN User Access" temporary; var TempGroupAccess: Record "O4N GL SN Group Access" temporary);
     var
         TempUser: Record User temporary;
@@ -99,6 +132,12 @@
         CopyUsers(TempUser, TempUserAccess, TempGroupAccess, TempGroupAccess."Permission Level"::Update);
     end;
 
+    /// <summary> 
+    /// Description for CopyUserGroups.
+    /// </summary>
+    /// <param name="TempUserGroup">Parameter of type Record "User Group" temporary.</param>
+    /// <param name="TempGroupAccess">Parameter of type Record "O4N GL SN Group Access" temporary.</param>
+    /// <param name="PermissionLevel">Parameter of type Option.</param>
     local procedure CopyUserGroups(var TempUserGroup: Record "User Group" temporary; var TempGroupAccess: Record "O4N GL SN Group Access" temporary; PermissionLevel: Option);
     begin
         if TempUserGroup.FIND('-') then
@@ -111,6 +150,13 @@
             until TempUserGroup.NEXT() = 0;
     end;
 
+    /// <summary> 
+    /// Description for CopyUsers.
+    /// </summary>
+    /// <param name="TempUser">Parameter of type Record User temporary.</param>
+    /// <param name="TempUserAccess">Parameter of type Record "O4N GL SN User Access" temporary.</param>
+    /// <param name="TempGroupAccess">Parameter of type Record "O4N GL SN Group Access" temporary.</param>
+    /// <param name="PermissionLevel">Parameter of type Option.</param>
     local procedure CopyUsers(var TempUser: Record User temporary; var TempUserAccess: Record "O4N GL SN User Access" temporary; var TempGroupAccess: Record "O4N GL SN Group Access" temporary; PermissionLevel: Option);
     begin
         if TempUser.FIND('-') then
@@ -125,6 +171,12 @@
             until TempUser.NEXT() = 0;
     end;
 
+    /// <summary> 
+    /// Description for WhoThatCanView.
+    /// </summary>
+    /// <param name="TableId">Parameter of type Integer.</param>
+    /// <param name="TempUser">Parameter of type Record User temporary.</param>
+    /// <param name="TempUserGroup">Parameter of type Record "User Group" temporary.</param>
     local procedure WhoThatCanView(TableId: Integer; var TempUser: Record User temporary; var TempUserGroup: Record "User Group" temporary);
     var
         Permission: Record Permission;
@@ -139,6 +191,12 @@
             until Permission.NEXT() = 0;
     end;
 
+    /// <summary> 
+    /// Description for WhoThatCanUpdate.
+    /// </summary>
+    /// <param name="TableId">Parameter of type Integer.</param>
+    /// <param name="TempUser">Parameter of type Record User temporary.</param>
+    /// <param name="TempUserGroup">Parameter of type Record "User Group" temporary.</param>
     local procedure WhoThatCanUpdate(TableId: Integer; var TempUser: Record User temporary; var TempUserGroup: Record "User Group" temporary);
     var
         Permission: Record Permission;
@@ -153,6 +211,11 @@
             until Permission.NEXT() = 0;
     end;
 
+    /// <summary> 
+    /// Description for AddUsersFromAccessControl.
+    /// </summary>
+    /// <param name="PermissionSetId">Parameter of type Code[20].</param>
+    /// <param name="TempUser">Parameter of type Record User temporary.</param>
     local procedure AddUsersFromAccessControl(PermissionSetId: Code[20]; var TempUser: Record User temporary);
     var
         AccessControl: Record "Access Control";
@@ -170,6 +233,11 @@
             until AccessControl.NEXT() = 0;
     end;
 
+    /// <summary> 
+    /// Description for AddGroupFromAccessControl.
+    /// </summary>
+    /// <param name="PermissionSetId">Parameter of type Code[20].</param>
+    /// <param name="TempUserGroup">Parameter of type Record "User Group" temporary.</param>
     local procedure AddGroupFromAccessControl(PermissionSetId: Code[20]; var TempUserGroup: Record "User Group" temporary);
     var
         UserGroup: Record "User Group";
@@ -187,6 +255,12 @@
             until AccessControl.NEXT() = 0;
     end;
 
+    /// <summary> 
+    /// Description for HasAccessViaGroup.
+    /// </summary>
+    /// <param name="TempUserAccess">Parameter of type Record "O4N GL SN User Access" temporary.</param>
+    /// <param name="TempGroupAccess">Parameter of type Record "O4N GL SN Group Access" temporary.</param>
+    /// <returns>Return variable "Code[20]".</returns>
     local procedure HasAccessViaGroup(TempUserAccess: Record "O4N GL SN User Access" temporary; var TempGroupAccess: Record "O4N GL SN Group Access" temporary): Code[20];
     var
         UserGroupMember: Record "User Group Member";
@@ -203,6 +277,12 @@
             until TempUserGroupAccess.NEXT() = 0;
     end;
 
+    /// <summary> 
+    /// Description for UserHasAccess.
+    /// </summary>
+    /// <param name="UserSid">Parameter of type Guid.</param>
+    /// <param name="PermissionLevel">Parameter of type Option Read,Update.</param>
+    /// <returns>Return variable "Boolean".</returns>
     local procedure UserHasAccess(UserSid: Guid; PermissionLevel: Option Read,Update): Boolean;
     var
         AccessControl: Record "Access Control";
@@ -223,6 +303,12 @@
         exit(not AccessControl.ISEMPTY());
     end;
 
+    /// <summary> 
+    /// Description for GroupHasAccess.
+    /// </summary>
+    /// <param name="GroupCode">Parameter of type Code[20].</param>
+    /// <param name="PermissionLevel">Parameter of type Option Read,Update.</param>
+    /// <returns>Return variable "Boolean".</returns>
     local procedure GroupHasAccess(GroupCode: Code[20]; PermissionLevel: Option Read,Update): Boolean;
     var
         UserGroupPermissionSet: Record "User Group Permission Set";
@@ -242,6 +328,12 @@
         exit(not UserGroupPermissionSet.ISEMPTY());
     end;
 
+    /// <summary> 
+    /// Description for AddUserAccess.
+    /// </summary>
+    /// <param name="UserSid">Parameter of type Guid.</param>
+    /// <param name="PermissionLevel">Parameter of type Option Read,Update.</param>
+    /// <returns>Return variable "Boolean".</returns>
     local procedure AddUserAccess(UserSid: Guid; PermissionLevel: Option Read,Update): Boolean;
     var
         AccessControl: Record "Access Control";
@@ -263,6 +355,12 @@
         AccessControl.INSERT(true);
     end;
 
+    /// <summary> 
+    /// Description for AddGroupAccess.
+    /// </summary>
+    /// <param name="GroupCode">Parameter of type Code[20].</param>
+    /// <param name="PermissionLevel">Parameter of type Option Read,Update.</param>
+    /// <returns>Return variable "Boolean".</returns>
     local procedure AddGroupAccess(GroupCode: Code[20]; PermissionLevel: Option Read,Update): Boolean;
     var
         UserGroupPermissionSet: Record "User Group Permission Set";
@@ -283,6 +381,12 @@
         UserGroupPermissionSet.INSERT(true);
     end;
 
+    /// <summary> 
+    /// Description for RemoveUserAccess.
+    /// </summary>
+    /// <param name="UserSid">Parameter of type Guid.</param>
+    /// <param name="PermissionLevel">Parameter of type Option Read,Update.</param>
+    /// <returns>Return variable "Boolean".</returns>
     local procedure RemoveUserAccess(UserSid: Guid; PermissionLevel: Option Read,Update): Boolean;
     var
         AccessControl: Record "Access Control";
@@ -303,6 +407,12 @@
         AccessControl.DELETEALL(true);
     end;
 
+    /// <summary> 
+    /// Description for RemoveGroupAccess.
+    /// </summary>
+    /// <param name="GroupCode">Parameter of type Code[20].</param>
+    /// <param name="PermissionLevel">Parameter of type Option Read,Update.</param>
+    /// <returns>Return variable "Boolean".</returns>
     local procedure RemoveGroupAccess(GroupCode: Code[20]; PermissionLevel: Option Read,Update): Boolean;
     var
         UserGroupPermissionSet: Record "User Group Permission Set";

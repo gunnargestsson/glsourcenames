@@ -5,12 +5,18 @@
     begin
     end;
 
+    /// <summary> 
+    /// Description for GetIcon.
+    /// </summary>
     procedure GetIcon() IconDataAsBase64: Text
     begin
         IconDataAsBase64 := IconSource();
     end;
 
-
+    /// <summary> 
+    /// Description for IconSource.
+    /// </summary>
+    /// <returns>Return variable "Text".</returns>
     local procedure IconSource(): Text;
     begin
         exit(
