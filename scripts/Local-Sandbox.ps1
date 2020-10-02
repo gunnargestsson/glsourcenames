@@ -8,9 +8,9 @@ if ($name) {
     $containername = $name
 }
 
-. ".\Install-NavContainerHelper.ps1" `
+. ".\Install-BCContainerHelper.ps1" `
     -buildEnv Local `
-    -navContainerHelperPath $userProfile.navContainerHelperPath
+    -BCContainerHelperPath $userProfile.BCContainerHelperPath
 
 . ".\Create-Container.ps1" `
     -buildEnv Local `

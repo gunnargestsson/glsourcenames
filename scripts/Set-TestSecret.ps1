@@ -28,5 +28,5 @@ if ($argument) {
 }
 if ($unsecureArgument) {
     Write-Host "Setting test secret"
-    Invoke-NavContainerCodeunit -containerName $containerName -CompanyName $companyName -Codeunitid $codeunitId -MethodName $methodName -Argument $unsecureArgument
+    Invoke-BCContainerCodeunit -containerName $containerName -CompanyName $companyName -Codeunitid $codeunitId -MethodName $methodName -Argument $unsecureArgument
 }

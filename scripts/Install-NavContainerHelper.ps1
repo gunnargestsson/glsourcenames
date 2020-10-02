@@ -3,38 +3,38 @@
     [string] $buildEnv = "AzureDevOps",
 
     [Parameter(Mandatory=$false)]
-    [string] $navContainerHelperPath = $env:navContainerHelperPath,
+    [string] $BCContainerHelperPath = $env:BCContainerHelperPath,
 
     [Parameter(Mandatory=$false)]
-    [string] $navContainerHelperVersion = $env:navContainerHelperVersion
+    [string] $BCContainerHelperVersion = $env:BCContainerHelperVersion
 )
 
-if (-not $navContainerHelperVersion) { $navContainerHelperVersion = "latest" }
+if (-not $BCContainerHelperVersion) { $BCContainerHelperVersion = "latest" }
 
-Write-Host "Version: $navContainerHelperVersion"
+Write-Host "Version: $BCContainerHelperVersion"
 
-if ($navContainerHelperPath -ne "" -and (Test-Path $navContainerHelperPath)) {
+if ($BCContainerHelperPath -ne "" -and (Test-Path $BCContainerHelperPath)) {
 
-    Write-Host "Using NavContainerHelper from $navContainerHelperPath"
-    . $navContainerHelperPath
+    Write-Host "Using BCContainerHelper from $BCContainerHelperPath"
+    . $BCContainerHelperPath
 
 }
 else {
 
-    $module = Get-InstalledModule -Name navcontainerhelper -ErrorAction SilentlyContinue
+    $module = Get-InstalledModule -Name BCContainerhelper -ErrorAction SilentlyContinue
     if ($module) {
         $versionStr = $module.Version.ToString()
-        Write-Host "NavContainerHelper $VersionStr is installed"
-        if ($navContainerHelperVersion -eq "latest") {
-            Write-Host "Determine latest NavContainerHelper version"
-            $latestVersion = (Find-Module -Name navcontainerhelper).Version
-            $navContainerHelperVersion = $latestVersion.ToString()
-            Write-Host "NavContainerHelper $navContainerHelperVersion is the latest version"
+        Write-Host "BCContainerHelper $VersionStr is installed"
+        if ($BCContainerHelperVersion -eq "latest") {
+            Write-Host "Determine latest BCContainerHelper version"
+            $latestVersion = (Find-Module -Name BCContainerhelper).Version
+            $BCContainerHelperVersion = $latestVersion.ToString()
+            Write-Host "BCContainerHelper $BCContainerHelperVersion is the latest version"
         }
-        if ($navContainerHelperVersion -ne $module.Version) {
-            Write-Host "Updating NavContainerHelper to $navContainerHelperVersion"
-            Update-Module -Name navcontainerhelper -Force -RequiredVersion $navContainerHelperVersion
-            Write-Host "NavContainerHelper updated"
+        if ($BCContainerHelperVersion -ne $module.Version) {
+            Write-Host "Updating BCContainerHelper to $BCContainerHelperVersion"
+            Update-Module -Name BCContainerhelper -Force -RequiredVersion $BCContainerHelperVersion
+            Write-Host "BCContainerHelper updated"
         }
     }
     else {
@@ -42,16 +42,16 @@ else {
             Write-Host "Installing NuGet Package Provider"
             Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.208 -Force -WarningAction SilentlyContinue | Out-Null
         }
-        if ($navContainerHelperVersion -eq "latest") {
-            Write-Host "Installing NavContainerHelper"
-            Install-Module -Name navcontainerhelper -Force
+        if ($BCContainerHelperVersion -eq "latest") {
+            Write-Host "Installing BCContainerHelper"
+            Install-Module -Name BCContainerhelper -Force
         }
         else {
-            Write-Host "Installing NavContainerHelper version $navContainerHelperVersion"
-            Install-Module -Name navcontainerhelper -Force -RequiredVersion $navContainerHelperVersion
+            Write-Host "Installing BCContainerHelper version $BCContainerHelperVersion"
+            Install-Module -Name BCContainerhelper -Force -RequiredVersion $BCContainerHelperVersion
         }
-        $module = Get-InstalledModule -Name navcontainerhelper -ErrorAction SilentlyContinue
+        $module = Get-InstalledModule -Name BCContainerhelper -ErrorAction SilentlyContinue
         $versionStr = $module.Version.ToString()
-        Write-Host "NavContainerHelper $VersionStr installed"
+        Write-Host "BCContainerHelper $VersionStr installed"
     }
 }

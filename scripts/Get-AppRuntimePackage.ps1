@@ -32,5 +32,5 @@ Sort-AppFoldersByDependencies -appFolders $appFolders.Split(',') -baseFolder $bu
     New-Item -Path $runtimeAppFolder -ItemType Directory | Out-Null
 
     Write-Host "Getting Runtime Package $appFolder"
-    Get-NavContainerAppRuntimePackage -containerName $containerName -appName $appJson.name -appVersion $appVersion -publisher $appJson.Publisher -appFile (Join-Path $runtimeAppFolder ([System.IO.Path]::GetFileName($appFile)))
+    Get-BCContainerAppRuntimePackage -containerName $containerName -appName $appJson.name -appVersion $appVersion -publisher $appJson.Publisher -appFile (Join-Path $runtimeAppFolder ([System.IO.Path]::GetFileName($appFile)))
 }

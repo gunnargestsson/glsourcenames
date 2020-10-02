@@ -91,7 +91,7 @@ else {
     $additionalParameters = @("--volume ""C:\DEMO:C:\DEMO""")
     $parameters += @{ 
         "shortcuts" = "None"
-        "myscripts" = @(@{ "AdditionalOutput.ps1" = "copy-item -Path 'C:\Run\*.vsix' -Destination 'C:\ProgramData\navcontainerhelper\Extensions\$containerName' -force" })
+        "myscripts" = @(@{ "AdditionalOutput.ps1" = "copy-item -Path 'C:\Run\*.vsix' -Destination 'C:\ProgramData\BCContainerhelper\Extensions\$containerName' -force" })
     }
 
 }

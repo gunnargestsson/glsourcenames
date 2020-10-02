@@ -29,15 +29,15 @@ if ($property.Value) {
     $imageName = $property.Value
 }
 
-$property = $settings.PSObject.Properties.Match('navContainerHelperVersion')
+$property = $settings.PSObject.Properties.Match('BCContainerHelperVersion')
 if ($property.Value) {
-    $navContainerHelperVersion = $property.Value
+    $BCContainerHelperVersion = $property.Value
 }
 else {
-    $navContainerHelperVersion = "latest"
+    $BCContainerHelperVersion = "latest"
 }
-Write-Host "Set navContainerHelperVersion = $navContainerHelperVersion"
-Write-Host "##vso[task.setvariable variable=navContainerHelperVersion]$navContainerHelperVersion"
+Write-Host "Set BCContainerHelperVersion = $BCContainerHelperVersion"
+Write-Host "##vso[task.setvariable variable=BCContainerHelperVersion]$BCContainerHelperVersion"
 
 $appFolders = $settings.appFolders
 Write-Host "Set appFolders = $appFolders"

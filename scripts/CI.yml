@@ -30,10 +30,10 @@ stages:
         failOnStderr: true
     
     - task: PowerShell@2
-      displayName: 'Install NavContainerHelper'
+      displayName: 'Install BCContainerHelper'
       inputs:
         targetType: filePath
-        filePath: 'scripts\Install-NavContainerHelper.ps1'
+        filePath: 'scripts\Install-BCContainerHelper.ps1'
         failOnStderr: true
     
     - task: PowerShell@2

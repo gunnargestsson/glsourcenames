@@ -5,7 +5,7 @@ cd $PSScriptRoot
 $containerName = "$($settings.name)-bld"
 
 $buildenv = "Local"
-$navContainerHelperPath = $userProfile.navContainerHelperPath
+$BCContainerHelperPath = $userProfile.BCContainerHelperPath
 
 $buildArtifactFolder = Join-Path $ProjectRoot ".output"
 if (Test-Path $buildArtifactFolder) { Remove-Item $buildArtifactFolder -Force -Recurse }
@@ -15,9 +15,9 @@ $alPackagesFolder = Join-Path $ProjectRoot ".alPackages"
 if (Test-Path $alPackagesFolder) { Remove-Item $alPackagesFolder -Force -Recurse }
 New-Item -Path $alPackagesFolder -ItemType Directory -Force | Out-Null
 
-. ".\Install-NavContainerHelper.ps1" `
+. ".\Install-BCContainerHelper.ps1" `
     -buildenv $buildenv `
-    -navContainerHelperPath $navContainerHelperPath
+    -BCContainerHelperPath $BCContainerHelperPath
 
 . ".\Create-Container.ps1" `
     -buildenv $buildenv `

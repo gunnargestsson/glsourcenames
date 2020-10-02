@@ -29,7 +29,7 @@ if (-not ($credential)) {
     $credential = New-Object PSCredential -ArgumentList $ENV:USERNAME, $SecurePassword
 }
 
-$TempTestResultFile = "C:\ProgramData\NavContainerHelper\Extensions\$containerName\Test Results.xml"
+$TempTestResultFile = "C:\ProgramData\BCContainerHelper\Extensions\$containerName\Test Results.xml"
 $globalDisabledTests = @()
 $disabledTestsFile = Join-Path $buildProjectFolder "disabledTests.json"
 if (Test-Path $disabledTestsFile) {

@@ -31,7 +31,7 @@ try {
         cd (Join-Path $ProjectRoot "scripts")
 
         $buildEnv = "AzureVM"
-        $navContainerHelperPath = "C:\DEMO\navcontainerhelper-dev\NavContainerHelper.ps1"
+        $BCContainerHelperPath = "C:\DEMO\BCContainerhelper-dev\BCContainerHelper.ps1"
 
         $buildArtifactFolder = Join-Path $ProjectRoot ".output"
         if (Test-Path $buildArtifactFolder) { Remove-Item $buildArtifactFolder -Force -Recurse }
@@ -41,9 +41,9 @@ try {
         if (Test-Path $alPackagesFolder) { Remove-Item $alPackagesFolder -Force -Recurse }
         New-Item -Path $alPackagesFolder -ItemType Directory -Force | Out-Null
 
-        . ".\Install-NavContainerHelper.ps1" `
+        . ".\Install-BCContainerHelper.ps1" `
             -buildEnv $buildEnv `
-            -navContainerHelperPath $navContainerHelperPath
+            -BCContainerHelperPath $BCContainerHelperPath
 
         . ".\Create-Container.ps1" `
             -buildEnv $buildEnv `

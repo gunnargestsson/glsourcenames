@@ -28,9 +28,9 @@ try {
 
         $buildEnv = "AzureVM"
         
-        . ".\Install-NavContainerHelper.ps1" `
+        . ".\Install-BCContainerHelper.ps1" `
             -buildEnv $buildEnv `
-            -navContainerHelperPath $navContainerHelperPath
+            -BCContainerHelperPath $BCContainerHelperPath
 
         . ".\Create-Container.ps1" `
             -buildEnv $buildEnv `
