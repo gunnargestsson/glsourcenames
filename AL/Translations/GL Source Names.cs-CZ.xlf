@@ -10,6 +10,14 @@
           <source>Source Name</source>
           <target state="translated">Název pàvodu</target><note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN - Field Source Name - Property Caption</note>
+        </trans-unit><trans-unit id="Table 102911037 - Field 3183101751 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Ledger Source Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN - Field Item Ledger Source Type - Property Caption</note>
+        </trans-unit><trans-unit id="Table 102911037 - Field 3183101751 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source> ,Customer,Vendor,Item</source>
+          <target state="translated"> ,Zákazník,Dodavatel,Zboží</target><note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table O4N GL SN - Field Item Ledger Source Type - Property OptionCaption</note>
         </trans-unit><trans-unit id="Table 2508189916 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Code</source>
           <target state="translated">Kód</target><note from="Developer" annotates="general" priority="2"></note>
@@ -190,6 +198,22 @@
           <source>What should I show?</source>
           <target state="translated">Údaje mají být zobrazeny?</target><note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N GL SN Notifications - NamedType MissingPermissionLinkTxt</note>
+        </trans-unit><trans-unit id="Codeunit 26771142 - NamedType 2782421492" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source is not defined</source>
+          <target state="translated">Není definován zdroj</target><note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N Item Show Source Card - NamedType NoSourceDefinedErr</note>
+        </trans-unit><trans-unit id="Codeunit 26771142 - NamedType 1672472045" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 %2 %3 not found</source>
+          <target state="translated">%1 %2 %3 nebyl nalezen.</target><note from="Developer" annotates="general" priority="2">%1 = TableCaption(), %2 = Fieldcaption, %3 = No. value</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N Item Show Source Card - NamedType SourceNotFoundErr</note>
+        </trans-unit><trans-unit id="Codeunit 519473912 - NamedType 2782421492" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source is not defined</source>
+          <target state="translated">Není definován zdroj</target><note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N Value Show Source Card - NamedType NoSourceDefinedErr</note>
+        </trans-unit><trans-unit id="Codeunit 519473912 - NamedType 1672472045" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 %2 %3 not found</source>
+          <target state="translated">%1 %2 %3 nebyl nalezen.</target><note from="Developer" annotates="general" priority="2">%1 = TableCaption(), %2 = Fieldcaption, %3 = No. value</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit O4N Value Show Source Card - NamedType SourceNotFoundErr</note>
         </trans-unit><trans-unit id="Codeunit 3669574782 - NamedType 2021711790" size-unit="char" translate="yes" xml:space="preserve">
           <source>Set up G/L Source Names</source>
           <target state="translated">Nastavení názvů finanční zdroje</target><note from="Developer" annotates="general" priority="2"></note>
@@ -450,6 +474,46 @@
           <source>Show the card for the master record defined as the source for this entry</source>
           <target state="translated">Zobrazit kartu pro hlavní záznam označen jako zdroj pro tuto položku</target><note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension O4N Ext GL Entries - Action O4N SourceCard - Property ToolTip</note>
+        </trans-unit><trans-unit id="PageExtension 3585210284 - Control 1195644 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3595318222">
+          <source>Specifies the type of the master record associated with this entry</source>
+          <target state="translated">Určuje typ hlavní záznam spojeného s touto položkou</target><note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension O4N Ext Item Ledger Entry - Control O4N Source Type - Property ToolTip</note>
+        </trans-unit><trans-unit id="PageExtension 3585210284 - Control 1139953745 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3595318222">
+          <source>Specifies the number of the master record associated with this entry</source>
+          <target state="translated">Určuje počet hlavní záznam spojeného s touto položkou</target><note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension O4N Ext Item Ledger Entry - Control O4N Source No. - Property ToolTip</note>
+        </trans-unit><trans-unit id="PageExtension 3585210284 - Control 384633921 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3595318222">
+          <source>Specifies the name of the master record associated with this entry</source>
+          <target state="translated">Určuje název hlavní záznam spojeného s touto položkou</target><note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension O4N Ext Item Ledger Entry - Control O4N Source Name - Property ToolTip</note>
+        </trans-unit><trans-unit id="PageExtension 3585210284 - Action 3094365984 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3595318222">
+          <source>Source Card</source>
+          <target state="translated">Karta zdroje</target><note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension O4N Ext Item Ledger Entry - Action O4N SourceCard - Property Caption</note>
+        </trans-unit><trans-unit id="PageExtension 3585210284 - Action 3094365984 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3595318222">
+          <source>Show the card for the master record defined as the source for this entry</source>
+          <target state="translated">Zobrazit kartu pro hlavní záznam označen jako zdroj pro tuto položku</target><note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension O4N Ext Item Ledger Entry - Action O4N SourceCard - Property ToolTip</note>
+        </trans-unit><trans-unit id="TableExtension 3585210284 - Field 384633921 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4089294192">
+          <source>Source Name</source>
+          <target state="translated">Název pàvodu</target><note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension O4N Ext Item Ledger Entry - Field O4N Source Name - Property Caption</note>
+        </trans-unit><trans-unit id="PageExtension 2349144501 - Control 384633921 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2513602899">
+          <source>Specifies the name of the master record associated with this entry</source>
+          <target state="translated">Určuje název hlavní záznam spojeného s touto položkou</target><note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension O4N Ext Value Entry - Control O4N Source Name - Property ToolTip</note>
+        </trans-unit><trans-unit id="PageExtension 2349144501 - Action 3094365984 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2513602899">
+          <source>Source Card</source>
+          <target state="translated">Karta zdroje</target><note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension O4N Ext Value Entry - Action O4N SourceCard - Property Caption</note>
+        </trans-unit><trans-unit id="PageExtension 2349144501 - Action 3094365984 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2513602899">
+          <source>Show the card for the master record defined as the source for this entry</source>
+          <target state="translated">Zobrazit kartu pro hlavní záznam označen jako zdroj pro tuto položku</target><note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension O4N Ext Value Entry - Action O4N SourceCard - Property ToolTip</note>
+        </trans-unit><trans-unit id="TableExtension 2349144501 - Field 384633921 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 467645625">
+          <source>Source Name</source>
+          <target state="translated">Název pàvodu</target><note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension O4N Ext Value Entry - Field O4N Source Name - Property Caption</note>
         </trans-unit><trans-unit id="TableExtension 4198449013 - Field 384633921 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2825951060">
           <source>Source Name</source>
           <target state="translated">Název pàvodu</target><note from="Developer" annotates="general" priority="2"></note>
