@@ -29,6 +29,13 @@
             Caption = 'Source Name';
             DataClassification = CustomerContent;
         }
+        field(41; "Item Ledger Source Type"; Option)
+        {
+            Caption = 'Item Ledger Source Type';
+            OptionCaption = ' ,Customer,Vendor,Item';
+            OptionMembers = " ",Customer,Vendor,Item;
+            DataClassification = CustomerContent;
+        }
     }
 
     keys
@@ -36,6 +43,10 @@
         key(Key1; "Source Type", "Source No.")
         {
             Clustered = true;
+        }
+        key(ItemKey; "Item Ledger Source Type", "Source No.")
+        {
+
         }
     }
 

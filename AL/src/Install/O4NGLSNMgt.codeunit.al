@@ -32,6 +32,12 @@
             GLSourceName."Source Type" := SourceType;
             GLSourceName."Source No." := SourceNo;
             GLSourceName."Source Name" := SourceName;
+            case SourceType of
+                GLSourceName."Source Type"::Customer:
+                    GLSourceName."Item Ledger Source Type" := GLSourceName."Item Ledger Source Type"::Customer;
+                GLSourceName."Source Type"::Vendor:
+                    GLSourceName."Item Ledger Source Type" := GLSourceName."Item Ledger Source Type"::Vendor;
+            end;
             GLSourceName.INSERT();
         end;
     end;
@@ -65,6 +71,12 @@
             GLSourceName."Source Type" := SourceType;
             GLSourceName."Source No." := SourceNo;
             GLSourceName."Source Name" := SourceName;
+            case SourceType of
+                GLSourceName."Source Type"::Customer:
+                    GLSourceName."Item Ledger Source Type" := GLSourceName."Item Ledger Source Type"::Customer;
+                GLSourceName."Source Type"::Vendor:
+                    GLSourceName."Item Ledger Source Type" := GLSourceName."Item Ledger Source Type"::Vendor;
+            end;
             GLSourceName.MODIFY();
         end else
             AddSource(SourceType, SourceNo, SourceName);

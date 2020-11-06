@@ -212,7 +212,7 @@ codeunit 70009249 "O4N GL Test Codeunits"
 
     [Test]
     [HandlerFunctions('CustomerCardRunHandler,GLSourceNamesDrillDownPageHandler')]
-    procedure TestShowCustCard()
+    procedure TestShowGLCustCard()
     var
         GLEntry: Record "G/L Entry";
         Cust: record Customer;
@@ -247,7 +247,7 @@ codeunit 70009249 "O4N GL Test Codeunits"
 
     [Test]
     [HandlerFunctions('VendorCardRunHandler,GLSourceNamesDrillDownPageHandler')]
-    procedure TestShowVendCard()
+    procedure TestShowGLVendCard()
     var
         GLEntry: Record "G/L Entry";
         Vend: record Vendor;
@@ -282,7 +282,7 @@ codeunit 70009249 "O4N GL Test Codeunits"
 
     [Test]
     [HandlerFunctions('BankAccountCardRunHandler,GLSourceNamesDrillDownPageHandler')]
-    procedure TestShowBankAccCard()
+    procedure TestShowGLBankAccCard()
     var
         GLEntry: Record "G/L Entry";
         BankAcc: record "Bank Account";
@@ -317,7 +317,7 @@ codeunit 70009249 "O4N GL Test Codeunits"
 
     [Test]
     [HandlerFunctions('FACardRunHandler,GLSourceNamesDrillDownPageHandler')]
-    procedure TestShowFACard()
+    procedure TestShowGLFACard()
     var
         GLEntry: Record "G/L Entry";
         FA: record "Fixed Asset";
@@ -352,7 +352,7 @@ codeunit 70009249 "O4N GL Test Codeunits"
 
     [Test]
     [HandlerFunctions('EmployeeCardRunHandler,GLSourceNamesDrillDownPageHandler')]
-    procedure TestShowEmployeeCard()
+    procedure TestShowGLEmployeeCard()
     var
         GLEntry: Record "G/L Entry";
         Employee: record Employee;
@@ -445,6 +445,7 @@ codeunit 70009249 "O4N GL Test Codeunits"
         GLSourceName.SetRange("Source Type", SourceType);
         GLSourceName.SetRange("Source No.", SourceNo);
         Assert.RecordIsNotEmpty(GLSourceName);
+        TestItemSourceType(SourceType, SourceNo);
     end;
 
     local procedure TestSourceNotExistsInLookupTable(SourceType: Enum "Gen. Journal Source Type"; SourceNo: code[20])
@@ -466,5 +467,21 @@ codeunit 70009249 "O4N GL Test Codeunits"
         Assert.AreEqual(SourceName, GLSourceName."Source Name", StrSubstNo(SourceNameUpdateFailesErr, GLSourceName."Source Type", GLSourceName."Source No."));
     end;
 
+    local procedure TestItemSourceType(SourceType: Enum "Gen. Journal Source Type"; SourceNo: code[20])
+    var
+        GLSourceName: record "O4N GL SN";
+    begin
+        GLSourceName.SetRange("Source Type", SourceType);
+        GLSourceName.SetRange("Source No.", SourceNo);
+        GLSourceName.FindFirst();
+        case SourceType of
+            GLSourceName."Source Type"::Customer:
+                Assert.AreEqual(GLSourceName."Item Ledger Source Type"::Customer, GLSourceName."Item Ledger Source Type", StrSubstNo(SourceNameUpdateFailesErr, GLSourceName."Source Type", GLSourceName."Source No."));
+            GLSourceName."Source Type"::Vendor:
+                Assert.AreEqual(GLSourceName."Item Ledger Source Type"::Vendor, GLSourceName."Item Ledger Source Type", StrSubstNo(SourceNameUpdateFailesErr, GLSourceName."Source Type", GLSourceName."Source No."));
+            else
+                Assert.AreEqual(GLSourceName."Item Ledger Source Type"::" ", GLSourceName."Item Ledger Source Type", StrSubstNo(SourceNameUpdateFailesErr, GLSourceName."Source Type", GLSourceName."Source No."));
+        end;
+    end;
 
 }
