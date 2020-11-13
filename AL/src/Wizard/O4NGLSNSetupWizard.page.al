@@ -206,6 +206,7 @@
                     CompanyInformation: Record "Company Information";
                     PermissionMgt: Codeunit "O4N GL SN Permission Mgt";
                 begin
+                    LogMessage('GL0001', 'Installation Wizard Default Setup', Verbosity::Normal, DATACLASSIFICATION::OrganizationIdentifiableInformation, TelemetryScope::ExtensionPublisher, 'result', 'success');
                     PermissionMgt.SuggestAccessControl(TempUserAccess, TempGroupAccess);
                     if Rec."Registration E-Mail Address" = '' then
                         if CompanyInformation.GET() then
@@ -231,6 +232,7 @@
                 var
                     GLSourceNameMgt: Codeunit "O4N GL SN Mgt";
                 begin
+                    LogMessage('GL0001', 'Installation Wizard Lookup Update', Verbosity::Normal, DATACLASSIFICATION::OrganizationIdentifiableInformation, TelemetryScope::ExtensionPublisher, 'result', 'success');
                     GLSourceNameMgt.Refresh(false);
                 end;
             }
@@ -262,6 +264,7 @@
         PermissionMgt: Codeunit "O4N GL SN Permission Mgt";
         AssistedSetupMgt: Codeunit "O4N GL SN Assisted Setup";
     begin
+        LogMessage('GL0001', 'Installation Wizard Started', Verbosity::Normal, DATACLASSIFICATION::OrganizationIdentifiableInformation, TelemetryScope::ExtensionPublisher, 'result', 'success');
         AssistedSetupMgt.VerifyUserAccess();
         Rec.INIT();
         if not Setup.GET() then begin
@@ -284,9 +287,13 @@
     trigger OnQueryClosePage(CloseAction: Action): Boolean;
     begin
         if CloseAction = ACTION::OK then
-            if Rec.Status = Rec.Status::"Not Completed" then
+            if Rec.Status = Rec.Status::"Not Completed" then begin
                 if not CONFIRM(NAVNotSetUpQst, false) then
-                    ERROR('');
+                    ERROR('')
+                else
+                    LogMessage('GL0001', 'Installation Wizard Canceled', Verbosity::Normal, DATACLASSIFICATION::OrganizationIdentifiableInformation, TelemetryScope::ExtensionPublisher, 'result', 'success');
+            end else
+                LogMessage('GL0001', 'Installation Wizard Finished', Verbosity::Normal, DATACLASSIFICATION::OrganizationIdentifiableInformation, TelemetryScope::ExtensionPublisher, 'result', 'success');
     end;
 
     var

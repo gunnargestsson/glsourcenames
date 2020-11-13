@@ -11,6 +11,7 @@
     /// <param name="MissingPermissionNotification">Parameter of type Notification.</param>
     procedure ShowAssistedSetupToUser(MissingPermissionNotification: Notification);
     begin
+        LogMessage('GL0001', 'Play Missing Permission Video', Verbosity::Normal, DATACLASSIFICATION::OrganizationIdentifiableInformation, TelemetryScope::ExtensionPublisher, 'result', 'success');
         StartVideo('https://www.youtube.com/embed/h9qmD6AfqpQ');
     end;
 

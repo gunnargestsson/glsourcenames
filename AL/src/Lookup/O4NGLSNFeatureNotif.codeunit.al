@@ -11,6 +11,7 @@
     /// <param name="NewFeatureNotification">Parameter of type Notification.</param>
     procedure ShowDetailsToUser(NewFeatureNotification: Notification);
     begin
+        LogMessage('GL0001', 'Play New Feature Video', Verbosity::Normal, DATACLASSIFICATION::OrganizationIdentifiableInformation, TelemetryScope::ExtensionPublisher, 'result', 'success');
         StartVideo('https://www.youtube.com/embed/rTLPfA_GX0o');
     end;
 

@@ -11,7 +11,7 @@ stages:
     variables:      
       build.clean: all
       platform: x64
-      appVersion: "5.1"
+      appVersion: "5.2"
       appBuild: $[counter(variables['appVersion'],0)]
       appRevision: 0
       createRuntimePackages: False
