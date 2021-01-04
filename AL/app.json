@@ -12,6 +12,7 @@
     "logo": "Images\\Logo250x250.png",
     "platform": "17.0.0.0",
     "application": "17.0.0.0",
+    "target": "Cloud",
     "runtime": "6.0",
     "showMyCode": true,
     "screenshots": [
