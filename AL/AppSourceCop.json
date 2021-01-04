@@ -1,3 +1,4 @@
 {
-    "mandatoryPrefix": "O4N"
+    "mandatoryPrefix": "O4N",
+    "baselinePackageCachePath": "./.appSourceCopPackages"    
 }
