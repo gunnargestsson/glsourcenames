@@ -8,12 +8,16 @@
 		},
 		{
 			"path": "scripts"
+		},
+		{
+			"path": ".azureDevOps"
 		}
 	],
 	"settings": {
 		"al.codeAnalyzers": ["${AppSourceCop}","${CodeCop}","${UICop}"],
 		"al.enableCodeAnalysis": true,
 		"al.ruleSetPath": "./ALRuleSets.json",
-		"CRS.FileNamePattern": "<ObjectNameShort>.<ObjectType>.al"
+		"CRS.FileNamePattern": "<ObjectNameShort>.<ObjectType>.al",
+		"CRS.FileNamePatternExtensions": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al"
 	}
 }

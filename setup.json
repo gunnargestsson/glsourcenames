@@ -2,7 +2,7 @@
   "branchId": "479e77f3-031a-49fe-bb6a-314464c6a9a8",
   "artifact":  "bcartifacts.azureedge.net/sandbox/17/is/Latest",
   "dockerTestLibraries": true,
-  "navVersion":  "17.0.0.0",
+  "navVersion":  "17.2.0.0",
   "navSolution": "W1",
   "projectName": "GLSOURCENAMES",
   "baseBranch": "master",
