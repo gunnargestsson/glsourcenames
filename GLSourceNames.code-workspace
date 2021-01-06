@@ -7,9 +7,6 @@
 			"path": "ALTests"
 		},
 		{
-			"path": "scripts"
-		},
-		{
 			"path": ".azureDevOps"
 		}
 	],
