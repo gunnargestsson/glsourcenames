@@ -2,6 +2,18 @@
     "name": "GLSN",
     "appFolders": "AL",
     "testFolders": "ALTests",
+    "includeTestLibrariesOnly": true,
+    "includeTestFrameworkOnly": false,
+    "testToolkitCountry": "en-US",
+    "testCompanyName": "",
+    "testSuiteDisabled": false,
+    "containerParameters": {
+        "locale": "",
+        "AuthenticationEmail": "",
+        "addFontsFromPath": "${env:SystemRoot}\\Fonts\\*.ttf",
+        "useNewDatabase": false,
+        "useCleanDatabase": false
+    },        
     "dependencies": [],
     "azureBlob": {
         "azureStorageAccount": "365bcfiles",
