@@ -19,5 +19,5 @@ extends:
   template: /.azureDevOps/CI.yml@Template
   parameters:
     version: "nextminor"
-    appVersion: "17.2"
+    appVersion: "18.0"
 
