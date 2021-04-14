@@ -9,6 +9,8 @@
         Setup: Record "O4N GL SN Setup";
         HelpResource: Record "O4N GL SN Help Resource";
         GLSourceNamesTxt: Label 'Set up G/L Source Names';
+        GLSourceNamesShortTitleTxt: Label 'G/L Entry Details';
+        GLSourceNamesDescTxt: Label 'Provice permission details and initalize the G/L Source Names lookup table.';
         RequiredPermissionMissingErr: Label 'You have not been granted required access rights to start the Assisted Setup.\\The Assisted Setup for G/L Source Names is about assigning the required permissions to users.  To be able to assign permissions you need to be granted either the SUPER og SECURITY permission set.';
 
     /// <summary> 
@@ -27,7 +29,7 @@
     /// <summary> 
     /// Description for OnRegisterAssistedSetup.
     /// </summary>
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Assisted Setup", 'OnRegister', '', true, false)]
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Guided Experience", 'OnRegisterAssistedSetup', '', true, false)]
     local procedure OnRegisterAssistedSetup();
     begin
         if not Setup.WRITEPERMISSION then exit;
@@ -55,8 +57,7 @@
     local procedure AddToAssistedSetup();
     var
         HelpResources: Record "O4N GL SN Help Resource";
-        AssistedSetup: Codeunit "Assisted Setup";
-        AppMgt: Codeunit "O4N GL SN App Mgt.";
+        GuidedExperience: Codeunit "Guided Experience";
         AssistedSetupGroup: Enum "Assisted Setup Group";
         VideoCategory: Enum "Video Category";
         AboutTxt: Label 'Add the Source Name field to G/L Entries and a direct link to the source entity card.';
@@ -65,9 +66,10 @@
         if not HelpResources.Get(HelpResources.GetSetupVideoCode()) then
             HelpResources.InitializeResources();
         HelpResources.Get(HelpResources.GetSetupVideoCode());
-        AssistedSetup.Add(AppMgt.GetAppId(), PAGE::"O4N GL SN Setup Wizard", GLSourceNamesTxt, AssistedSetupGroup::Extensions, HelpResources.Url, VideoCategory::FinancialReporting, '', AboutTxt);
+        GuidedExperience.InsertAssistedSetup(GLSourceNamesTxt, CopyStr(GLSourceNamesShortTitleTxt, 1, 50), GLSourceNamesDescTxt, 3,
+            ObjectType::Page, PAGE::"O4N GL SN Setup Wizard", AssistedSetupGroup::Extensions, HelpResources.Url, VideoCategory::FinancialReporting, AboutTxt);
         if Setup.Status = Setup.Status::Completed then
-            AssistedSetup.Complete(PAGE::"O4N GL SN Setup Wizard");
+            GuidedExperience.CompleteAssistedSetup(ObjectType::Page, PAGE::"O4N GL SN Setup Wizard");
     end;
 }
 

@@ -498,13 +498,15 @@
     local procedure StoreSetup();
     var
         Setup: Record "O4N GL SN Setup";
-        AssistedSetup: Codeunit "Assisted Setup";
+        GuidedExperiance: Codeunit "Guided Experience";
     begin
         Rec.Status := Rec.Status::Completed;
         Setup.GET();
         Setup.TRANSFERFIELDS(Rec);
+# pragma warning disable        
         Setup.MODIFY();
-        AssistedSetup.Complete(page::"O4N GL SN Setup Wizard");
+# pragma warning restore        
+        GuidedExperiance.CompleteAssistedSetup(ObjectType::Page,page::"O4N GL SN Setup Wizard");
     end;
 
     /// <summary> 

@@ -2,6 +2,10 @@
     "name" : "GLSourceNames",
     "description": "Custom Rules",
     "rules": [
-        
+        {
+            "id": "AA0072",
+            "action": "None",
+            "justification": "Don't like to follow this rule"
+        }
     ]
 }
