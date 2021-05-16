@@ -1,18 +1,17 @@
 {
-    "version":  "0.2.0",
-    "configurations":  [                         
-                           {
-                               "type":  "al",
-                               "request":  "launch",
-                               "name":  "Traefik",
-                               "server":  "https://traefik.kappi.is",                               
-                               "serverInstance":  "sandboxdev",
-                               "port":  443,
-                               "tenant":  "default",
-                               "authentication":  "UserPassword",
-                               "startupObjectId":  130451,
-                               "startupObjectType":  "Page",
-                               "breakOnError":  true
-                           }
-                       ]
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "al",
+            "request": "launch",
+            "name": "Local container",
+            "server": "http://cronus18w1",
+            "serverInstance": "bc",
+            "tenant": "default",
+            "authentication": "UserPassword",
+            "startupObjectId": 130451,
+            "startupObjectType": "Page",
+            "breakOnError": true
+        }
+    ]
 }
