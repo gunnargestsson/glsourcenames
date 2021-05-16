@@ -40,6 +40,18 @@ $SystemPermissions = @{
     9070 = 'Design, MenuSuite, Basic'
 }
 
+Function Remove-InvalidFileNameChars {
+
+    param([Parameter(Mandatory=$true,
+        Position=0,
+        ValueFromPipeline=$true,
+        ValueFromPipelineByPropertyName=$true)]
+        [String]$Name
+    )
+
+    return [RegEx]::Replace($Name, "[{0}]" -f ([RegEx]::Escape([String][System.IO.Path]::GetInvalidFileNameChars())), '')
+}
+
 # Get information about an application object
 function GetDetails
 {
@@ -448,10 +460,14 @@ function DownloadSymbolsFromDatabase
         
         [Parameter(Mandatory)]
         [ValidateNotNullOrEmpty()]
-        $Path
+        $Path,
+
+        [Parameter(Mandatory)]
+        [ValidateNotNullOrEmpty()]
+        [PSCredential]$Credential
     )
 
-    $SymbolsBytes = (Invoke-Sqlcmd -ServerInstance $DatabaseServer -Database $DatabaseName -Query "Select [Symbols] from [Published Application] where ID = '$PackageId'" -MaxBinaryLength $PackageSize).Symbols
+    $SymbolsBytes = (Invoke-Sqlcmd -ServerInstance $DatabaseServer -Database $DatabaseName -Query "Select [Symbols] from [Published Application] where ID = '$PackageId'" -MaxBinaryLength $PackageSize -Credential $Credential).Symbols 
     
     $Stream = [System.IO.MemoryStream]::new($SymbolsBytes)
     $Stream.Position = 4 # throw away the header
@@ -492,11 +508,15 @@ function Convert-PermissionSets
 
         [Parameter(Mandatory)]
         [ValidateNotNullOrEmpty()]
-        $Destination
+        $Destination,
+
+        [Parameter(Mandatory)]
+        [ValidateNotNullOrEmpty()]
+        [PSCredential]$Credential
     )
 
     Write-Host "Downloading Symbols from $DatabaseServer $DatabaseName"
-    $Apps = Invoke-Sqlcmd -ServerInstance $DatabaseServer -Database $DatabaseName -Query 'Select ID, Name, Datalength(Symbols) as Size from [Published Application]'
+    $Apps = Invoke-Sqlcmd -ServerInstance $DatabaseServer -Database $DatabaseName -Query 'Select ID, Name, Datalength(Symbols) as Size from [Published Application]' -Credential $Credential
     $ApplicationAppID = 'C1335042-3002-4257-BF8A-75C898CCB1B8'
 
     $Apps | % { $_.Name = $_.Name.Replace('_Exclude_', '').TrimEnd('_')}
@@ -509,13 +529,13 @@ function Convert-PermissionSets
 
     foreach($App in $Apps)
     {
-        DownloadSymbolsFromDatabase -DatabaseServer $DatabaseServer -DatabaseName $DatabaseName -PackageId $App.ID -PackageSize $App.Size -Path (Join-Path $SymbolsFolder ($App.Name))
+        DownloadSymbolsFromDatabase -DatabaseServer $DatabaseServer -DatabaseName $DatabaseName -PackageId $App.ID -PackageSize $App.Size -Path (Join-Path $SymbolsFolder (Remove-InvalidFileNameChars($App.Name))) -Credential $Credential
     }
     
     $Symbols = ProccessSymbols $SymbolsFolder
 
     Write-Host "Quering permissions from $DatabaseServer $DatabaseName"
-    $Permissions = Invoke-Sqlcmd -ServerInstance $DatabaseServer -Database $DatabaseName -Query 'Select [Role ID],[Object Type],[Object ID],[Read Permission],[Insert Permission],[Modify Permission],[Delete Permission],[Execute Permission],[Security Filter] from Permission UNION Select [Role ID],[Object Type],[Object ID],[Read Permission],[Insert Permission],[Modify Permission],[Delete Permission],[Execute Permission],[Security Filter] from [Tenant Permission] order by [Role ID]'
+    $Permissions = Invoke-Sqlcmd -ServerInstance $DatabaseServer -Database $DatabaseName -Query 'Select [Role ID],[Object Type],[Object ID],[Read Permission],[Insert Permission],[Modify Permission],[Delete Permission],[Execute Permission],[Security Filter] from Permission UNION Select [Role ID],[Object Type],[Object ID],[Read Permission],[Insert Permission],[Modify Permission],[Delete Permission],[Execute Permission],[Security Filter] from [Tenant Permission] order by [Role ID]'  -Credential $Credential
     $PermissionSets = @{}
 
     foreach($Permission in $Permissions)
@@ -555,8 +575,13 @@ function Convert-PermissionSets
         }
     }
 
-    $PermissionSetTableContent = Invoke-Sqlcmd -ServerInstance $DatabaseServer -Database $DatabaseName -Query 'Select [Role ID], Name from [Permission Set] UNION Select [Role ID], Name from [Tenant Permission Set]'
+    $PermissionSetTableContent = Invoke-Sqlcmd -ServerInstance $DatabaseServer -Database $DatabaseName -Query 'Select [Role ID], Name from [Permission Set] UNION Select [Role ID], Name from [Tenant Permission Set]'  -Credential $Credential
     WritePermissionSets $PermissionSets $Destination $PermissionSetTableContent
 }
 
-Export-ModuleMember -Function "Convert-PermissionSets"
+$userName = "gunnargestsson"
+$password = "01000000d08c9ddf0115d1118c7a00c04fc297eb01000000cf18ebd8eae143488beaf4749a857080000000000200000000001066000000010000200000008b87c2523931d47d22e5e0e30d378f5f706e5e2e4ccd165b73232c1a7e25cdd6000000000e800000000200002000000040577fd74750ace374bec04f827c0daf91fcff558d352c00e314bf788831c458200000005ba26ba4be1e930548e8e114fea46c614b3575c76f11fc18f9572758047c34d640000000d8c8a05aa1d7135c8448f8b34e0c85ca5e73726f38c31e22df096648ad11d576e1a287490f463e16d004dd224c5482f45701f4250ecda6066eaff098a212f322"
+$Credential = New-Object System.Management.Automation.PSCredential($userName, (ConvertTo-SecureString $password -Force));
+
+Convert-PermissionSets -DatabaseServer cronus18w1 -DatabaseName cronus -Destination F:\Git\GitHub\glsourcenames\AL\src -Credential $Credential
+
