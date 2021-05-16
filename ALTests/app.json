@@ -42,6 +42,7 @@
     "application": "18.0.0.0",
     "target": "Cloud",
     "showMyCode": true,
+    "applicationInsightsKey": "ab5e692a-2ef8-40ac-bed4-74fe61285bf2",
     "idRanges":[ {
         "from": 70009240,
         "to": 70009249

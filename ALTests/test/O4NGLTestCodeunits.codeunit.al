@@ -26,8 +26,9 @@ codeunit 70009249 "O4N GL Test Codeunits"
     [Test]
     procedure TestRegisterAssistedSetup()
     var
-        AssistedSetup: Codeunit "Assisted Setup";
+        AssistedSetup: Codeunit "Guided Experience";
         AssistedSetupPage: TestPage "Assisted Setup";
+        GuidedExperienceType: Enum "Guided Experience Type";
     begin
         // [SCENARIO] Discovery for assisted setup should find the G/L Source Names Setup Wizard
         // [GIVEN] An temporary instance of assisted setup   
@@ -35,7 +36,7 @@ codeunit 70009249 "O4N GL Test Codeunits"
         AssistedSetupPage.OpenView();
         AssistedSetupPage.Close();
         // [THEN] Assisted setup for G/L Source Names should be found
-        Assert.IsTrue(AssistedSetup.Exists(page::"O4N GL SN Setup Wizard"), 'Failed to verify the Assisted Setup Page registered');
+        Assert.IsTrue(AssistedSetup.Exists(GuidedExperienceType::"Assisted Setup", ObjectType::Page, page::"O4N GL SN Setup Wizard"), 'Failed to verify the Assisted Setup Page registered');
     end;
 
     [Test]
@@ -415,20 +416,6 @@ codeunit 70009249 "O4N GL Test Codeunits"
         GLEntry."Source No." := SourceNo;
         GLEntry.Insert();
         Commit();
-    end;
-
-    local procedure TestLookupIsEmpty()
-    var
-        GLSourceName: record "O4N GL SN";
-    begin
-        Assert.RecordIsNotEmpty(GLSourceName);
-    end;
-
-    local procedure TestLookupIsNotEmpty()
-    var
-        GLSourceName: record "O4N GL SN";
-    begin
-        Assert.RecordIsEmpty(GLSourceName);
     end;
 
     local procedure TestLookupNoOfRecords(ExpectedNoOfRecords: Integer)
