@@ -47,7 +47,7 @@
     "validation": [
         {
             "branch": "refs/heads/master",
-            "previousApps": ["https://365bcfiles.blob.core.windows.net/artifacts/gunnargestsson/glsourcenames/AL/Objects4NAV_GL Source Names_5.2.3.0.app"],
+            "previousApps": ["https://365bcfiles.blob.core.windows.net/artifacts/gunnargestsson/glsourcenames/AL/Objects4NAV_GL Source Names_18.0.17.0.app"],
             "countries": ["is","us","fi","dk","se","no","ca","gb"],
             "affixes": ["O4N"],
             "supportedCountries": ["is","se"]
