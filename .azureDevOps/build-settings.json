@@ -13,7 +13,7 @@
         "addFontsFromPath": "${env:SystemRoot}\\Fonts\\*.ttf",
         "useNewDatabase": false,
         "useCleanDatabase": false
-    },        
+    },
     "dependencies": [],
     "azureBlob": {
         "azureStorageAccount": "365bcfiles",
@@ -28,29 +28,40 @@
         {
             "version": "current",
             "artifact": "bcartifacts.azureedge.net/sandbox//w1/latest",
-            "imageName": "ci",
+            "imageName": "",
             "insiderBuild": false
         },
         {
             "version": "nextminor",
             "artifact": "bcinsider/sandbox//w1/SecondToLastMajor",
-            "imageName": "cu",
+            "imageName": "",
             "insiderBuild": true
         },
         {
             "version": "nextmajor",
             "artifact": "bcinsider/sandbox//w1/Latest",
-            "imageName": "rtm",
+            "imageName": "",
             "insiderBuild": true
         }
     ],
     "validation": [
         {
             "branch": "refs/heads/master",
-            "previousApps": ["https://365bcfiles.blob.core.windows.net/artifacts/gunnargestsson/glsourcenames/AL/Objects4NAV_GL Source Names_18.0.17.0.app"],
-            "countries": ["is","us","fi","dk","se","no","ca","gb"],
-            "affixes": ["O4N"],
-            "supportedCountries": ["is","se"]
+            "previousApps": [
+                "https://365bcfiles.blob.core.windows.net/artifacts/gunnargestsson/glsourcenames/AL/Objects4NAV_GL Source Names_18.0.17.0.app"
+            ],
+            "countries": [
+                "is",
+                "us",
+                "se"
+            ],
+            "affixes": [
+                "O4N"
+            ],
+            "supportedCountries": [
+                "is",
+                "se"
+            ]
         }
     ],
     "deployments": [
