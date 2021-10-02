@@ -12,6 +12,25 @@
             "startupObjectId": 22,
             "startupObjectType": "Page",
             "breakOnError": true
-        }
+        },
+        {
+            "name": "Publish: Your own server",
+            "type": "al",
+            "request": "launch",
+            "environmentType": "OnPrem",
+            "server": "https://workhorse.kappi.is",
+            "port": 443,
+            "serverInstance": "nextmajordev",
+            "authentication": "UserPassword",
+            "startupObjectId": 70009201,
+            "breakOnError": true,
+            "breakOnRecordWrite": false,
+            "launchBrowser": true,
+            "enableSqlInformationDebugger": true,
+            "enableLongRunningSqlStatements": true,
+            "longRunningSqlStatementsThreshold": 500,
+            "numberOfSqlStatements": 10,
+            "tenant": "default"
+        }        
     ]
 }

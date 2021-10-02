@@ -21,4 +21,4 @@ extends:
   template: /.azureDevOps/CI.yml@Template
   parameters:
     version: "current"
-    appVersion: "18.0"
+    appVersion: "19.0"
