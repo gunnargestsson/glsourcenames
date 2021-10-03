@@ -29,12 +29,10 @@
             Caption = 'Source Name';
             DataClassification = CustomerContent;
         }
-        field(41; "Item Ledger Source Type"; Option)
+        field(41; "Item Ledger Source Type"; Enum "Analysis Source Type")
         {
             Caption = 'Item Ledger Source Type';
-            OptionCaption = ' ,Customer,Vendor,Item';
-            OptionMembers = " ",Customer,Vendor,Item;
-            DataClassification = CustomerContent;
+            DataClassification = SystemMetadata;
         }
     }
 
