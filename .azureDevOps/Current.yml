@@ -4,7 +4,8 @@ trigger:
 pr: 
 - '*'
 
-pool: Default
+pool: 
+  vmImage: windows-latest
 
 resources:
   repositories:
