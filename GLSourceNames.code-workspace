@@ -11,7 +11,9 @@
 		}
 	],
 	"settings": {
-		"al.codeAnalyzers": ["${AppSourceCop}","${CodeCop}","${UICop}"],
+		"al.codeAnalyzers": [
+		
+		"${AppSourceCop}","${CodeCop}","${UICop}"],
 		"al.enableCodeAnalysis": true,
 		"al.ruleSetPath": "./ALRuleSets.json",
 		"CRS.FileNamePattern": "<ObjectNameShort>.<ObjectType>.al",

@@ -1,4 +1,4 @@
-permissionset 70009202 "O4NG/L-SOURCENAME, S"
+permissionset 70009202 "G/L-SOURCENAME, S"
 {
     Access = Public;
     Assignable = true;
