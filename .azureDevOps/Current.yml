@@ -22,3 +22,4 @@ extends:
   parameters:
     version: "current"
     appVersion: "19.0"
+    azureSubscription: "Microsoft Partner Network"    
