@@ -1,4 +1,6 @@
+#pragma warning disable AS0011
 permissionset 70009200 "G/L-SOURCE NAMES"
+#pragma warning restore AS0011
 {
     Access = Public;
     Assignable = true;
