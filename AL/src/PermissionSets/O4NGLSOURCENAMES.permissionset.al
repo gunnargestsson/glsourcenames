@@ -1,21 +1,16 @@
 #pragma warning disable AS0011
-permissionset 70009202 "G/L-SOURCENAME, S"
+permissionset 70009200 "O4N G/L-SOURCE NAMES"
 #pragma warning restore AS0011
 {
     Access = Public;
     Assignable = true;
-    Caption = 'Setup G/L Source Names';
-    Permissions = codeunit "O4N GL SN App Mgt." = X,
-                  codeunit "O4N GL SN Assisted Setup" = X,
-                  codeunit "O4N GL SN Icon 150x150" = X,
-                  codeunit "O4N GL SN Icon 240x240" = X,
-                  codeunit "O4N GL SN Icon 250x250" = X,
-                  codeunit "O4N GL SN Icon 417x417" = X,
-                  codeunit "O4N GL SN Icon 70x70" = X,
-                  codeunit "O4N GL SN Permission Mgt" = X,
-                  page "O4N GL SN Setup" = X,
-                  page "O4N GL SN Setup Wizard" = X,
-                  tabledata "O4N GL SN" = RIMD,
-                  tabledata "O4N GL SN Help Resource" = RIMD,
-                  tabledata "O4N GL SN Setup" = RIMD;
+    Caption = 'Read G/L Source Names';
+    Permissions = codeunit "O4N GL Show Source Card" = X,
+                  codeunit "O4N GL SN Feature Notif." = X,
+                  codeunit "O4N GL SN Notifications" = X,
+                  codeunit "O4N GL SN Perm. Notif." = X,
+                  page "O4N GL SNs DrillDown" = X,
+                  tabledata "O4N GL SN" = R,
+                  tabledata "O4N GL SN Setup" = R,
+                  tabledata "O4N GL SN User Setup" = RIMD;
 }
