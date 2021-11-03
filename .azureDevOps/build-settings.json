@@ -27,64 +27,12 @@
     "versions": [
         {
             "version": "current",
-            "artifact": "bcartifacts.azureedge.net/sandbox//w1/latest",
+            "artifact": "bcartifacts.azureedge.net/sandbox/18/w1/latest",
             "imageName": "",
             "insiderBuild": false
-        },
-        {
-            "version": "nextminor",
-            "artifact": "bcinsider/sandbox//w1/SecondToLastMajor",
-            "imageName": "",
-            "insiderBuild": true
-        },
-        {
-            "version": "nextmajor",
-            "artifact": "bcinsider/sandbox//w1/Latest",
-            "imageName": "",
-            "insiderBuild": true
         }
     ],
-    "validation": [
-        {
-            "branch": "refs/heads/master",
-            "previousApps": [
-                "https://365bcfiles.blob.core.windows.net/artifacts/gunnargestsson/glsourcenames/AL/Objects4NAV_GL Source Names_18.0.17.0.app"
-            ],
-            "countries": [
-                "is",
-                "us",
-                "se"
-            ],
-            "affixes": [
-                "O4N"
-            ],
-            "supportedCountries": [
-                "is",
-                "se"
-            ]
-        }
-    ],
-    "deployments": [
-        {
-            "branch": "<disabled>",
-            "DeploymentType": "host",
-            "DeployToName": "",
-            "DeployToTenants": [],
-            "apiBaseUrl": ""
-        }
-    ],
-    "userProfiles": [
-        {
-            "profile": "Default",
-            "bccontainerhelperPath": "",
-            "licenseFilePath": "",
-            "Username": "",
-            "Password": "",
-            "AzureVM": {
-                "ComputerName": "<azure VM uri>",
-                "Username": "<azure VM username>",
-                "Password": "<encrypted or plain azure VM password>"
-            }
-        }
-    ]
+    "validation": [],
+    "deployments": [],
+    "userProfiles": []
 }
