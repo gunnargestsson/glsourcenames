@@ -1,5 +1,5 @@
 #pragma warning disable AS0011
-permissionset 70009201 "G/L-SOURCENAME, E"
+permissionset 70009201 "G/L-SOURCE NAMES, E"
 #pragma warning restore AS0011
 {
     ObsoleteState = Pending;
