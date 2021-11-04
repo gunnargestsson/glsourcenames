@@ -2,6 +2,8 @@
 permissionset 70009201 "G/L-SOURCENAME, E"
 #pragma warning restore AS0011
 {
+    ObsoleteState = Pending;
+    ObsoleteReason = 'Pass through validation';
     Access = Public;
     Assignable = true;
     Caption = 'Update G/L Source Names';
