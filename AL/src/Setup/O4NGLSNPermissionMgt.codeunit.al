@@ -6,8 +6,8 @@
     end;
 
     var
-        ReadRoleIdTxt: Label 'G/L-SOURCE NAMES', Locked = true;
-        UpdateRoleIdTxt: Label 'G/L-SOURCE NAMES, E', Locked = true;
+        ReadRoleIdTxt: Label 'O4N G/L-SOURCE NAMES', Locked = true;
+        UpdateRoleIdTxt: Label 'O4N G/L-SN, EDIT', Locked = true;
 
     /// <summary> 
     /// Description for GetAccessControl.

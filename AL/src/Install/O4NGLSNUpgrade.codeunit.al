@@ -19,11 +19,11 @@
     trigger OnUpgradePerCompany()
     begin
         UpgradeLookupTable();
-        UpgradeAccessControl('G/L-SOURCE NAMES, E', 'O4N G/L-SN, E');
-        UpgradeAccessControl('G/L-SOURCE NAMES, S', 'O4N G/L-SN, S');
+        UpgradeAccessControl('G/L-SOURCE NAMES, E', 'O4N G/L-SN, EDIT');
+        UpgradeAccessControl('G/L-SOURCE NAMES, S', 'O4N G/L-SN, SETUP');
         UpgradeAccessControl('G/L-SOURCE NAMES', 'O4N G/L-SOURCE NAMES');
-        UpgradeGroupAccessControl('G/L-SOURCE NAMES, E', 'O4N G/L-SN, E');
-        UpgradeGroupAccessControl('G/L-SOURCE NAMES, S', 'O4N G/L-SN, S');
+        UpgradeGroupAccessControl('G/L-SOURCE NAMES, E', 'O4N G/L-SN, EDIT');
+        UpgradeGroupAccessControl('G/L-SOURCE NAMES, S', 'O4N G/L-SN, SETUP');
         UpgradeGroupAccessControl('G/L-SOURCE NAMES', 'O4N G/L-SOURCE NAMES');
     end;
 

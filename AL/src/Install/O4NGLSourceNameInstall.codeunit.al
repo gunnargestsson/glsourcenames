@@ -6,9 +6,9 @@
     end;
 
     var
-        PermissionSetToSetupGLSourceNamesTxt: Label 'G/L-SOURCE NAMES, S', Locked = true;
-        PermissionSetToUpdateGLSourceNamesTxt: Label 'G/L-SOURCE NAMES, E', Locked = true;
-        PermissionSetToUserGLSourceNamesTxt: Label 'G/L-SOURCE NAMES', Locked = true;
+        PermissionSetToSetupGLSourceNamesTxt: Label 'O4N G/L-SN, SETUP', Locked = true;
+        PermissionSetToUpdateGLSourceNamesTxt: Label 'O4N G/L-SN, EDIT', Locked = true;
+        PermissionSetToUserGLSourceNamesTxt: Label 'O4N G/L-SOURCE NAMES', Locked = true;
 
 
     trigger OnInstallAppPerCompany();

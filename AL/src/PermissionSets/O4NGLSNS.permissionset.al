@@ -1,4 +1,4 @@
-permissionset 70009205 "O4N G/L-SN, S"
+permissionset 70009205 "O4N G/L-SN, SETUP"
 {
     Access = Public;
     Assignable = true;
