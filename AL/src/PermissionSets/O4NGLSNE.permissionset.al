@@ -1,9 +1,5 @@
-#pragma warning disable AS0011
-permissionset 70009201 "G/L-SOURCE NAMES, E"
-#pragma warning restore AS0011
+permissionset 70009204 "O4N G/L-SN, E"
 {
-    ObsoleteState = Pending;
-    ObsoleteReason = 'Pass through validation';
     Access = Public;
     Assignable = true;
     Caption = 'Update G/L Source Names';
