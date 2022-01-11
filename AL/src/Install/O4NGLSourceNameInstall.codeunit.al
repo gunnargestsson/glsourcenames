@@ -47,7 +47,7 @@
         AccessControl.INIT();
         AccessControl."User Security ID" := AssignToUser;
         AccessControl."App ID" := AppGuid;
-        AccessControl.Scope := AccessControl.Scope::Tenant;
+        AccessControl.Scope := AccessControl.Scope::System;
         AccessControl."Role ID" := PermissionSet;
         if not AccessControl.FIND() then
             AccessControl.INSERT(true);

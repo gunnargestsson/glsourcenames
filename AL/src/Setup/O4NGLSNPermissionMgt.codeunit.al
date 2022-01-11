@@ -293,7 +293,7 @@
         AccessControl.SETRANGE("User Security ID", UserSid);
         AccessControl.SETFILTER("Company Name", '%1|%2', COMPANYNAME, '');
         AccessControl.SETRANGE("App ID", AppGuid);
-        AccessControl.SETRANGE(Scope, AccessControl.Scope::Tenant);
+        AccessControl.SETRANGE(Scope, AccessControl.Scope::System);
         case PermissionLevel of
             PermissionLevel::Read:
                 AccessControl.SETRANGE("Role ID", ReadRoleIdTxt);
@@ -318,7 +318,7 @@
         EVALUATE(AppGuid, AppMgt.GetAppId());
         UserGroupPermissionSet.SETRANGE("User Group Code", GroupCode);
         UserGroupPermissionSet.SETRANGE("App ID", AppGuid);
-        UserGroupPermissionSet.SETRANGE(Scope, UserGroupPermissionSet.Scope::Tenant);
+        UserGroupPermissionSet.SETRANGE(Scope, UserGroupPermissionSet.Scope::System);
         case PermissionLevel of
             PermissionLevel::Read:
                 UserGroupPermissionSet.SETRANGE("Role ID", ReadRoleIdTxt);
@@ -345,7 +345,7 @@
         AccessControl."User Security ID" := UserSid;
         AccessControl."App ID" := AppGuid;
         AccessControl."Company Name" := CopyStr(COMPANYNAME(), 1, MaxStrLen(AccessControl."Company Name"));
-        AccessControl.Scope := AccessControl.Scope::Tenant;
+        AccessControl.Scope := AccessControl.Scope::System;
         case PermissionLevel of
             PermissionLevel::Read:
                 AccessControl."Role ID" := ReadRoleIdTxt;
@@ -371,7 +371,7 @@
         UserGroupPermissionSet.INIT();
         UserGroupPermissionSet."User Group Code" := GroupCode;
         UserGroupPermissionSet."App ID" := AppGuid;
-        UserGroupPermissionSet.Scope := UserGroupPermissionSet.Scope::Tenant;
+        UserGroupPermissionSet.Scope := UserGroupPermissionSet.Scope::System;
         case PermissionLevel of
             PermissionLevel::Read:
                 UserGroupPermissionSet."Role ID" := ReadRoleIdTxt;
@@ -397,7 +397,7 @@
         AccessControl.SETRANGE("User Security ID", UserSid);
         AccessControl.SETFILTER("Company Name", '%1|%2', COMPANYNAME, '');
         AccessControl.SETRANGE("App ID", AppGuid);
-        AccessControl.SETRANGE(Scope, AccessControl.Scope::Tenant);
+        AccessControl.SETRANGE(Scope, AccessControl.Scope::System);
         case PermissionLevel of
             PermissionLevel::Read:
                 AccessControl.SETRANGE("Role ID", ReadRoleIdTxt);
@@ -422,7 +422,7 @@
         EVALUATE(AppGuid, AppMgt.GetAppId());
         UserGroupPermissionSet.SETRANGE("User Group Code", GroupCode);
         UserGroupPermissionSet.SETRANGE("App ID", AppGuid);
-        UserGroupPermissionSet.SETRANGE(Scope, UserGroupPermissionSet.Scope::Tenant);
+        UserGroupPermissionSet.SETRANGE(Scope, UserGroupPermissionSet.Scope::System);
         case PermissionLevel of
             PermissionLevel::Read:
                 UserGroupPermissionSet.SETRANGE("Role ID", ReadRoleIdTxt);
