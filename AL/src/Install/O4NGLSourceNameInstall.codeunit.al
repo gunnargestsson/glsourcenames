@@ -5,11 +5,6 @@
     begin
     end;
 
-    var
-        PermissionSetToSetupGLSourceNamesTxt: Label 'O4N G/L-SN, SETUP', Locked = true;
-        PermissionSetToUpdateGLSourceNamesTxt: Label 'O4N G/L-SN, EDIT', Locked = true;
-        PermissionSetToUserGLSourceNamesTxt: Label 'O4N G/L-SOURCE NAMES', Locked = true;
-
 
     trigger OnInstallAppPerCompany();
     var
@@ -20,38 +15,10 @@
     end;
 
     trigger OnInstallAppPerDatabase();
-    var
-        AccessControl: Record "Access Control";
     begin
-        AccessControl.SETFILTER("Role ID", '%1|%2', 'SUPER', 'SECURITY');
-        if AccessControl.FINDSET() then
-            repeat
-                AddUserAccess(AccessControl."User Security ID", PermissionSetToUserGLSourceNamesTxt);
-                AddUserAccess(AccessControl."User Security ID", PermissionSetToUpdateGLSourceNamesTxt);
-                AddUserAccess(AccessControl."User Security ID", PermissionSetToSetupGLSourceNamesTxt);
-            until AccessControl.NEXT() = 0;
+
     end;
 
-    /// <summary> 
-    /// Description for AddUserAccess.
-    /// </summary>
-    /// <param name="AssignToUser">Parameter of type Guid.</param>
-    /// <param name="PermissionSet">Parameter of type Code[20].</param>
-    local procedure AddUserAccess(AssignToUser: Guid; PermissionSet: Code[20]);
-    var
-        AccessControl: Record "Access Control";
-        AppMgt: Codeunit "O4N GL SN App Mgt.";
-        AppGuid: Guid;
-    begin
-        EVALUATE(AppGuid, AppMgt.GetAppId());
-        AccessControl.INIT();
-        AccessControl."User Security ID" := AssignToUser;
-        AccessControl."App ID" := AppGuid;
-        AccessControl.Scope := AccessControl.Scope::System;
-        AccessControl."Role ID" := PermissionSet;
-        if not AccessControl.FIND() then
-            AccessControl.INSERT(true);
-    end;
 
     /// <summary> 
     /// Description for RecreateHelpResources.

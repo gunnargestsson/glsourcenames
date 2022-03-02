@@ -76,14 +76,14 @@
     local procedure UpgradeGroupAccessControl(OldRoleId: Code[20]; NewRoleId: Code[20])
     var
         OldGroupAccessControl: Record "User Group Access Control";
-        NewGropuAccessControl: Record "User Group Access Control";
+        NewGroupAccessControl: Record "User Group Access Control";
     begin
         OldGroupAccessControl.SetRange("Role ID", OldRoleId);
         if OldGroupAccessControl.FindSet(true) then
             repeat
-                NewGropuAccessControl := OldGroupAccessControl;
-                NewGropuAccessControl.Validate("Role ID", NewRoleId);
-                if NewGropuAccessControl.Insert(true) then;
+                NewGroupAccessControl := OldGroupAccessControl;
+                NewGroupAccessControl.Validate("Role ID", NewRoleId);
+                if NewGroupAccessControl.Insert(true) then;
             until OldGroupAccessControl.Next() = 0;
         OldGroupAccessControl.DeleteAll(true);
     end;
