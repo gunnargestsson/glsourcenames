@@ -5,7 +5,8 @@ variables:
 - group: BuildVariables
 - group: InsiderBuilds
 
-pool: Default
+pool: 
+  vmImage: windows-latest
 
 resources:
   repositories:
