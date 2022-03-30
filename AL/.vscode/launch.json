@@ -6,7 +6,7 @@
             "type": "al",
             "request": "launch",
             "environmentType": "Sandbox",
-            "environmentName": "sandbox",
+            "environmentName": "Preview",
             "startupObjectId": 22,
             "breakOnError": true,
             "breakOnRecordWrite": false,

@@ -1,5 +1,5 @@
 trigger:
-- main
+- master
 
 variables:
 - group: BuildVariables
@@ -19,5 +19,5 @@ extends:
   template: /.azureDevOps/CI.yml@Template
   parameters:
     version: "nextminor"
-    appVersion: "18.0"
-
+    appVersion: "19.0"
+    azureSubscription: "Microsoft Partner Network"   

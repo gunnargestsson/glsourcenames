@@ -48,7 +48,7 @@
         {
             "branch": "refs/heads/master",
             "previousApps": [
-                "https://365bcfiles.blob.core.windows.net/artifacts/gunnargestsson/glsourcenames/bc18/18.0/current/Objects4NAV/GL Source Names.app"
+                "https://365bcfiles.blob.core.windows.net/artifacts/gunnargestsson/glsourcenames/master/19.0/current/Objects4NAV/GL Source Names.app"
             ],
             "countries": [
                 "is",
